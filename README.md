@@ -42,6 +42,7 @@ sufficient CSS styling:
 
 **Objective:** Functioning rails project with front-end Authentication
 
+- [ ] create New Rails project
 
 ### Phase 2: Pins Model, API, and components (2 days)
 
@@ -50,23 +51,23 @@ the API.
 
 ### Phase 3: Boards (2 day)
 
-**Objective:** Notes belong to Notebooks that can be created, read, edited and destroyed through the API.
+**Objective:** Pins belong to Boards that can be created, read, edited, and destroyed through the API.
 
 ### Phase 4: Follows Model, API, and components (1 days)
 
-**Objective:** Notes can be tagged with multiple tags, and tags are searchable.
+**Objective:** Users can follow and unfollow another user.
 
 ### Phase 5: Infinite Scroll for Pins (1 days)
 
-**objective:** Allow rich text editing of notes.
+**objective:** Add infinite scroll to Pins Index.
 
 ### Phase 6: Search (1 day)
 
-**objective:** Add infinite scroll to Notes Index
+**objective:** Implement Search Bar Realtime functionality.
 
 ### Phase 7: Final CSS styling for MVP (1 day)
 
-**objective:** Add infinite scroll to Notes Index
+**objective:** Beauty in Simplicity.
 
 ### Bonus Features (TBD)
 - [ ] Comments for pins
