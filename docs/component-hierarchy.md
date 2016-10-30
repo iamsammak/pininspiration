@@ -2,6 +2,7 @@
 
 # App
     - REMEMBER to remove own (comments) before final push
+    - REVIEW: Hierarchy looks a bit cluttered
 
 **AuthFormContainer**
   - LoginForm ("/login")
@@ -52,3 +53,23 @@
         + will need /users/:userId/followers
       + followings
         + will need /users/:userId/followings
+
+
+## Routes
+
+|Path                         | Component           |
+|-----------------------------|---------------------|
+| "/new"                      | "AuthFormContainer" |
+| "/login"                    | "AuthFormContainer" |
+| "/"                         | "HomeContainer"     |
+| "/search/"                  | "SearchContainer"   |
+| "/pins/"                    | "PinsContainer"     |
+| "/pins/:pinId"              | "PinDetail"         |
+| "/pins/new"                 | "NewPin"            |
+| "/boards/"                  | "BoardsContainer"   |
+| "/boards/:boardId"          | "BoardDetail"       |
+| "/boards/:boardId/new"      | "NewBoard"          |
+| "/boards/:boardId/edit"     | "EditBoard"         |
+| "/users/:id"                | "UserContainer"     |
+| "/users/:userId/followers"  | "FollowsContainer"  |
+| "/users/:userId/followings" | "FollowsContainer"  |
