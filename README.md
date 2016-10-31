@@ -1,4 +1,4 @@
-# PinterestClone (name tbd)
+# Pinspiration
 
 [Heroku link][heroku]
 
@@ -10,7 +10,7 @@
 ## Minimum Viable Product
 
 PinterestClone is a web application inspired by Pinterest built using Ruby on Rails
-and React/Redux.  The name will change during the course of app development. By the end of Week 9, this app will, at a minimum, satisfy the
+and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the
 following criteria with smooth, bug-free navigation, adequate seed data and
 sufficient CSS styling:
 
