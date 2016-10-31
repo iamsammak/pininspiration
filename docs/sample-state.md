@@ -11,7 +11,7 @@
       following: []
     }
   }
-
+  // Ken: This looks redundant to the session key.
   user: {
     id: 1
     username: "sam",

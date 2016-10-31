@@ -32,6 +32,7 @@
 - `GET /api/boards`
 - `POST /api/boards`
 - `GET /api/boards/:id`
+	Ken: What information does the above route give that the below route does not?
 - `GET /api/boards/:id/pins`
   - index of all pins for a board
 

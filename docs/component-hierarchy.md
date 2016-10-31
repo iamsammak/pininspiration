@@ -30,6 +30,7 @@
       + will need params.boardId
     + NewBoard
       + will need params.boardId
+      Ken: When creating a board, you don't have an ID to start.
     + EditBoard
       + will need params.boardId
 
@@ -42,6 +43,7 @@
         + will need params.boardId
       + NewBoard
         + will need params.boardId
+      Ken: When creating a board, you don't have an ID to start.
       + EditBoard
         + will need params.boardId
     - **PinsContainer** (will also be nested)
