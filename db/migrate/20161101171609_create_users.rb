@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.text :description
       t.string :password_digest, null: false
       t.string :session_token, null: false
-      t.string :image_url
+      t.string :image_url #will need to add a default later, rollback
 
       t.timestamps null: false
     end
