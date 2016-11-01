@@ -13,8 +13,8 @@
   }
 
   user: {
-    id: 1
-    username: "sam",
+    id: 2
+    username: "jeremy",
     image_url: "/assets/default_sam.png",
     pins: [],
     boards: [],

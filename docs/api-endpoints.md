@@ -32,7 +32,6 @@
 - `GET /api/boards`
 - `POST /api/boards`
 - `GET /api/boards/:id`
-- `GET /api/boards/:id/pins`
   - index of all pins for a board
 
 ### Follows
