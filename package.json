@@ -1,7 +1,7 @@
 {
   "name": "Pinspiration",
   "version": "1.0.0",
-  "description": "[Heroku link][heroku]",
+  "description": "== README",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -29,5 +29,5 @@
   "engines": {
     "node": "4.1.1",
     "npm": "2.1.x"
-  },
+  }
 }
