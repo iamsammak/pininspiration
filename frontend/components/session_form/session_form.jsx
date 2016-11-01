@@ -42,9 +42,10 @@ class SessionForm extends React.Component {
 		}
 	}
 
+// work on styling the errors
 	renderErrors() {
 		return(
-			<ul>
+			<ul className="form-errors">
 				{this.props.errors.map((error, i) => (
 					<li key={`error-${i}`}>
 						{error}
@@ -56,32 +57,42 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to Pinspiration, Sam's world of inspiration! Come inside
-          <br/>
-          Please {this.props.formType} or {this.navLink()}
-          {this.renderErrors()}
-          <div className="login-form">
+      <main className="session-form">
+        <div className="login-form-container">
+          <form onSubmit={this.handleSubmit} className="login-form-box">
+            <h1 id="app-name">Pinspiration</h1>
+            <p id='slogan'>I n s p i r a t i o n</p>
             <br/>
-            <label> Username:
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update("username")}
-                className="login-input" />
-            </label>
-            <br/>
-            <label> Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update("password")}
-                className="login-input" />
-            </label>
-            <br/>
-            <input type="submit" value="Submit" />
-          </div>
-        </form>
-      </div>
+
+            <div className="login-form">
+              <br/>
+              <label> Username:
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update("username")}
+                  className="login-input username" />
+              </label>
+              <br/>
+              <label> Password:
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update("password")}
+                  className="login-input password" />
+              </label>
+              <br/>
+              <div>
+                {this.renderErrors()}
+              </div>
+
+              <div className="switch-button">
+                Please {this.props.formType} or {this.navLink()}
+              </div>
+
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        </div>
+      </main>
     );
   }
 

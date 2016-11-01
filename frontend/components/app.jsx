@@ -5,7 +5,7 @@ import GreetingContainer from './greeting/greeting_container';
 const App = ({ children }) => (
   <div>
     <header>
-      <Link to="/" className="header-link"><h1>what the CRAY this is a link: Pinspiration</h1></Link>
+      <Link to="/" className="header-link"><h1>Pinspiration Logo</h1></Link>
       <GreetingContainer />
     </header>
     {children}

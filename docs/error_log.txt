@@ -11,3 +11,11 @@ Error Log {
 
 2.
 }
+
+
+CSS Error log {
+1: for background image url - the "images" folder will be skipped when you write your path
+  ex)   background-image: url('/assets/rainbow.jpg');
+  take-away: with image url path, start at the root "/" then go into assets folder
+
+}
