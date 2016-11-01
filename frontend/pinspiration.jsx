@@ -1,12 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-document.addEventListener('DOMContentLoaded', () => {
+import Root from './components/root';
+import configureStore from './store/store';
 
-  const root = document.getElementbyId('root');
-  ReactDOM.render(<h1>Welcome to Pinspiration</h1>, root);
+// testing
+import { login, logout, signup } from './actions/session_actions';
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  let store;
+  if (window.currentUser) {
+    const preloadedState = {session: {currentUser: window.currentUser}};
+    store = configureStore(preloadedState);
+  } else {
+    store = configureStore();
+  }
+
+  const root = document.getElementById('root');
+  ReactDOM.render(<Root store={store} />, root);
 
 
   //testing
-  
+  window.store = configureStore();
+  window.login = login;
+  window.logout = logout;
+  window.signup = signup;
+
 });
