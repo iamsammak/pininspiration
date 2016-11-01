@@ -1,4 +1,35 @@
-/*.header-link {
+.session-form {
+  /*opacity: .8;*/
+  position: absolute;
+  /*top: 0;*/
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(white, teal);
+  background-image: url('/assets/rainbow.jpg');
+  background-size: cover;
+  text-align: center;
+  z-index: 0;
+
+}
+
+.session-form #app-name {
+  font-size: 50px;
+  /*font-weight: bold;*/
+}
+
+.session-form #slogan {
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+.header-link {
   text-decoration: none;
   color: black;
 }
@@ -22,4 +53,4 @@
 .login-form-box {
  outline: 1px solid black;
  padding: 20px;
-}*/
+}
