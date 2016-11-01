@@ -1,0 +1,13 @@
+Error Log {
+1:
+  Inside package.json
+    Error: Cannot read config file:
+    /Users/samuelmak/Desktop/kammas/fullstackproject/Pinspiration/package.json
+    Error: Cannot read config file: /Users/samuelmak/Desktop/kammas/fullstackproject/Pinspiration/package.json
+    Error: Unexpected token }
+
+  * I had an extra "," *
+  Which didn't allow me to run webpack or anything else
+
+2.
+}
