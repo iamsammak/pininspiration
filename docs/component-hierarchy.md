@@ -29,7 +29,6 @@
     + BoardDetail
       + will need params.boardId
     + NewBoard
-      + will need params.boardId
     + EditBoard
       + will need params.boardId
 
@@ -41,7 +40,6 @@
       + BoardDetail
         + will need params.boardId
       + NewBoard
-        + will need params.boardId
       + EditBoard
         + will need params.boardId
     - **PinsContainer** (will also be nested)
@@ -68,7 +66,7 @@
 | "/pins/new"                 | "NewPin"            |
 | "/boards/"                  | "BoardsContainer"   |
 | "/boards/:boardId"          | "BoardDetail"       |
-| "/boards/:boardId/new"      | "NewBoard"          |
+| "/boards/new"               | "NewBoard"          |
 | "/boards/:boardId/edit"     | "EditBoard"         |
 | "/users/:id"                | "UserContainer"     |
 | "/users/:userId/followers"  | "FollowsContainer"  |
