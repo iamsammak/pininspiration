@@ -112,7 +112,7 @@ class SessionForm extends React.Component {
             onSubmit={this.handleSubmit}
             className={loginFromClass}>
             <h1 id="app-name">Pinspiration</h1>
-            <p id='slogan'>I n s p i r a t i o n</p>
+            <s id='slogan'>I n s p i r a t i o n</s>
             <br/>
 
             <div className="login-form">
