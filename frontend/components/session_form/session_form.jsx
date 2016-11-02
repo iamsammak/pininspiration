@@ -9,6 +9,10 @@ class SessionForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+
+    this.phantomLogin = this.phantomLogin.bind(this);
+		this.beMyGuest = this.beMyGuest.bind(this);
+    this.beMyGuestQuick = this.beMyGuestQuick.bind(this);
   }
 
   componentDidUpdate() {
@@ -36,9 +40,17 @@ class SessionForm extends React.Component {
 
   navLink() {
 		if (this.props.formType === "login") {
-			return <Link to="/signup">sign up instead</Link>;
+			return (
+        <div>Want to create an account?
+          <Link to="/signup"> sign up</Link>
+        </div>
+      );
 		} else {
-			return <Link to="/login">log in instead</Link>;
+			return (
+        <div>Already have an account?
+          <Link to="/login"> log in</Link>
+        </div>
+      );
 		}
 	}
 
@@ -55,27 +67,68 @@ class SessionForm extends React.Component {
 		);
 	}
 
+  // Demo User
+  phantomLogin($el, word, callback){
+
+		var typing = setInterval(function(){
+			$el.val( $el.val() + word.slice(0,1) );
+			word = word.substr(1);
+
+			if (!word){
+				clearInterval(typing);
+				callback();
+			}
+		}, 50);
+	}
+
+	beMyGuest(e, username, password) {
+		e.preventDefault();
+		let $username = $('.username');
+		let $password = $('.password');
+		let $submitButton = $('.submit-button');
+		let that = this;
+		this.phantomLogin($username, username, () => {
+			this.phantomLogin($password, password, ()=> {
+				that.setState({username, password });
+				$submitButton.click();
+			});
+		});
+	}
+
+  beMyGuestQuick() {
+    this.setState({username: "emily"});
+    this.setState({password: "password"});
+  }
+
   render() {
+    let loginFromClass = (this.props.formType === "login") ? "login-form-box login" : "login-form-box signup";
+    let passwordPlaceholder = (this.props.formType === "login") ? "Password" : "Create a password ";
+    let submitText = (this.props.formType === "login") ? "Log In" : "Sign Up ";
+
     return (
       <main className="session-form">
         <div className="login-form-container">
-          <form onSubmit={this.handleSubmit} className="login-form-box">
+          <form
+            onSubmit={this.handleSubmit}
+            className={loginFromClass}>
             <h1 id="app-name">Pinspiration</h1>
             <p id='slogan'>I n s p i r a t i o n</p>
             <br/>
 
             <div className="login-form">
               <br/>
-              <label> Username:
+              <label>
                 <input type="text"
                   value={this.state.username}
+                  placeholder="Username"
                   onChange={this.update("username")}
                   className="login-input username" />
               </label>
               <br/>
-              <label> Password:
+              <label>
                 <input type="password"
                   value={this.state.password}
+                  placeholder={passwordPlaceholder}
                   onChange={this.update("password")}
                   className="login-input password" />
               </label>
@@ -84,11 +137,17 @@ class SessionForm extends React.Component {
                 {this.renderErrors()}
               </div>
 
-              <div className="switch-button">
-                Please {this.props.formType} or {this.navLink()}
-              </div>
+              <div className="switch-button">{this.navLink()}</div>
 
-              <input type="submit" value="Submit" />
+              <div className="submit-buttons-box">
+                <input type="submit"
+                  className="submit-button"
+                  value={submitText} />
+                <input type="submit"
+                    className="demo-button"
+                    onClick={e => this.beMyGuest(e, "emily", "password")}
+                    value="Demo" />
+              </div>
             </div>
           </form>
         </div>
