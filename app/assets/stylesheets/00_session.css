@@ -1,7 +1,16 @@
+header {
+  background: #b9d9c3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 25px;
+  height: 250px;
+}
+
 .session-form {
   /*opacity: .8;*/
   position: absolute;
-  /*top: 0;*/
+  top: 150px;
   height: 100%;
   width: 100%;
   background: linear-gradient(white, teal);
@@ -24,12 +33,13 @@
 
 .login-form-box {
   /*font-size: 16px; same as default*/
-  outline: 1px solid black;
+  border: 1px solid black;
+  border-radius: 3px;
   padding: 20px;
   /*display: block;*/
   width: 400px;
   position: relative;
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 1px 1px 3px black;
   margin: 100px auto;
   background: rgba(255, 255, 255, 0.5);
   /*background: rgba(172, 208, 192, 0.5);*/
@@ -71,8 +81,18 @@
  /*margin-left: 20px;*/
  text-align: left;
  border: 1px solid black;
+ border-radius: 3px;
  padding: 10px;
+ background-color: #fff;
 }
+
+.form-errors {
+  /*float: right;*/
+  /*border: 1px solid black;*/
+  padding: 5px;
+  /*border-radius: 5px;*/
+}
+
 
 .submit-button {
   margin: 10px;
@@ -103,9 +123,42 @@
   background-color: #0083d5;
 }
 
-.form-errors {
-  float: right;
-  border: 1px solid black;
-  padding: 5px;
-  border-radius: 5px;
+
+/*fun button transformations*/
+.submit-button {
+  border-radius: 3px;
+  margin-bottom: 30px;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+  background-color: #fff;
+  color: black;
+  border: 5px solid #ffd64d;
+  box-shadow: 0 8px #ffaf1a;
+}
+
+.submit-button:hover {
+  background-color: #fff;
+  color: #ffaf1a;
+  box-shadow: 0 6px #ffaf1a;
+  transform: translateY(2px);
+}
+
+.demo-button {
+  border-radius: 3px;
+  margin-bottom: 30px;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+  background-color: #fff;
+  color: black;
+  border: 5px solid #4cb5f5;
+  box-shadow: 0 8px #0083d5;
+}
+
+.demo-button:hover {
+  background-color: #fff;
+  color: #0083d5;
+  box-shadow: 0 6px #0083d5;
+  transform: translateY(2px);
 }
