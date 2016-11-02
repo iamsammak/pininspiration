@@ -1,4 +1,5 @@
 Additional Installation Log {
+  - notify.js
   - bootstrap sass
   - font-awesome-icons
   - modals
@@ -19,6 +20,9 @@ Error Log {
   Which didn't allow me to run webpack or anything else
 
 2.
+  Ran into an infinite loop between "/" replacing "/login"
+  I had both ensureLoggedIn and redirectIfLoggedIn but replaceing the url path if a currentUser exists
+  forgot a ! before currentUser in my ensureLoggedIn function
 }
 
 

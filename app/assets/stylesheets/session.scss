@@ -19,17 +19,16 @@ header {
   background-size: cover;
   text-align: center;
   z-index: 0;
-
-}
-
-.session-form #app-name {
-  font-size: 50px;
-  /*font-weight: bold;*/
-}
-
-.session-form #slogan {
-  font-size: 16px;
-  /*text-decoration: underline;*/
+  #app-name {
+    font-size: 50px;
+    /*font-weight: bold;*/
+    /*color: #fff;*/
+    /*text-shadow: 2px 2px 3px #444;*/
+  }
+  #slogan {
+    font-size: 16px;
+    /*text-decoration: underline;*/
+  }
 }
 
 .login-form-box {
@@ -67,24 +66,24 @@ header {
 }
 
 .login-form-container {
- display: flex;
- justify-content: center;
- margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
 }
 
 .login-form {
- display: flex;
- justify-content: center;
- flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .login-input {
- /*margin-left: 20px;*/
- text-align: left;
- border: 1px solid black;
- border-radius: 3px;
- padding: 10px;
- background-color: #fff;
+  /*margin-left: 20px;*/
+  text-align: left;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 10px;
+  background-color: #fff;
 }
 
 .form-errors {
@@ -95,7 +94,6 @@ header {
   /*border-radius: 5px;*/
 }
 
-
 .submit-button {
   margin: 10px;
   border: none;
@@ -104,11 +102,10 @@ header {
   background-color: #f2d737;
   cursor: pointer;
   font-size: 14px;
-}
-
-.submit-button:hover {
-  background-color: #ffaf1a;
-  /*background-color: #e69500;*/
+  &:hover {
+    background-color: #ffaf1a;
+    /*background-color: #e69500;*/
+  }
 }
 
 .demo-button {
@@ -119,14 +116,13 @@ header {
   background-color: #4cb5f5;
   cursor: pointer;
   font-size: 14px;
+  &:hover {
+    background-color: #0083d5;
+  }
 }
-
-.demo-button:hover {
-  background-color: #0083d5;
-}
-
 
 /*fun button transformations*/
+
 .submit-button {
   border-radius: 3px;
   margin-bottom: 30px;
@@ -137,13 +133,12 @@ header {
   color: black;
   border: 5px solid #ffd64d;
   box-shadow: 0 8px #ffaf1a;
-}
-
-.submit-button:hover {
-  background-color: #fff;
-  color: #ffaf1a;
-  box-shadow: 0 6px #ffaf1a;
-  transform: translateY(2px);
+  &:hover {
+    background-color: #fff;
+    color: #ffaf1a;
+    box-shadow: 0 6px #ffaf1a;
+    transform: translateY(2px);
+  }
 }
 
 .demo-button {
@@ -156,67 +151,66 @@ header {
   color: black;
   border: 5px solid #4cb5f5;
   box-shadow: 0 8px #0083d5;
-}
-
-.demo-button:hover {
-  background-color: #fff;
-  color: #0083d5;
-  box-shadow: 0 6px #0083d5;
-  transform: translateY(2px);
+  &:hover {
+    background-color: #fff;
+    color: #0083d5;
+    box-shadow: 0 6px #0083d5;
+    transform: translateY(2px);
+  }
 }
 
 .input__field {
-	position: relative;
-	display: block;
-	float: right;
-	padding: 0.8em;
-	width: 60%;
-	border: none;
-	border-radius: 0;
-	background: #f0f0f0;
-	color: #aaa;
-	font-weight: bold;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	-webkit-appearance: none; /* for box shadows to show on iOS */
-}
-
-.input__field:focus {
-	outline: none;
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  width: 60%;
+  border: none;
+  border-radius: 0;
+  background: #f0f0f0;
+  color: #aaa;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none;
+  /* for box shadows to show on iOS */
+  &:focus {
+    outline: none;
+  }
 }
 
 .input__label {
-	display: inline-block;
-	float: right;
-	padding: 0 1em;
-	width: 40%;
-	color: #6a7989;
-	font-weight: bold;
-	font-size: 70.25%;
-	-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  width: 40%;
+  color: #6a7989;
+  font-weight: bold;
+  font-size: 70.25%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .input__label-content {
-	position: relative;
-	display: block;
-	padding: 1.6em 0;
-	width: 100%;
+  position: relative;
+  display: block;
+  padding: 1.6em 0;
+  width: 100%;
 }
 
 .graphic {
-	position: absolute;
-	top: 0;
-	left: 0;
-	fill: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
 }
 
 .icon {
-	color: #ddd;
-	font-size: 150%;
+  color: #ddd;
+  font-size: 150%;
 }
