@@ -1,0 +1,111 @@
+.session-form {
+  /*opacity: .8;*/
+  position: absolute;
+  /*top: 0;*/
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(white, teal);
+  background-image: url('/assets/rainbow.jpg');
+  background-size: cover;
+  text-align: center;
+  z-index: 0;
+
+}
+
+.session-form #app-name {
+  font-size: 50px;
+  /*font-weight: bold;*/
+}
+
+.session-form #slogan {
+  font-size: 16px;
+  /*text-decoration: underline;*/
+}
+
+.login-form-box {
+  /*font-size: 16px; same as default*/
+  outline: 1px solid black;
+  padding: 20px;
+  /*display: block;*/
+  width: 400px;
+  position: relative;
+  box-shadow: 2px 2px 5px black;
+  margin: 100px auto;
+  background: rgba(255, 255, 255, 0.5);
+  /*background: rgba(172, 208, 192, 0.5);*/
+  /*hex #ACD0C0*/
+  /*rgb colors, opacity*/
+  color: black;
+  z-index: 20;
+  /*transition: height 1s, background-color 1s ease;*/
+}
+
+/*.login {
+  background: rgba(255, 200, 200, 0.5);
+  height: 370px;
+}*/
+
+.switch-button {
+  /*color: rgb(0,51,204);*/
+  font-size: 14px;
+}
+
+.header-link {
+  text-decoration: none;
+  color: black;
+}
+
+.login-form-container {
+ display: flex;
+ justify-content: center;
+ margin-top: 100px;
+}
+
+.login-form {
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+}
+
+.login-input {
+ /*margin-left: 20px;*/
+ text-align: left;
+ border: 1px solid black;
+ padding: 10px;
+}
+
+.submit-button {
+  margin: 10px;
+  border: none;
+  width: 100px;
+  height: 30px;
+  background-color: #f2d737;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.submit-button:hover {
+  background-color: #ffaf1a;
+  /*background-color: #e69500;*/
+}
+
+.demo-button {
+  margin: 10px;
+  border: none;
+  width: 100px;
+  height: 30px;
+  background-color: #4cb5f5;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.demo-button:hover {
+  background-color: #0083d5;
+}
+
+.form-errors {
+  float: right;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+}
