@@ -7,6 +7,7 @@ class Errors extends React.Component {
 	}
 
 	componentDidUpdate(){
+    debugger;
     this.props.errors.forEach(error => {
       $.notify(error, { position:'bottom left', className: 'error' });
     });
