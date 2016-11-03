@@ -24,19 +24,17 @@ class Home extends React.Component {
   }
 
   render() {
-    let pincomponent = null;
-    if (this.props.location.pathname === "/home/" || this.props.location.pathname === "/") {
-      pincomponent = <PinsContainer />;
-    }
+    // let pincomponent = null;
+    // if (this.props.location.pathname === "/home/" || this.props.location.pathname === "/") {
+    //   pincomponent = <PinsContainer />;
+    // }
 
     return (
       <section className="home-container">
         <div className='nav-bar'>
           <NavContainer />
         </div>
-        <div className="home-children">
-          {pincomponent}
-        </div>
+
         {this.props.children}
       </section>
     );

@@ -23,6 +23,10 @@ Error Log {
   Ran into an infinite loop between "/" replacing "/login"
   I had both ensureLoggedIn and redirectIfLoggedIn but replaceing the url path if a currentUser exists
   forgot a ! before currentUser in my ensureLoggedIn function
+
+3.
+  error: Uncaught Error: Invariant Violation: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object.
+  I forgot to export default withRouter(Nav) so it was saying connect(Component) was undefined or null
 }
 
 
