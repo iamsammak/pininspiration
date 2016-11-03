@@ -1,0 +1,66 @@
+// .logo {
+//   width: 50px;
+//   height: 50px;
+// }
+
+.nav-bar {
+  display: flex;
+  flex-shrink: 2;
+  width: 100%;
+}
+
+.nav-bar .all-containers {
+  margin: 10px 10px 10px 0px;
+  vertical-align: top;
+  float: left;
+}
+
+
+.search-container {
+  min-width: 200px;
+  width:100%;
+}
+
+.profile-container {
+  min-width: 200px;
+  display: flex;
+  float: left;
+}
+
+.profile-link {
+  width: 60px;
+  height: 60px;
+  padding: 0 20px;
+  cursor:pointer;
+}
+
+.logout-button {
+  border-radius: 3px;
+  margin-bottom: 30px;
+  height: 30px;
+  width: 70px;
+  text-align: center;
+  background-color: #fff;
+  color: black;
+  border: 5px solid #4cb5f5;
+  box-shadow: 0 8px #0083d5;
+  &:hover {
+    background-color: #fff;
+    color: #0083d5;
+    box-shadow: 0 6px #0083d5;
+    transform: translateY(2px);
+  }
+}
+
+.search-bar {
+  float: top;
+  padding: 15px;
+  padding-left: 50px;
+  width: 95%;
+  border: 1px solid #f5f5f5;
+  color:gray;
+  background-color: rgb(239,239,239);
+  background-image:url('http://i47.tinypic.com/r02vbq.png');
+  background-repeat:no-repeat;
+  background-position:left center;outline:0;
+}
