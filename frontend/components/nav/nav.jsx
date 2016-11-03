@@ -10,13 +10,6 @@ class Nav extends React.Component {
     this.logEmOut = this.logEmOut.bind(this);
     this.currentUser = this.props.currentUser;
   }
-  // 
-  // shouldComponentUpdate(nextProps) {
-  //   if (!nextProps.currentUser) {
-  //     return false;
-  //   }
-  //   return true;
-  // }
 
   // might cause an error
   componentWillReceiveProps(nextProps) {
@@ -36,7 +29,9 @@ class Nav extends React.Component {
       <section className="nav_container">
         <div className="logo-container all-containers">
           <Link to="/">
-            <i class="fa fa-thumb-tack logo" aria-hidden="true" alt="logo" id="logo"></i>
+            <i className="fa fa-thumb-tack logo"
+              aria-hidden="true"
+              alt="logo" id="logo"></i>
           </Link>
         </div>
 
@@ -47,13 +42,18 @@ class Nav extends React.Component {
         </div>
 
         <div className="profile-container all-containers">
-          <i class="fa fa-bars catalog-link" aria-hidden="true"></i>
+          <i className="fa fa-bars catalog-link" aria-hidden="true"></i>
           <Link to={userUrlPath}>
-            <i class="fa fa-user profile-link" aria-hidden="true" alt='profile'></i>
+            <i className="fa fa-user profile-link"
+              aria-hidden="true"
+              alt='profile'></i>
           </Link>
-          <button className="logout-button" onClick={(e) => this.logEmOut(e)}>Logout</button>
+          <button className="logout-button"
+            onClick={(e) => this.logEmOut(e)}>Logout</button>
         </div>
       </section>
     );
   }
 }
+
+export default withRouter(Nav);
