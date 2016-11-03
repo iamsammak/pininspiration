@@ -26,10 +26,10 @@ class Nav extends React.Component {
     let userUrlPath = `/${this.currentUser.username}`;
 
     return (
-      <section className="nav_container">
+      <section className="nav-bar">
         <div className="logo-container all-containers">
           <Link to="/">
-            <i className="fa fa-thumb-tack logo"
+            <i className="fa fa-thumb-tack fa-3x logo"
               aria-hidden="true"
               alt="logo" id="logo"></i>
           </Link>
@@ -42,9 +42,9 @@ class Nav extends React.Component {
         </div>
 
         <div className="profile-container all-containers">
-          <i className="fa fa-bars catalog-link" aria-hidden="true"></i>
+          <i className="fa fa-bars fa-3x catalog-link" aria-hidden="true"></i>
           <Link to={userUrlPath}>
-            <i className="fa fa-user profile-link"
+            <i className="fa fa-user fa-3x profile-link"
               aria-hidden="true"
               alt='profile'></i>
           </Link>

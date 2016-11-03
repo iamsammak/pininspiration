@@ -31,10 +31,12 @@ class Home extends React.Component {
 
     return (
       <section className="home-container">
-        <div className='nav-bar'>
+        <div>
           <NavContainer />
         </div>
+        <div className='home-children'>
 
+        </div>
         {this.props.children}
       </section>
     );
