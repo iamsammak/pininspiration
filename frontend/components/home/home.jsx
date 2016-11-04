@@ -267,17 +267,17 @@ class Home extends React.Component {
           this.thing.classList.toggle("m-fadeIn");
           this.state['errors'] = [];
         }} type="button">
-          <i className="fa fa-plus-circle fa-2 plus-sign" aria-hidden="true"></i>
+          <i className="fa fa-plus-circle fa-4 plus-sign" aria-hidden="true"></i>
         </div>
         <div className="github">
           <a target='_blank' href='https://www.pinterest.com/iamsammak'>
-            <i className="fa fa-pinterest fa-2 git-image" aria-hidden="true"></i>
+            <i className="fa fa-pinterest fa-4 git-image" aria-hidden="true"></i>
           </a>
         </div>
         <ul className="add-pin-menu" id="add-pin-menu-id">
           <li onClick={this.openPinModal.bind(this)}>Create a new Pin.</li>
           <li onClick={this.openBoardModal.bind(this)}>Create a new Board.</li>
-          
+
         </ul>
         <Modal className='addNewBoardModal'
           isOpen={this.state.openNewBoardModal}
