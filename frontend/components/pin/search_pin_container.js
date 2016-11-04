@@ -1,20 +1,15 @@
 import { connect } from 'react-redux';
-import { fetchAllPins,
-         updatePin,
-         deletePin} from '../../actions/pin_actions';
+import { updatePin, deletePin } from '../../actions/pin_actions';
+import SearchPins from './search_pins';
 
-import Pins from './pins';
-
-const mapStateToProps = state => {
-  return ({
+const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
   pins: state.pins.pins,
   pin: state.pins.pin
 });
-};
+
 
 const mapDispatchToProps = dispatch => ({
-  fetchAllPins: (page) => dispatch(fetchAllPins(page)),
   updatePin: (pin) => dispatch(updatePin(pin)),
   deletePin: (id) => dispatch(deletePin(id))
 });
@@ -22,4 +17,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Pins);
+)(SearchPins);

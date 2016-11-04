@@ -1,9 +1,13 @@
 import { applyMiddleware } from 'redux';
 
 import SessionMiddleware from '../middleware/session_middleware';
+import PinMiddleware from './pin_middleware';
+import BoardMiddleware from './board_middleware';
 
 const RootMiddleware = applyMiddleware(
-  SessionMiddleware
+  SessionMiddleware,
+  PinMiddleware,
+  BoardMiddleware
 );
 
 export default RootMiddleware;

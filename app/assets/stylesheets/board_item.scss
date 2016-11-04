@@ -1,0 +1,104 @@
+.board-item-container {
+  position: relative;
+  display: block;
+  float: left;
+  width: 236px;
+  height: auto;
+  padding: 10px;
+  border: 1px 1px 1px 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  &:hover {
+    background-color: rgb(242, 242, 242);
+    .edit-board-button {
+      display: inline;
+    }
+  }
+}
+
+.pin-picture-background {
+  background-color: rgb(230, 230, 230);
+}
+
+.pin-picture-block {
+  display: block;
+  content: "";
+  height: 210px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.detail-block {
+  width: 100%;
+  display: block;
+  float: left;
+  cursor: default;
+}
+
+.pin-picture-block {
+  .one-pic, .two-pics {
+    vertical-align: middle;
+    display: block;
+    float: left;
+  }
+}
+
+.pin-picture-0 {
+  width: 234px;
+  height: 110px;
+  overflow: hidden;
+  img {
+    margin: 5px;
+    width: 96%;
+  }
+}
+
+.pin-picture-1 {
+  display: inline-block;
+  width: 117px;
+  height: 111px;
+  overflow: hidden;
+  img {
+    margin: 5px;
+    width: 95%;
+  }
+}
+
+.board-title {
+  display: block;
+  margin: 5px auto;
+  float: left;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+}
+
+.pin-count-block {
+  color: rgb(135, 172, 207);
+  font-size: 16px;
+  width: 100%;
+  display: inline;
+  text-align: left;
+  .pin-count {
+    font-weight: bold;
+  }
+  .text {
+    font-weight: normal;
+  }
+}
+
+.edit-board-button {
+  &:hover {
+    background-color: rgb(204, 204, 204);
+  }
+  border-radius: 30%;
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 999;
+}
