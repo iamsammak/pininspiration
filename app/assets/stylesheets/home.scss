@@ -34,8 +34,11 @@
   z-index: 999;
   cursor: pointer;
   border-radius: 50%;
+  border: 5px solid #4cb5f5;
+  box-shadow: 0 8px #0083d5;
   &:hover, &:focus, &:active {
-    box-shadow: 0 0 8px rgba(0, 0, 255, 0.8);
+    box-shadow: 0 6px #0083d5;
+    transform: translateY(2px);
   }
 }
 

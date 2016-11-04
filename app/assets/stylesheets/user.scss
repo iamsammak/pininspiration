@@ -54,11 +54,11 @@
   .following {
     background-color: rgb(0, 255, 0);
   }
-  .summary-container {
+  .detail-title-container {
     display: flex;
     width: 100%;
     margin-left: 30%;
-    .summary {
+    .detail-titles {
       .checked {
         background-color: rgb(242, 242, 242);
       }
@@ -107,7 +107,7 @@
 }
 
 .user-container {
-  .summary-container .summary .text-container {
+  .detail-title-container .detail-titles .text-container {
     display: block;
     float: left;
     height: auto;
@@ -116,7 +116,7 @@
     color: #555;
     /*color: rgb(234,234,234);*/
     .number {
-      font-size: 20px;
+      font-size: 30px;
       font-weight: bold;
     }
   }
