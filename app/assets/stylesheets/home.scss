@@ -13,7 +13,7 @@
 
 .add-pin-button {
   color: black;
-  box-shadow: 1px 1px 1px black;
+  // box-shadow: 1px 1px 1px black;
   padding: 20px 20px;
   border-radius: 50%;
   border: 0;
@@ -27,10 +27,10 @@
 .plus-sign {
   position: fixed;
   right: 2%;
-  bottom: 9%;
+  bottom: 10%;
   vertical-align: middle;
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   z-index: 999;
   cursor: pointer;
   border-radius: 50%;
@@ -45,8 +45,8 @@
 .add-pin-menu {
   display: none;
   position: fixed;
-  right: 6%;
-  bottom: 8%;
+  right: 7%;
+  bottom: 10%;
   font-size: 16px;
   background: #fff;
   border-radius: 5%;
@@ -91,7 +91,7 @@
 
 .github {
   color: black;
-  box-shadow: 1px 1px 1px black;
+  // box-shadow: 1px 1px 1px black;
   padding: 20px 20px;
   border-radius: 50%;
   border: 0;
@@ -107,13 +107,16 @@
   right: 2%;
   bottom: 3%;
   vertical-align: middle;
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   z-index: 999;
   cursor: pointer;
   border-radius: 50%;
+  border: 5px solid #4cb5f5;
+  box-shadow: 0 8px #0083d5;
   &:hover, &:focus, &:active {
-    box-shadow: 0 0 8px rgba(0, 0, 255, 0.8);
+    box-shadow: 0 6px #0083d5;
+    transform: translateY(2px);
   }
 }
 
