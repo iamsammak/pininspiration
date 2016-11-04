@@ -8,6 +8,13 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './app';
 import SessionFormContainer from './session_form/session_form_container';
 import HomeContainer from './home/home_container';
+import UserContainer from './user/user_container';
+import PinsContainer from './pin/pins_container';
+import UserPinsContainer from './pin/user_pins_container';
+import BoardsContainer from './board/boards_container';
+import BoardContainer from './board/board_container';
+import SearchPinContainer from './pin/search_pin_container';
+
 
 const Root = ({ store }) => {
 
@@ -29,14 +36,25 @@ const Root = ({ store }) => {
     <Provider store={store}>
       <Router history={ hashHistory }>
         <Route path="/" component={ App }>
-            <IndexRoute component={ HomeContainer }
-              onEnter={_ensureLoggedIn}/>
-            <Route path="login"
-                   component={ SessionFormContainer }
-                   onEnter={_redirectIfloggedIn} />
-            <Route path="signup"
-                   component={ SessionFormContainer }
-                   onEnter={_redirectIfloggedIn} />
+          <IndexRoute component={ HomeContainer }
+                      onEnter={_ensureLoggedIn}/>
+          <Route path="login"
+                 component={ SessionFormContainer }
+                 onEnter={_redirectIfloggedIn} />
+          <Route path="signup"
+                 component={ SessionFormContainer }
+                 onEnter={_redirectIfloggedIn} />
+          <Route path="/" component={ HomeContainer }
+                 onEnter={_ensureLoggedIn}>
+            <Route path="search" component={ SearchPinContainer } />
+            <Route path="pins" component={PinsContainer} />
+            <Route path=":username" component={ UserContainer }>
+              <IndexRoute component={ BoardsContainer } />
+              <Route path="boards" component={ BoardsContainer } />
+              <Route path="pins" component={ UserPinsContainer } />
+            </Route>
+            <Route path="boards/:boardId" component={ BoardContainer } />
+          </Route>
         </Route>
       </Router>
     </Provider>

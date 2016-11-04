@@ -9,14 +9,17 @@ class Nav extends React.Component {
     };
     this.logEmOut = this.logEmOut.bind(this);
     this.currentUser = this.props.currentUser;
+    // update
   }
 
-  // might cause an error
+  // might cause an error would I need shouldComponentUpdate
   componentWillReceiveProps(nextProps) {
     if (!nextProps.currentUser) {
       this.props.router.push("/login");
     }
   }
+
+// update, onKeyUp, componentDidMount
 
   logEmOut (e) {
     this.props.logout(0);

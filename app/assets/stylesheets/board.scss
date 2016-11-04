@@ -1,0 +1,19 @@
+.board-container {
+  margin-left: 50px;
+  .board-details {
+    .title {
+      text-align: justify;
+      font-size: 50px;
+      color: rgb(74, 74, 74);
+    }
+    .description {
+      margin: 5px 0 10px 0;
+    }
+  }
+}
+
+.edit-button-block {
+  width: 236px;
+}
+
+.board-container .boardpin-container {}

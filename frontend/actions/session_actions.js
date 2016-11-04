@@ -8,6 +8,8 @@ export const RECEIVE_USER = "RECEIVE_USER";
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
+// FOLLOW_USER, UNFOLLOW_USER
+
 
 export const login = user => ({
   type: LOGIN,

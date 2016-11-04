@@ -28,6 +28,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-sass', '~> 4.6.2'
+gem 'kaminari'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

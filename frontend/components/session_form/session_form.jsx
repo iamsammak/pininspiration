@@ -6,7 +6,8 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      description: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
 
@@ -17,6 +18,7 @@ class SessionForm extends React.Component {
 
   componentDidUpdate() {
     this.redirectIfLoggedIn();
+    // REVIEW;
   }
 
   redirectIfLoggedIn() {
@@ -33,7 +35,12 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = this.state;
+    let newUsername = this.state.username.toLowerCase();
+		this.state.username = newUsername;
+		const user = this.state;
+		if (this.props.formType === "login") {
+			this.setState({description: ""});
+		}
     this.props.processForm({user});
     // login or signup
   }
@@ -104,6 +111,8 @@ class SessionForm extends React.Component {
     let loginFromClass = (this.props.formType === "login") ? "login-form-box login" : "login-form-box signup";
     let passwordPlaceholder = (this.props.formType === "login") ? "Password" : "Create a password ";
     let submitText = (this.props.formType === "login") ? "Log In" : "Sign Up ";
+    let demoClass = (this.props.formType === "login") ? "login-buttons demo-button demo-show" : "login-buttons demo-button demo-hide";
+
 
     return (
       <main className="session-form">
@@ -144,7 +153,7 @@ class SessionForm extends React.Component {
                   className="submit-button"
                   value={submitText} />
                 <input type="submit"
-                    className="demo-button"
+                    className={demoClass}
                     onClick={e => this.beMyGuest(e, "emily", "password")}
                     value="Demo" />
               </div>

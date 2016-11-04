@@ -30,6 +30,17 @@ export const logout = (success) => {
   });
 };
 
+export const fetchUser = function(username, success, error){
+  $.ajax({
+    method: 'GET',
+    url: `/api/users/${username}`,
+    success,
+    error
+  });
+};
+
+// will need followUser, unfollowUser
+
 // Testing on chrome console dev tools
 // $.ajax({
 //     method: 'POST',
