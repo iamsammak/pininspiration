@@ -47,7 +47,7 @@ class Home extends React.Component {
     }
   }
 
-	handleNewBoardSubmit(e){
+  handleNewBoardSubmit(e){
     e.preventDefault();
     this.state['errors'] = [];
     if (this.state.title === "") {
@@ -186,7 +186,7 @@ class Home extends React.Component {
 	}
 
   render() {
-    // let greaterUrl = 'http://res.cloudinary.com/dfazwubvc/image/upload/v1478281473/pinspiration/icons/greater_sign.png';
+    let greaterUrl = 'http://res.cloudinary.com/dfazwubvc/image/upload/v1478281473/pinspiration/icons/greater_sign.png';
     let comp = null;
     if (this.props.location.pathname === "/home/" || this.props.location.pathname === "/") {
       comp = <PinsContainer />;
@@ -277,38 +277,40 @@ class Home extends React.Component {
         <ul className="add-pin-menu" id="add-pin-menu-id">
           <li onClick={this.openPinModal.bind(this)}>Create a new Pin.</li>
           <li onClick={this.openBoardModal.bind(this)}>Create a new Board.</li>
-          
+          <div className="greater" id="greater-id">
+            <img src={greaterUrl} className='greater-img' />
+          </div>
         </ul>
         <Modal className='addNewBoardModal'
           isOpen={this.state.openNewBoardModal}
           onRequestClose={this.closeBoardModal.bind(this)}
           style={newBoardStyle}>
           <section className="modal-form-container">
-  					<form	className="modal-form-box">
+            <form	className="modal-form-box">
               <div>
               { this.renderErrors() }
               </div>
-  						<div className="modal-form">
-								<input
-									type="text"
-									onChange={this.update("title")}
-									className="title-input modal-input"
+              <div className="modal-form">
+                <input
+                  type="text"
+                  onChange={this.update("title")}
+                  className="title-input modal-input"
                   placeholder='Title'/>
 
-								<textarea name='description'
-									onChange={this.update("description")}
-									className="description-input modal-input"
+                <textarea name='description'
+                  onChange={this.update("description")}
+                  className="description-input modal-input"
                   placeholder='What is your board about?'></textarea>
 
-  							<div className="modal-save-button-box">
-  								<input type="submit"
-  									className="modal-save-button"
-  									value='Save Board'
-  									onClick={this.handleNewBoardSubmit}/>
-  							</div>
-  						</div>
-  					</form>
-  				</section>
+                <div className="modal-save-button-box">
+                  <input type="submit"
+                    className="modal-save-button"
+                    value='Save Board'
+                    onClick={this.handleNewBoardSubmit}/>
+                </div>
+              </div>
+            </form>
+          </section>
 
         </Modal>
 
@@ -320,8 +322,8 @@ class Home extends React.Component {
             <form	className="modal-form-box">
               <div className="modal-form">
                 <div>
-    						{ this.renderErrors() }
-    						</div>
+                { this.renderErrors() }
+                </div>
                 <label className='modal-label'>
                   <p className='modal-label-text'>New URL</p>
                   <input
@@ -333,15 +335,15 @@ class Home extends React.Component {
                 <div className='modal-input new-pin-image-area'>
                   <img className='background-image' src='http://res.cloudinary.com/dfazwubvc/image/upload/v1478280874/pinspiration/icons/picture_frames.png' />
                 </div>
-								<input
-									type="text"
-									onChange={this.update("pin_title")}
-									className="title-input modal-input"
+                <input
+                  type="text"
+                  onChange={this.update("pin_title")}
+                  className="title-input modal-input"
                   placeholder='Title'/>
 
-								<textarea name='description'
-									onChange={this.update("pin_description")}
-									className="description-input modal-input"
+                <textarea name='description'
+                  onChange={this.update("pin_description")}
+                  className="description-input modal-input"
                   placeholder='What is your pin about?'></textarea>
                  <select className='modal-input modal-board-select' onChange={this.selectBoard}>
                    <option disabled selected value> -- select a board -- </option>
