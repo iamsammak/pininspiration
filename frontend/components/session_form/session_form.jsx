@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
+import { Link, withRouter, hashHistory } from 'react-router';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -19,6 +19,7 @@ class SessionForm extends React.Component {
   componentDidUpdate() {
     this.redirectIfLoggedIn();
     // REVIEW;
+    // add confirmPassword logic if you decide to add that input
   }
 
   redirectIfLoggedIn() {
@@ -74,6 +75,28 @@ class SessionForm extends React.Component {
 		);
 	}
 
+  // Confirm password
+  // add this later when you have time { this.confirmPassword() }
+  // don't forget to add cpassword to state (cpassword: "",)
+  // confirmPassword() {
+  //   if (this.props.formType === "signup") {
+  //     return (
+  //       <label>
+  //         <input type="password"
+  //           value={this.state.cpassword}
+  //           placeholder="Confirm Password"
+  //           onChange={this.update("cpassword")}
+  //           className="login-input cpassword" />
+  //       </label>
+  //     );
+  //   } else {
+  //     return (
+  //       <label>
+  //       </label>
+  //     );
+  //   }
+  // }
+
   // Demo User
   phantomLogin($el, word, callback){
 
@@ -90,6 +113,9 @@ class SessionForm extends React.Component {
 
 	beMyGuest(e, username, password) {
 		e.preventDefault();
+    // this way if they are on the signup page they will first be redirected to login
+    hashHistory.push('/login');
+
 		let $username = $('.username');
 		let $password = $('.password');
 		let $submitButton = $('.submit-button');
@@ -109,6 +135,7 @@ class SessionForm extends React.Component {
 
   render() {
     let loginFromClass = (this.props.formType === "login") ? "login-form-box login" : "login-form-box signup";
+    let usernamePlaceholder = (this.props.formType === "login") ? "Username" : "Create a username ";
     let passwordPlaceholder = (this.props.formType === "login") ? "Password" : "Create a password ";
     let submitText = (this.props.formType === "login") ? "Log In" : "Sign Up ";
     let demoClass = (this.props.formType === "login") ? "login-buttons demo-button demo-show" : "login-buttons demo-button demo-hide";
@@ -120,8 +147,8 @@ class SessionForm extends React.Component {
           <form
             onSubmit={this.handleSubmit}
             className={loginFromClass}>
-            <h1 id="app-name">Pinspiration</h1>
-            <s id='slogan'>I n s p i r a t i o n</s>
+            <h1 id="app-name">Pin That!</h1>
+            <p id='slogan'>Found some I n s p i r a t i o n ?</p>
             <br/>
 
             <div className="login-form">
@@ -129,7 +156,7 @@ class SessionForm extends React.Component {
               <label>
                 <input type="text"
                   value={this.state.username}
-                  placeholder="Username"
+                  placeholder={usernamePlaceholder}
                   onChange={this.update("username")}
                   className="login-input username" />
               </label>

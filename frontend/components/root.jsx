@@ -35,17 +35,15 @@ const Root = ({ store }) => {
   return(
     <Provider store={store}>
       <Router history={ hashHistory }>
-        <Route path="/" component={ App }>
+        <Route path="/" component={ App } >
           <IndexRoute component={ HomeContainer }
                       onEnter={_ensureLoggedIn}/>
-          <Route path="login"
-                 component={ SessionFormContainer }
-                 onEnter={_redirectIfloggedIn} />
-          <Route path="signup"
-                 component={ SessionFormContainer }
-                 onEnter={_redirectIfloggedIn} />
+          <Route path="/login" component={ SessionFormContainer }
+                               onEnter={_redirectIfloggedIn}/>
+          <Route path="/signup" component={ SessionFormContainer }
+                              onEnter={_redirectIfloggedIn}/>
           <Route path="/" component={ HomeContainer }
-                 onEnter={_ensureLoggedIn}>
+                          onEnter={_ensureLoggedIn}>
             <Route path="search" component={ SearchPinContainer } />
             <Route path="pins" component={PinsContainer} />
             <Route path=":username" component={ UserContainer }>

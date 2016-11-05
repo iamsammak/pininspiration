@@ -12,6 +12,14 @@ class Nav extends React.Component {
     // update
   }
 
+  // REVIEW testing
+  // shouldComponentUpdate(nextProps) {
+  //   if (!nextProps.currentUser) {
+  //     return false;
+  //   }
+  //   return true;
+  // }
+
   // might cause an error would I need shouldComponentUpdate
   componentWillReceiveProps(nextProps) {
     if (!nextProps.currentUser) {

@@ -90,7 +90,7 @@ export const deletePin = id => ({
   id
 });
 
-export const receiveError = errors => ({
+export const receiveErrors = errors => ({
   type: RECEIVE_ERRORS,
   errors
 });
