@@ -1,4 +1,6 @@
 class Api::PinsController < ApplicationController
+  LIMIT = 20
+
   def index
     cloud_name = ENV['CLOUD_NAME']
     upload_preset = ENV['UPLOAD_PRESET']
@@ -7,13 +9,13 @@ class Api::PinsController < ApplicationController
       @pins = Pin.where(board_id: params[:board_id])
     elsif params[:user_id]
       @pins = Pin.where(user_id: params[:user_id])
-    # elsif params[:keyword]
-    #   like_keyword = "%#{params[:keyword]}%".downcase
-    #   @pins = Pin.where("LOWER(TITLE) LIKE ? OR LOWER(DESCRIPTION) LIKE ?", like_keyword, like_keyword)
+    elsif params[:keyword]
+      like_keyword = "%#{params[:keyword]}%".downcase
+      @pins = Pin.where("LOWER(TITLE) LIKE ? OR LOWER(DESCRIPTION) LIKE ?", like_keyword, like_keyword)
     else
-      # @pins = Pin.all.order("created_at ASC").page(params[:page]).per(10)
+      @pins = Pin.all.order("created_at ASC").page(params[:page]).per(10)
       # @pins = @pins.where("created_at < ?", params[:max_created_at]) if params[:max_created_at]
-      @pins = @pins.limit(20)
+      # @pins = @pins.limit(20)
     end
     render :index
 

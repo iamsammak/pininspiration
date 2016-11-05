@@ -19,8 +19,7 @@ const pin = {
   board_id: ""
 };
 
-
-const PinsReducer = function(state = {pins, pin, errors: []}, action) {
+const PinsReducer = function(state = {pins, pin, errors: []}, action){
   console.log(action);
   switch(action.type) {
     case RECEIVE_ALL_PINS: {

@@ -11,7 +11,8 @@ class PinItem extends React.Component {
       title: "",
       description: "",
       url: "",
-      user_id: this.props.pin.user.id,
+      user_id: this.props.pin.user_id, //user.id or user_id
+      // user_id: this.props.pin.user.id, //user.id or user_id
       board_id: -1,
       image_url: ""
     };

@@ -9,13 +9,21 @@ import { receiveCurrentUser,
          SIGNUP,
          FETCH_USER } from '../actions/session_actions';
 
+import { fetchBoards } from '../actions/board_actions';
+
 // from api utils, the ajax requests
 import { login, signup, logout, fetchUser } from '../util/session_api_util';
 
 const SessionMiddleware = ({getState, dispatch}) => next => action => {
-  const successCallback = user => dispatch(receiveCurrentUser(user));
+  const successCallback = user => {
+    dispatch(receiveCurrentUser(user));
+    dispatch(fetchBoards(user.id));
+  };
 
-  const successUserCallback = user => dispatch(receiveUser(user));
+  const successUserCallback = user => {
+    dispatch(receiveUser(user));
+    dispatch(fetchBoards(user.id));
+  };
   // will need to add fetchBoards here
 
 

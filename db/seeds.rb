@@ -6,6 +6,7 @@
 #   books = Book.create([{ name: 'Fresh off the Boat' }, { name: '1Q84' }])
 #   Author.create(name: 'Haruki Murakami', city: cities.second)
 
+Pin.destroy_all
 Board.destroy_all
 User.destroy_all
 
