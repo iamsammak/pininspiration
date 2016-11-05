@@ -27,6 +27,27 @@ Error Log {
 3.
   error: Uncaught Error: Invariant Violation: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object.
   I forgot to export default withRouter(Nav) so it was saying connect(Component) was undefined or null
+4.
+  Forgot to add :user in the board index / pin index
+5.
+warning.js:37 Warning: flattenChildren(...): Encountered two children with the same key, `1Our ends are our beginnings`. Child keys must be unique; when two children share a key, only the first child will be used.
+    in ul (created by MasonryComponent)
+    in MasonryComponent (created by Pins)
+    in Pins (created by withRouter(Pins))
+    in withRouter(Pins) (created by Connect(withRouter(Pins)))
+    in Connect(withRouter(Pins)) (created by Home)
+    in div (created by Home)
+    in section (created by Home)
+    in Home (created by withRouter(Home))
+    in withRouter(Home) (created by Connect(withRouter(Home)))
+    in Connect(withRouter(Home)) (created by RouterContext)
+    in div (created by App)
+    in div (created by App)
+    in App (created by RouterContext)
+    in RouterContext (created by Router)
+    in Router (created by Root)
+    in Provider (created by Root)
+    in Root
 }
 
 
