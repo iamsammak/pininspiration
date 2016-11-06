@@ -1,0 +1,62 @@
+.PinModal {
+  .picture-block {
+    display: block;
+    content: "";
+    cursor: pointer;
+    width: 100%;
+  }
+  .pin-detail-block {
+    display: block;
+    overflow-y: scroll;
+    height: auto;
+    max-height: 600px;
+  }
+  .pin-picture {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .detail-block {
+    width: 100%;
+    display: block;
+    float: left;
+  }
+  .pin-title {
+    display: block;
+    margin: 15px 0 0 0;
+    float: left;
+    font-size: 16px;
+    font-weight: normal;
+    width: 100%;
+    text-align: left;
+  }
+  .pin-description {
+    display: block;
+    margin: 5px 0 15px 0;
+    float: left;
+    font-size: 16px;
+    font-weight: normal;
+    width: 100%;
+    text-align: left;
+  }
+  .profile-pic {
+    margin: 5px 5px 0 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+  }
+  .url-block {
+    display: inline-block;
+    color: rgb(85, 85, 85);
+    text-align: left;
+    padding-bottom: 5px;
+  }
+  .board-title {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .pin-url {}
+}
