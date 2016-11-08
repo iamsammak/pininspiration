@@ -27,6 +27,7 @@ class UserPins extends React.Component {
         return [value];
       });
     }
+
     if (!this.isEmpty(this.props.user.followers)) {
       followers = followerArr.map((follower) => (
         <Link key={follower.id+follower.username} to={follower.username}>

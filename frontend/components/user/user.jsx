@@ -79,13 +79,14 @@ class User extends React.Component {
     let followersUrl = `${this.user.username}/followers`;
     let followingUrl = `${this.user.username}/following`;
 
+    // TODO make sure upon pin creation that the currentUser.pins is re-rendered
     let pinCount = this.props.currentUser.pins.length;
     // let pinCount = this.props.pins.pins.length;
 
     // REVIEW change 404 to the actual count when you code followers
     let followerCount = this.props.currentUser.followers.length;
     let followeeCount = this.props.currentUser.followees.length;
-    let followText = "Unfollowed";
+    let followText = "Follow";
 
     let followButton = null;
     // Follow Button Logic - Other user detail logic
@@ -98,12 +99,12 @@ class User extends React.Component {
       for (var i = 0; i < this.user.followers.length; i++) {
         if (this.user.followers[i].id === this.props.currentUser.id) {
             followButtonClass = 'following follow-button';
-            followText = "Following";
+            followText = "Unfollow";
         }
       }
 
       followButton = (<div className={followButtonClass}
-        onClick={(e) => this.toggleFollowing(e,followButtonClass)}>{followText}</div>);
+        onClick={(e) => this.toggleFollowing(e, followButtonClass)}>{followText}</div>);
     }
 
     // debugger;

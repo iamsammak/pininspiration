@@ -2,7 +2,8 @@
   display: flex;
   flex-shrink: 2;
   width: 100%;
-  border-bottom: 2px solid #4cb5f5;
+  border-bottom: 1px solid grey;
+  color: #555;
 }
 
 .nav-bar .all-containers {
@@ -17,6 +18,7 @@
 }
 
 .logo {
+  color: #ca271c;
   &:hover {
     color: #4cb5f5;
   }
@@ -31,6 +33,10 @@
   min-width: 200px;
   display: flex;
   float: left;
+}
+
+.catalog-link {
+  color: transparent;
 }
 
 .catalog-link {
@@ -71,7 +77,7 @@
   float: top;
   padding: 15px;
   padding-left: 50px;
-  width: 90%;
+  width: 100%;
   border: 1px solid #f5f5f5;
   border-radius: 3px;
   color:gray;

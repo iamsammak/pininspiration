@@ -6,6 +6,7 @@ Additional Installation Log {
   - masonry
 }
 
+THINGS TO DO
 Monday Nov 7 - work on
 put main fetch on component load
 have the pins update upon creation
@@ -13,6 +14,8 @@ cloudinary
 
 pagnation
 kaminari
+
+change the font color on board, pins, follow button to grey
 
 Error Log {
 1:
