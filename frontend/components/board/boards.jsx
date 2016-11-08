@@ -87,12 +87,12 @@ class Boards extends React.Component {
 
     let boards = "";
     let newBoard = null;
-    let plusUrl = 'http://res.cloudinary.com/pinitt/image/upload/v1472664493/plus_mhdary.png';
+    
     if (this.props.user !== undefined && this.props.user.id === this.props.currentUser.id) {
       newBoard = (
         <section className="new-board-item" key="new-board" onClick={this.openBoardModal.bind(this)}>
           <p className='create-a-board'>Create a board</p>
-          <img src={plusUrl} className='plus-sign-at-board' />
+          <i></i>
         </section>
       );
     }

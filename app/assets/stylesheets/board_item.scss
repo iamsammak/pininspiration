@@ -6,11 +6,11 @@
   height: auto;
   padding: 10px;
   border: 1px 1px 1px 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
   text-align: center;
   &:hover {
     background-color: rgb(242, 242, 242);
-    .edit-board-button {
+    .edit-board-button em {
       display: inline;
     }
   }
@@ -36,7 +36,7 @@
 }
 
 .pin-picture-block {
-  .one-pic, .two-pics {
+  .boardcover, .boardthumbs {
     vertical-align: middle;
     display: block;
     float: left;
@@ -44,12 +44,22 @@
 }
 
 .pin-picture-0 {
+  border-radius: 5px 5px 0 0;
   width: 234px;
   height: 110px;
   overflow: hidden;
   img {
     margin: 5px;
     width: 96%;
+  }
+}
+
+.boardthumbs {
+  div:nth-child(1) {
+    border-bottom-left-radius: 5px;
+  }
+  div:nth-child(2) {
+    border-bottom-right-radius: 5px;
   }
 }
 
@@ -75,7 +85,7 @@
 }
 
 .pin-count-block {
-  color: rgb(135, 172, 207);
+  color: #b5b5b5;
   font-size: 16px;
   width: 100%;
   display: inline;
@@ -90,15 +100,26 @@
 
 .edit-board-button {
   &:hover {
-    background-color: rgb(204, 204, 204);
+    background-color: #ca271c;
   }
-  border-radius: 30%;
-  display: none;
+  em {
+    background: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478211490/pinspiration/icons/pinterest_sprite.png) -183px -204px no-repeat;
+    border-radius: 30%;
+    display: none;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 2
+  }
+  // display: none;
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 33px;
+  height: 33px;
   bottom: 10px;
-  right: 10px;
+  right: 5px;
   cursor: pointer;
-  z-index: 999;
+  border-radius: 5px
 }

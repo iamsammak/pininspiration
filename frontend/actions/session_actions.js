@@ -9,6 +9,8 @@ export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
 // FOLLOW_USER, UNFOLLOW_USER
+export const FOLLOW_USER = "FOLLOW_USER";
+export const UNFOLLOW_USER = "UNFOLLOW_USER";
 
 
 export const login = user => ({
@@ -44,4 +46,14 @@ export const receiveCurrentUser = currentUser => ({
 export const receiveErrors = errors => ({
   type: RECEIVE_ERRORS,
   errors
+});
+
+export const followUser = id => ({
+  type: FOLLOW_USER,
+  id
+});
+
+export const unfollowUser = id => ({
+  type: UNFOLLOW_USER,
+  id
 });

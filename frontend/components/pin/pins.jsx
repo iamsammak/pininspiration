@@ -56,9 +56,18 @@ class Pins extends React.Component {
   render() {
     let pins = "";
     // debugger;
+    // error 5 is right here, what can I use as a unique key
     if (!this.isEmpty(this.props.pins)) {
       pins = this.props.pins.map((pin) => (
-        <PinItem key={pin.id+pin.title} pin={pin} user={this.props.user} currentUser={this.props.currentUser} fetchPin={this.props.fetchPin} updatePin={this.props.updatePin} deletePin={this.props.deletePin} canEditPin={false}/>
+        <PinItem
+          key={pin.id+pin.title}
+          pin={pin}
+          user={this.props.user}
+          currentUser={this.props.currentUser}
+          fetchPin={this.props.fetchPin}
+          updatePin={this.props.updatePin}
+          deletePin={this.props.deletePin}
+          canEditPin={false}/>
       ));
     }
     this.listenForScroll();

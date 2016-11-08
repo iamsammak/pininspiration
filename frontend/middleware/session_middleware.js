@@ -7,12 +7,19 @@ import { receiveCurrentUser,
          LOGIN,
          LOGOUT,
          SIGNUP,
-         FETCH_USER } from '../actions/session_actions';
+         FETCH_USER,
+         FOLLOW_USER,
+         UNFOLLOW_USER } from '../actions/session_actions';
 
 import { fetchBoards } from '../actions/board_actions';
 
 // from api utils, the ajax requests
-import { login, signup, logout, fetchUser } from '../util/session_api_util';
+import { login,
+         signup,
+         logout,
+         fetchUser,
+         followUser,
+         unfollowUser } from '../util/session_api_util';
 
 const SessionMiddleware = ({getState, dispatch}) => next => action => {
   const successCallback = user => {
@@ -47,6 +54,14 @@ const SessionMiddleware = ({getState, dispatch}) => next => action => {
 
     case FETCH_USER:
       fetchUser(action.username, successUserCallback, errorCallback);
+      return next(action);
+
+    case FOLLOW_USER:
+      followUser(action.id, successUserCallback, errorCallback);
+      return next(action);
+
+    case UNFOLLOW_USER:
+      unfollowUser(action.id, successUserCallback, errorCallback);
       return next(action);
 
     default:

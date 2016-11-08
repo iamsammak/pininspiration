@@ -40,6 +40,25 @@ export const fetchUser = function(username, success, error){
 };
 
 // will need followUser, unfollowUser
+export const followUser = function(userId, success, error){
+	$.ajax({
+		method: 'POST',
+		url: `/api/follow`,
+		data: {user_id: userId},
+		success,
+		error
+	});
+};
+
+export const unfollowUser = function(userId, success, error){
+	$.ajax({
+		method: 'DELETE',
+		url: `/api/follow`,
+		data: {user_id: userId},
+		success,
+		error
+	});
+};
 
 // Testing on chrome console dev tools
 // $.ajax({

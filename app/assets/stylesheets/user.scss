@@ -28,31 +28,47 @@
 .user-container {
   .profile-picture {
     position: absolute;
-    top: 50px;
+    top: 70px;
     right: 50px;
     float: right;
     margin: 50px 0 0 0;
     border-radius: 50%;
-    width: 130px;
-    height: 130px;
+    width: 160px;
+    height: 160px;
     // box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.8);
   }
   .follow-button {
     position: absolute;
-    top: 240px;
-    right: 70px;
+    top: 285px;
+    right: 90px;
     border-radius: 4px;
-    color: white;
+    color: black;
     font-size: 16px;
     font-weight: bold;
     padding: 5px;
     cursor: pointer;
+    background-color: white;
   }
   .unfollowed {
-    background-color: red;
+    // backgound-color
+    border: 5px solid #e6544a;
+    box-shadow: 0 8px #ca271c;
+    &:hover {
+      background-color: #fff;
+      color: #ca271c;
+      box-shadow: 0 6px #ca271c;
+      transform: translateY(2px);
+    }
   }
   .following {
-    background-color: rgb(0, 255, 0);
+    border: 5px solid #4cb5f5;
+    box-shadow: 0 8px #0083d5;
+    &:hover {
+      background-color: #fff;
+      color: #0083d5;
+      box-shadow: 0 6px #0083d5;
+      transform: translateY(2px);
+    }
   }
   .detail-title-container {
     display: flex;
@@ -64,6 +80,9 @@
       }
       .unchecked {
         background-color: inherit;
+        li {
+          color: #777;
+        }
       }
     }
   }
@@ -82,28 +101,28 @@
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   overflow: hidden;
-  &:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #2098d1;
-    height: 4px;
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-  }
-  &:hover:before, &:focus:before, &:active:before {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   z-index: -1;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: #2098d1;
+  //   height: 4px;
+  //   -webkit-transform: translateY(4px);
+  //   transform: translateY(4px);
+  //   -webkit-transition-property: transform;
+  //   transition-property: transform;
+  //   -webkit-transition-duration: 0.3s;
+  //   transition-duration: 0.3s;
+  //   -webkit-transition-timing-function: ease-out;
+  //   transition-timing-function: ease-out;
+  // }
+  // &:hover:before, &:focus:before, &:active:before {
+  //   -webkit-transform: translateY(0);
+  //   transform: translateY(0);
+  // }
 }
 
 .user-container {

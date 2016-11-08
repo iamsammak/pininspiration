@@ -150,7 +150,11 @@ class PinItem extends React.Component {
     }
     let editButton = null;
     if (this.props.canEditPin === true && this.props.pin.user.id === this.props.currentUser.id) {
-      editButton = (<img className='edit-board-button' src='http://res.cloudinary.com/pinitt/image/upload/c_scale,w_50/v1473185168/pencil_x13czz.png' onClick={this.openPinModal.bind(this)} />);
+      editButton = (
+        <button className='edit-board-button' onClick={this.openPinModal.bind(this)}>
+          <em></em>
+        </button>
+      );
     }
     return (
       <li className="pin-item-container" key={this.props.pin.id+this.props.pin.title}>
