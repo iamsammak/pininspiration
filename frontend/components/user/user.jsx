@@ -7,6 +7,7 @@ class User extends React.Component {
 
     this.user = this.props.user;
     this.props.fetchUser(this.props.params.username);
+    this.toggleFollowing = this.toggleFollowing.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -51,9 +52,17 @@ class User extends React.Component {
   }
 
   // toggleFollowing
+  // REVIEW error with toggling following
+  toggleFollowing(e, followButtonClass) {
+    if (followButtonClass === "unfollowed follow-button") {
+      this.props.followUser(this.user.id);
+    } else {
+      this.props.unfollowUser(this.user.id);
+    }
+  }
+
 
   render() {
-
     let name = null;
     if (this.props.currentUser !== undefined) {
       name = this.props.currentUser.username.charAt(0).toUpperCase() + this.props.currentUser.username.slice(1);
@@ -71,20 +80,33 @@ class User extends React.Component {
     let followingUrl = `${this.user.username}/following`;
 
     let pinCount = this.props.currentUser.pins.length;
+    // let pinCount = this.props.pins.pins.length;
+
     // REVIEW change 404 to the actual count when you code followers
-    let followerCount = "404";
-    let followeeCount = "404";
+    let followerCount = this.props.currentUser.followers.length;
+    let followeeCount = this.props.currentUser.followees.length;
     let followText = "Unfollowed";
 
     let followButton = null;
     // Follow Button Logic - Other user detail logic
     if (this.user !== undefined && this.user.id !== undefined && this.user.id !== this.props.currentUser.id) {
-      let followButtonClass = "unfollowed follow-button";
-      // this will also contain the logic for displaying other user's detail that isn't currentUser
+      let followButtonClass = 'unfollowed follow-button';
+      name = this.user.username.charAt(0).toUpperCase() + this.user.username.slice(1);
+      pinCount = this.user.pins.length;
+      followerCount = this.user.followers.length;
+      followeeCount = this.user.followees.length;
+      for (var i = 0; i < this.user.followers.length; i++) {
+        if (this.user.followers[i].id === this.props.currentUser.id) {
+            followButtonClass = 'following follow-button';
+            followText = "Following";
+        }
+      }
 
-      // To be implemented later
-      followButton = (<div className={followButtonClass}>{followText}</div>);
+      followButton = (<div className={followButtonClass}
+        onClick={(e) => this.toggleFollowing(e,followButtonClass)}>{followText}</div>);
     }
+
+    // debugger;
 
     return (
       <section className="user-container">

@@ -9,7 +9,7 @@
   width: 236px;
   height: auto;
   margin: 10px;
-  border-radius: 4px;
+  border-radius: 5px;
   text-align: center;
   content: "";
   background-color: #eee;
@@ -20,13 +20,29 @@
   &:hover {
     background-color: rgb(204, 204, 204);
   }
+  i {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+  }
+  i::before {
+    width: 40px;
+    height: 40px;
+    background: url(http://res.cloudinary.com/dfazwubvc/image/upload/c_scale,q_100,w_405/v1478211490/pinspiration/icons/pinterest_sprite.png) -178px -124px no-repeat;
+    display: inline-block;
+    text-shadow: none;
+    color: transparent;
+    content: " ";
+  }
 }
 
 .create-a-board {
   color: rgb(194, 194, 194);
   position: absolute;
-  top: 50%;
-  left: 30%;
+  top: 55%;
+  left: 0;
+  right: 0;
 }
 
 .new-board-item:hover .create-a-board {

@@ -119,18 +119,23 @@ class BoardItem extends React.Component {
 
     let editButton = null;
     if (this.props.currentUser.id === this.props.user.id) {
-      editButton = (<img src='http://res.cloudinary.com/pinitt/image/upload/c_scale,w_50/v1473185168/pencil_x13czz.png' className='edit-board-button' onClick={this.openBoardModal.bind(this)} />);
+      editButton = (
+        <button className='edit-board-button' onClick={this.openBoardModal.bind(this)}>
+          <em></em>
+        </button>
+      );
     }
+
     return (
       <section className="board-item-container" key={this.props.board.id+this.props.board.title}>
         <Link to={boardUrl}>
           <div className='pin-picture-block'>
-              <div className='one-pic'>
+              <div className='boardcover'>
                 <div className='pin-picture-background pin-picture-0'>
                   {imgs[0]}
                 </div>
               </div>
-              <div className='two-pics'>
+              <div className='boardthumbs'>
                 <div className='pin-picture-background pin-picture-1'>
                   {imgs[1]}
                 </div>

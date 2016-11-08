@@ -9,7 +9,7 @@ class Nav extends React.Component {
     };
     this.logEmOut = this.logEmOut.bind(this);
     this.currentUser = this.props.currentUser;
-    // update
+    this.update = this.update.bind(this);
   }
 
   // REVIEW testing
@@ -28,6 +28,35 @@ class Nav extends React.Component {
   }
 
 // update, onKeyUp, componentDidMount
+
+  componentDidMount() {
+    $('.search-bar').on('keyup', e => this.onKeyUp(e));
+  }
+
+  onKeyUp(e) {
+    e.preventDefault();
+    if (e.key !== "Enter") {
+      this.setState({searchWord: e.currentTarget.value});
+
+      // Realtime search part. If don't want that, comment out these 4 lines and comment back the rest in else statement.
+      console.log(this.state.searchWord);
+      this.props.fetchSearchPins(this.state.searchWord);
+      this.props.router.push('/search');
+    } else {
+
+      $('.search-bar').val('');
+      // console.log(this.state.searchWord);
+      // this.props.fetchSearchPins(this.state.searchWord);
+      this.setState({searchWord: ""});
+      // this.props.router.push('/search');
+    }
+  }
+
+  update(e) {
+    this.setState({searchWord: e.currentTarget.value});
+  }
+
+
 
   logEmOut (e) {
     this.props.logout(0);

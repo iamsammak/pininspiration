@@ -152,7 +152,17 @@ class Home extends React.Component {
     	var images = data.images;
     	var $container = $('<div class=\'image-container\'>');
     	images.forEach( (image, idx) => {
-    		var imgUrl = $.embedly.display.resize(image.url, {query: {height: 200, width: 300}});
+        // testing
+    		// var imgUrl = $.embedly.display.resize(image.url, {query: {height: 200, width: 300, quality: 1}});
+
+    		// var imgUrl = $.embedly.display.resize(image.url, {query: {height: 400, width: 400}});
+    		var imgUrl = $.embedly.display.resize(image.url, {query: {height: 500, width: 500, grow: true}});
+
+        // this works - high quality
+    		// var imgUrl = $.embedly.display.resize(image.url);
+
+        // original below
+    		// var imgUrl = $.embedly.display.resize(image.url, {query: {height: 200, width: 300}});
     		var $img = $(`<img class=\'pin-upload-image-unchecked pin-upload-image${idx}\'>`);
         $img.on("click", (e2) => {
           this.setState({pin_image_url: imgUrl});
@@ -267,11 +277,11 @@ class Home extends React.Component {
           this.thing.classList.toggle("m-fadeIn");
           this.state['errors'] = [];
         }} type="button">
-          <i className="fa fa-plus-circle fa-4 plus-sign" aria-hidden="true"></i>
+          <i className="fa fa-plus fa-2x plus-sign" aria-hidden="true"></i>
         </div>
         <div className="github">
           <a target='_blank' href='https://www.pinterest.com/iamsammak'>
-            <i className="fa fa-pinterest fa-4 git-image" aria-hidden="true"></i>
+            <i className="fa fa-pinterest fa-2x git-image" aria-hidden="true"></i>
           </a>
         </div>
         <ul className="add-pin-menu" id="add-pin-menu-id">

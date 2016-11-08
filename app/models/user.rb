@@ -11,6 +11,11 @@ class User < ActiveRecord::Base
   has_many :boards, dependent: :destroy, inverse_of: :user
 	has_many :pins, dependent: :destroy, inverse_of: :user
 
+  has_many :in_follows, class_name: "Follow", foreign_key: "followee_id"
+	has_many :out_follows, class_name: "Follow", foreign_key: "follower_id"
+	has_many :followers, through: :in_follows, source: :follower
+	has_many :followees, through: :out_follows, source: :followee
+
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)
     @password = password
@@ -49,5 +54,9 @@ class User < ActiveRecord::Base
 			self.session_token = new_session_token
 		end
 	end
+
+  def follows?(user)
+    out_follows.exists?(followee_id: user.id)
+  end
 
 end

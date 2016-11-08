@@ -1,5 +1,8 @@
 import { connect } from 'react-redux';
-import { logout, fetchUser } from '../../actions/session_actions';
+import { logout,
+         fetchUser,
+         followUser,
+         unfollowUser } from '../../actions/session_actions';
 import User from './user';
 
 const mapStateToProps = state => ({
@@ -11,7 +14,9 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
-  fetchUser: username => dispatch(fetchUser(username))
+  fetchUser: username => dispatch(fetchUser(username)),
+  followUser: id => dispatch(followUser(id)),
+  unfollowUser: id => dispatch(unfollowUser(id))
 });
 
 export default connect(

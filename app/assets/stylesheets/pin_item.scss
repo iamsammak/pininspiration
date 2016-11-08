@@ -18,7 +18,7 @@
 	opacity: 1;*/
   &:hover {
     background-color: rgb(242, 242, 242);
-    .edit-board-button {
+    .edit-board-button em {
       display: inline;
     }
   }
@@ -68,16 +68,30 @@
     font-size: 16px;
   }
   .pin-url {}
+
   .edit-board-button {
     &:hover {
-      background-color: rgb(204, 204, 204);
+      background-color: #ca271c;
     }
-    display: none;
+    em {
+      background: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478211490/pinspiration/icons/pinterest_sprite.png) -183px -204px no-repeat;
+      border-radius: 30%;
+      display: none;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      bottom: 0;
+      right: 0;
+      cursor: pointer;
+      z-index: 2
+    }
+    // display: none;
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
     bottom: 10px;
-    right: 10px;
+    right: 5px;
     cursor: pointer;
+    border-radius: 5px
   }
 }

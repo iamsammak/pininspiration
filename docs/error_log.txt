@@ -6,7 +6,13 @@ Additional Installation Log {
   - masonry
 }
 
+Monday Nov 7 - work on
+put main fetch on component load
+have the pins update upon creation
+cloudinary
 
+pagnation
+kaminari
 
 Error Log {
 1:
@@ -48,6 +54,13 @@ warning.js:37 Warning: flattenChildren(...): Encountered two children with the s
     in Router (created by Root)
     in Provider (created by Root)
     in Root
+
+6. Pin count error (user.jsx)
+  probably related to error 5
+  but in user set pin count to this.props.pin.pin.length
+  and upon every scroll it re-fetches for pins which then duplicates the amount of pins
+  therefore increasing the pin count
+  not true pin count
 }
 
 

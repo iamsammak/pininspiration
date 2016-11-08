@@ -13,6 +13,8 @@ import PinsContainer from './pin/pins_container';
 import UserPinsContainer from './pin/user_pins_container';
 import BoardsContainer from './board/boards_container';
 import BoardContainer from './board/board_container';
+import FollowersContainer from './user/followers_container';
+import FollowingContainer from './user/following_container';
 import SearchPinContainer from './pin/search_pin_container';
 
 
@@ -50,6 +52,8 @@ const Root = ({ store }) => {
               <IndexRoute component={ BoardsContainer } />
               <Route path="boards" component={ BoardsContainer } />
               <Route path="pins" component={ UserPinsContainer } />
+              <Route path="followers" component={ FollowersContainer } />
+              <Route path="following" component={ FollowingContainer } />
             </Route>
             <Route path="boards/:boardId" component={ BoardContainer } />
           </Route>
