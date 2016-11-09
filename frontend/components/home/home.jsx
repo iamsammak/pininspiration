@@ -155,8 +155,8 @@ class Home extends React.Component {
         // testing
     		// var imgUrl = $.embedly.display.resize(image.url, {query: {height: 200, width: 300, quality: 1}});
 
-    		// var imgUrl = $.embedly.display.resize(image.url, {query: {height: 400, width: 400}});
-    		var imgUrl = $.embedly.display.resize(image.url, {query: {height: 500, width: 500, grow: true}});
+    		var imgUrl = $.embedly.display.resize(image.url, {query: {height: 400, width: 400}});
+    		// var imgUrl = $.embedly.display.resize(image.url, {query: {height: 500, width: 500, grow: true}});
 
         // this works - high quality
     		// var imgUrl = $.embedly.display.resize(image.url);
