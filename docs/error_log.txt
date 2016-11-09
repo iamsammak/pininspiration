@@ -24,6 +24,7 @@ change the font color on board, pins, follow button to grey
 
 
 transform scale from sonik
+check out the animations on brian's page
 
 
 COMPLETED - delete pin doesn't work
@@ -32,9 +33,9 @@ Fix edit button on new board show page
 get rid of edit on board show page
 
 
+COMPLETED - Update and mix the seed data
 
-
-make modal for pin more UI scroll intuitive
+make modal for pin-show more UI scroll intuitive
 
 COMPLETED - logger in middleware import from redux-logger
 
@@ -46,6 +47,12 @@ create pin/board home button make sure it closes when user clicks elsewhere
 Change the sizing on the create pin modal
 - change the image background picture
 
+need to rake db:reset heroku as well
+
+squarespace logos
+
+
+if you don't end up getting to the catalog icon, then disable it
 
 
 Error Log {

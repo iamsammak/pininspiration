@@ -27,7 +27,7 @@ class Home extends React.Component {
     this.fetchBoards = this.props.fetchBoards.bind(this);
     this.handleNewBoardSubmit = this.handleNewBoardSubmit.bind(this);
     this.handleNewPinSubmit = this.handleNewPinSubmit.bind(this);
-    this.scrapeImgs = this.scrapeImgs.bind(this);
+    this.scrapeImages = this.scrapeImages.bind(this);
     this.selectBoard = this.selectBoard.bind(this);
   }
 
@@ -60,7 +60,6 @@ class Home extends React.Component {
       this.closeBoardModal();
       this.openBoardModal();
       this.thing.classList.toggle("m-fadeIn");
-      // this.thing2.classList.toggle("m-fadeIn");
     } else {
       this.createBoard({
         board: {
@@ -95,7 +94,6 @@ class Home extends React.Component {
       this.closePinModal();
       this.openPinModal();
       this.thing.classList.toggle("m-fadeIn");
-      // this.thing2.classList.toggle("m-fadeIn");
     } else {
       this.createPin({
         pin: {
@@ -117,7 +115,6 @@ class Home extends React.Component {
       openNewPinModal: true
     });
     this.thing.classList.toggle("m-fadeIn");
-    // this.thing2.classList.toggle("m-fadeIn");
   }
 
   closePinModal() {
@@ -131,7 +128,6 @@ class Home extends React.Component {
       openNewBoardModal: true
     });
     this.thing.classList.toggle("m-fadeIn");
-    // this.thing2.classList.toggle("m-fadeIn");
   }
 
   closeBoardModal() {
@@ -144,7 +140,7 @@ class Home extends React.Component {
 		return e => { this.setState({[field]: e.currentTarget.value }); };
 	}
 
-  scrapeImgs(e) {
+  scrapeImages(e) {
     e.preventDefault();
     let url = e.currentTarget.value;
     this.setState({pin_url: url});
@@ -202,7 +198,6 @@ class Home extends React.Component {
       comp = <PinsContainer />;
     }
     this.thing = document.getElementById("add-pin-menu-id");
-    // this.thing2 = document.getElementById("greater-id");
 
     let newBoardStyle = {
       overlay : {
@@ -335,7 +330,7 @@ class Home extends React.Component {
                   <p className='modal-label-text'>New URL</p>
                   <input
                     type='text'
-                    onChange={this.scrapeImgs}
+                    onChange={this.scrapeImages}
                     defaultValue='http://'
                     className="title-input modal-input" />
                 </label>
