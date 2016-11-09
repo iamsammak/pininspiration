@@ -21,7 +21,9 @@ change the font color on board, pins, follow button to grey
 
 
 transform scale from sonik
-delete pin doesn't work
+
+
+COMPLETED - delete pin doesn't work
 
 Fix edit button on new board show page
 get rid of edit on board show page
@@ -37,6 +39,11 @@ COMPLETED - logger in middleware import from redux-logger
 fix create pin error, image display
 
 create pin/board home button make sure it closes when user clicks elsewhere
+
+
+Change the sizing on the create pin modal
+- change the image background picture
+
 
 
 Error Log {
@@ -90,6 +97,7 @@ warning.js:37 Warning: flattenChildren(...): Encountered two children with the s
 7. Delete Board wasn't working
   I was passing the board as payload in board_actions instead of the id
   which is what the middleware was listening for
+  - I also spelled "destroy" as "destory" in the routes.rb file which caused the 404 error upon DELETE
 }
 
 

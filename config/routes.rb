@@ -7,8 +7,8 @@ Rails.application.routes.draw do
     # http://guides.rubyonrails.org/routing.html
 
     resource :session, only: [:create, :destroy, :show]
-    resources :pins, only: [:index, :show, :create, :update, :destory]
-    resources :boards, only: [:index, :show, :create, :update, :destory]
+    resources :pins, only: [:index, :show, :create, :update, :destroy]
+    resources :boards, only: [:index, :show, :create, :update, :destroy]
     resource :follow, only: [:create, :destroy]
   end
 
