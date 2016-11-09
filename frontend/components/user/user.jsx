@@ -63,6 +63,12 @@ class User extends React.Component {
 
 
   render() {
+
+    // this fixed the routing hard refresh error
+    if(!this.user) {
+      return (<div></div>);
+    }
+
     let name = null;
     if (this.props.currentUser !== undefined) {
       name = this.props.currentUser.username.charAt(0).toUpperCase() + this.props.currentUser.username.slice(1);
