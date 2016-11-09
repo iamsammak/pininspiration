@@ -15,7 +15,29 @@ cloudinary
 pagnation
 kaminari
 
+implement loading spinner
+
 change the font color on board, pins, follow button to grey
+
+
+transform scale from sonik
+delete pin doesn't work
+
+Fix edit button on new board show page
+get rid of edit on board show page
+
+
+error refresh route error
+if there is an uncaught error, all lifecycle methods get dropped
+
+make modal for pin more UI scroll intuitive
+
+COMPLETED - logger in middleware import from redux-logger
+
+fix create pin error, image display
+
+create pin/board home button make sure it closes when user clicks elsewhere
+
 
 Error Log {
 1:
@@ -64,6 +86,10 @@ warning.js:37 Warning: flattenChildren(...): Encountered two children with the s
   and upon every scroll it re-fetches for pins which then duplicates the amount of pins
   therefore increasing the pin count
   not true pin count
+
+7. Delete Board wasn't working
+  I was passing the board as payload in board_actions instead of the id
+  which is what the middleware was listening for
 }
 
 

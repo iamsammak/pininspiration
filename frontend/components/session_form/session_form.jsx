@@ -129,7 +129,7 @@ class SessionForm extends React.Component {
 	}
 
   beMyGuestQuick() {
-    this.setState({username: "emily"});
+    this.setState({username: "baymax"});
     this.setState({password: "password"});
   }
 
@@ -148,7 +148,7 @@ class SessionForm extends React.Component {
             onSubmit={this.handleSubmit}
             className={loginFromClass}>
             <h1 id="app-name">Pin That!</h1>
-            <p id='slogan'>I n s p i r a t i o n ?</p>
+            <p id='slogan'>Inspiration at your fingertips</p>
 
             <div className="login-form">
               <br/>
@@ -180,7 +180,7 @@ class SessionForm extends React.Component {
                   value={submitText} />
                 <input type="submit"
                     className={demoClass}
-                    onClick={e => this.beMyGuest(e, "emily", "password")}
+                    onClick={e => this.beMyGuest(e, "baymax", "password")}
                     value="Demo" />
               </div>
             </div>

@@ -136,7 +136,9 @@ class Boards extends React.Component {
           </div>
         </div>
         <div className='edit-button-block'>
-          <button className='edit-board-button' onClick={this.openBoardModal.bind(this)} type='button'>Edit</button>
+          <button className='edit-board-button' onClick={this.openBoardModal.bind(this)}>
+            <em></em>
+          </button>
         </div>
         <div className='boardpin-container'>
           {boardPins}

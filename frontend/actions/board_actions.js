@@ -43,9 +43,9 @@ export const receiveBoardWithEdit = board => ({
   board
 });
 
-export const receiveBoardWithDelete = board => ({
+export const receiveBoardWithDelete = id => ({
   type: RECEIVE_BOARD_WITH_DELETE,
-  board
+  id
 });
 
 export const createBoard = board => ({
@@ -58,9 +58,9 @@ export const updateBoard = board => ({
   board
 });
 
-export const deleteBoard = board => ({
+export const deleteBoard = id => ({
   type: DELETE_BOARD,
-  board
+  id
 });
 
 export const receiveErrors = errors => ({

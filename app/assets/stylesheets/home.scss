@@ -110,6 +110,7 @@
   border-radius: 5%;
   border: 1px solid #ccc;
   list-style: none;
+  z-index: 990;
 }
 
 .greater {
@@ -135,11 +136,13 @@
 }
 
 .add-pin-button:hover {
-  background-color: #f5f5f5;
+  background-color: #ca271c;
+  // background-color: #f5f5f5;
 }
 
 .github:hover {
-  background-color: #f5f5f5;
+  background-color: #ca271c;
+  // background-color: #f5f5f5;
 }
 
 .add-pin-menu > li {
