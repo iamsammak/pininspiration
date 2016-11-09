@@ -68,15 +68,15 @@ Board.create!(title: "Design", description: "Little do you know, I actually came
 Board.create!(title: "Digital Illustrations", description: "Imagination in the Clouds", user_id: 3)
 Board.create!(title: "Home decor", description: "For my dream house", user_id: 3)
 Board.create!(title: "Photography", description: "My left eye is a camera", user_id: 3)
-
-Board.create!(title: "Sunglasses", description: "Can't have enough", user_id: 4)
+# 16 17 18 19
+Board.create!(title: "NBA", description: "2016-2017 season has begun!", user_id: 4)
 Board.create!(title: "Food porn", description: "Pics or it didn't happen", user_id: 4)
 Board.create!(title: "Travel", description: "Next adventure", user_id: 4)
 Board.create!(title: "Fashion", description: "Ideas", user_id: 4)
-
+#20
 Board.create!(title: "Movies", description: "To watch later", user_id: 5)
 Board.create!(title: "Flower Arrangements", description: "Back to the roots", user_id: 5)
-Board.create!(title: "Food", description: "Nom nom noms", user_id: 5)
+Board.create!(title: "Recipes", description: "Momma wants me to learn how to cook", user_id: 5)
 Board.create!(title: "Hong Kong", description: "Travel Ideas", user_id: 5)
 
 Board.create!(title: "Family Trips", description: "Plan the next trip", user_id: 6)
@@ -85,11 +85,11 @@ Board.create!(title: "Books on Books", description: "Soak in some knowledge", us
 
 Board.create!(title: "Things I like", description: "I like", user_id: 7)
 Board.create!(title: "Celebrities", description: "Hello friends", user_id: 7)
-Board.create!(title: "Books on Books", description: "Soak in some knowledge", user_id: 7)
+Board.create!(title: "Humor", description: "An elephant never forgets...a joke", user_id: 7)
 
 Board.create!(title: "Things I like", description: "Want them", user_id: 8)
 Board.create!(title: "Cartoons", description: "Guilty pleasure", user_id: 8)
-Board.create!(title: "Books", description: "Soak in some knowledge", user_id: 8)
+Board.create!(title: "Game of Thrones", description: "Winter is coming", user_id: 8)
 
 Follow.create!(followee_id: 1, follower_id: 3)
 Follow.create!(followee_id: 2, follower_id: 3)
@@ -102,6 +102,7 @@ Follow.create!(followee_id: 6, follower_id: 2)
 Follow.create!(followee_id: 1, follower_id: 2)
 Follow.create!(followee_id: 3, follower_id: 2)
 
+Follow.create!(followee_id: 3, follower_id: 1)
 Follow.create!(followee_id: 2, follower_id: 1)
 Follow.create!(followee_id: 4, follower_id: 1)
 Follow.create!(followee_id: 5, follower_id: 1)
@@ -134,7 +135,7 @@ Follow.create!(followee_id: 3, follower_id: 8)
 # user 3 - Baymax
 Pin.create!(title: "Flat Fruits", description: "Kong Yunlei on Behance", image_url: "https://s-media-cache-ak0.pinimg.com/564x/41/87/8f/41878f0e7c91581affe0ab4244a0e2ec.jpg", url: "https://www.behance.net/gallery/17954697/Flat-fruits-icon", user_id: 3, board_id: 12)
 Pin.create!(title: "Lee Joon Gi to Hold Fanmeet Event to watch 'Scarlet Heart: Ryeo' with Fans", description: "Baymax likes Korean dramas, and talking third person", image_url: "https://s-media-cache-ak0.pinimg.com/564x/bf/24/f4/bf24f47a0b84db05f41019d24fa253d5.jpg", url: "http://www.koogle.tv/media/news/lee-joon-gi-to-hold-fanmeet-event-to-watch-scarlet-heart-ryeo-with-fans/", user_id: 3, board_id: 10)
-Pin.create!(title: "Books are the key to another world...", description: "Read", image_url: "https://s-media-cache-ak0.pinimg.com/564x/83/6a/1b/836a1b622dc2f826dc3a151c16508af0.jpg", url: "https://s-media-cache-ak0.pinimg.com/originals/83/6a/1b/836a1b622dc2f826dc3a151c16508af0.jpg", user_id: 3, board_id: 13)
+Pin.create!(title: "Strange Gravity", description: "Another world", image_url: "https://s-media-cache-ak0.pinimg.com/564x/ec/92/ee/ec92ee623b917be79603ecad0ee5ff80.jpg", url: "https://s-media-cache-ak0.pinimg.com/564x/ec/92/ee/ec92ee623b917be79603ecad0ee5ff80.jpg", user_id: 3, board_id: 13)
 Pin.create!(title: "Chance the Rapper", description: "Coloring Book", image_url: "https://s-media-cache-ak0.pinimg.com/564x/5f/fa/e1/5ffae1888103cdb4452e107d0d796099.jpg", url: "https://trillartworks.tumblr.com/post/149535967946/trillartworks-chance-3", user_id: 3, board_id: 11)
 Pin.create!(title: "100 Brilliant Color Combinations: And How to apply them to your designs", description: "A stunning collection of color palettes inspired by food, nature, travel and everyday items.", image_url: "https://s-media-cache-ak0.pinimg.com/564x/c3/21/0a/c3210a9126966c8ca9ad6cfd478e38b0.jpg", url: "https://designschool.canva.com/blog/100-color-combinations/?utm_content=bufferc6f3c&utm_medium=social&utm_source=pinterest.com&utm_campaign=buffer", user_id: 3, board_id: 12)
 Pin.create!(title: "IKEA Hack: Craft Room Work Table", description: "This simple Ikea hack will make all of your craft room/home office dreams come true for about $160! ", image_url: "https://s-media-cache-ak0.pinimg.com/564x/6d/1b/89/6d1b89e3b8b44e237b8fc566a699407c.jpg", url: "http://www.landeeseelandeedo.com/2016/08/ikea-hack-craft-room-work-table.html", user_id: 3, board_id: 14)
@@ -146,10 +147,10 @@ Pin.create!(title: "Hotel", description: "\#hotel \#logo", image_url: "https://s
 Pin.create!(title: "Nora En Pure announces \"Tell My Heart Tour\" 2016 world tour dates", description: "Nora En Pure announces \"Tell My Heart Tour\" 2016 world tour dates", image_url: "https://s-media-cache-ak0.pinimg.com/564x/e9/17/1e/e9171ebfd7c405f416e84c91d6a62e2d.jpg", url: "http://www.soundlr.com/news/nora-en-pure-announces-tell-my-heart-tour-2016-world-tour-dates/", user_id: 3, board_id: 11)
 Pin.create!(title: "25 Cool Illustrations, Paintings & Drawings", description: "In From up North's inspiration galleries we present our latest findings from the wonderful world of design", image_url: "https://s-media-cache-ak0.pinimg.com/564x/3f/55/b8/3f55b8842621818be45ba8060cb983fe.jpg", url: "http://www.fromupnorth.com/illustration-inspiration-1080/", user_id: 3, board_id: 13)
 Pin.create!(title: "Our Ends are Beginnings", description: "Art Print by ParadisiacPicture", image_url: "https://s-media-cache-ak0.pinimg.com/564x/50/76/de/5076de85a76a0dc1e54fdd8140bd0f10.jpg", url: "https://society6.com/product/our-ends-are-beginnings-limited-print_print#s6-2839648p4a1v45", user_id: 3, board_id: 13)
-Pin.create!(title: "Strange Gravity", description: "Another world", image_url: "https://s-media-cache-ak0.pinimg.com/564x/ec/92/ee/ec92ee623b917be79603ecad0ee5ff80.jpg", url: "https://s-media-cache-ak0.pinimg.com/564x/ec/92/ee/ec92ee623b917be79603ecad0ee5ff80.jpg", user_id: 3, board_id: 13)
 Pin.create!(title: "Metropolis 225", description: "Toshio Hatanaka aka Ataboh", image_url: "https://s-media-cache-ak0.pinimg.com/564x/c0/b0/7d/c0b07dbcae6658d85ebbe7fe4d8bfa41.jpg", url: "http://www.stripyamanita.com/metropolis225-ataboh/", user_id: 3, board_id: 13)
 Pin.create!(title: "Taeyeon", description: "Go listen to her new single", image_url: "https://s-media-cache-ak0.pinimg.com/564x/c0/16/5d/c0165d3b9eefb67a73f3a92206a9f03d.jpg", url: "http://fy-girls-generation.tumblr.com/post/133981629762/wish5503", user_id: 3, board_id: 10)
 Pin.create!(title: "Scenic Bliss", description: "The Art of Animation", image_url: "https://s-media-cache-ak0.pinimg.com/564x/95/38/08/9538082cb7b9f0799cb97e599363c755.jpg", url: "http://theartofanimation.tumblr.com/post/135771690544/ghost-i-httpghostillustrationscom", user_id: 3, board_id: 13)
+Pin.create!(title: "Books are the key to another world...", description: "Read", image_url: "https://s-media-cache-ak0.pinimg.com/564x/83/6a/1b/836a1b622dc2f826dc3a151c16508af0.jpg", url: "https://s-media-cache-ak0.pinimg.com/originals/83/6a/1b/836a1b622dc2f826dc3a151c16508af0.jpg", user_id: 3, board_id: 13)
 Pin.create!(title: "Ritual 02", description: "Matteo Bassini", image_url: "https://s-media-cache-ak0.pinimg.com/564x/4e/b5/6b/4eb56b3f9eb7e38b52f820b8776288f9.jpg", url: "https://www.artstation.com/artwork/G1roB", user_id: 3, board_id: 13)
 Pin.create!(title: "9 Gorgeous Beauty Ideas to Steal from the Oscars", description: "Best in Oscars beauty: Anna Kendrick", image_url: "https://s-media-cache-ak0.pinimg.com/564x/e9/5a/f5/e95af5c58ad6971446c643c79c6b3cb0.jpg", url: "http://www.teenvogue.com/gallery/oscar-awards-best-in-beauty?slide=3", user_id: 3, board_id: 10)
 Pin.create!(title: "Tokimonsta", description: "Put it Down (feat. Anderson .Paak & KRNE), go listen", image_url: "https://s-media-cache-ak0.pinimg.com/564x/90/0a/6b/900a6b6aaefa0fd5635771e967854ece.jpg", url: "https://twitter.com/tokimonsta?lang=en", user_id: 3, board_id: 11)
@@ -212,3 +213,84 @@ Pin.create!(title: "Komorebi", description: "Totoro likes komorebi", image_url: 
 Pin.create!(title: "How To Cook Perfect Eggs", description: "Totoro eats eggs every morning", image_url: "https://s-media-cache-ak0.pinimg.com/564x/04/6e/57/046e5765c5736567f681db6119d358dc.jpg", url: "https://www.buzzfeed.com/alisonroman/how-to-cook-eggs#.lnX7ePGkR", user_id: 2, board_id: 9)
 Pin.create!(title: "25 Delightfully Cozy Gifts For Anyone Who Hates Leaving The House", description: "Totoro likes Netflix", image_url: "https://s-media-cache-ak0.pinimg.com/564x/c0/f0/ad/c0f0adb2ce2525c2035c5683b47a034d.jpg", url: "https://www.buzzfeed.com/sallytamarkin/indoorsy-af?crlt.pid=camp.FYzgPa2eM28q#.peMqzGnQAW", user_id: 2, board_id: 9)
 Pin.create!(title: "These Mozzarella Stick Onion Rings Should Run For President", description: "NOM NOMS, GET IN MY BELLY", image_url: "https://s-media-cache-ak0.pinimg.com/564x/b4/23/c1/b423c1d1cebc5bd6e9ee1571252f64be.jpg", url: "https://www.buzzfeed.com/melissaharrison/mozzarella-stick-onion-rings?utm_term=.olDQzGZaa#.nogWElAdd", user_id: 2, board_id: 9)
+
+Pin.create!(title: "Kobe Bryant the Black Mamba", description: "Missing the Mamba", image_url: "https://s-media-cache-ak0.pinimg.com/564x/b9/85/3e/b9853e2ce287f3b2def5d7373a9a9ee6.jpg", url: "https://www.instagram.com/p/BD7BQiJk_Gx/", user_id: 4, board_id: 16)
+Pin.create!(title: "Kevin Durant to the Warriors!", description: "Fingers crossed", image_url: "https://s-media-cache-ak0.pinimg.com/564x/ed/0d/94/ed0d949804a8d26c0e8648d383457c40.jpg", url: "http://hoopeduponline.com/", user_id: 4, board_id: 16)
+Pin.create!(title: "From The Mag: How Stephen Curry became the NBA's top point guard", description: "Warriors!!", image_url: "https://s-media-cache-ak0.pinimg.com/564x/8f/d2/af/8fd2af917a51391f226a976b2ba8e0a4.jpg", url: "http://www.espn.com/espn/feature/story/_/id/12728744/how-golden-state-warriors-stephen-curry-became-nba-best-point-guard?ex_cid=espnpt", user_id: 4, board_id: 16)
+Pin.create!(title: "Golden State Warriors Set NBA Record with 73 Wins", description: "Let's do it again!", image_url: "https://s-media-cache-ak0.pinimg.com/564x/a6/62/69/a662697e9bb7ba7164e306030306ea37.jpg", url: "http://hypebeast.com/", user_id: 4, board_id: 16)
+Pin.create!(title: "Wariors 2016-2017", description: "Making it Rain", image_url: "https://s-media-cache-ak0.pinimg.com/564x/a0/d4/6a/a0d46ae8a943c749686369a1eabe7adf.jpg", url: "http://splash-brothers.tumblr.com/post/150980343419/steph-and-kd-2016-warriors-media-day", user_id: 4, board_id: 16)
+
+Pin.create!(title: "34 Pictures Of Circular Food That Will Give You Intense Cravings", description: "Thank you, geometry", image_url: "https://s-media-cache-ak0.pinimg.com/564x/3f/46/9e/3f469ec4a1ec5349dd0bdfb38c587dff.jpg", url: "https://www.buzzfeed.com/jamiejones/spherical-food-that-make-the-world-a-little-brighter?utm_term=.gew7p7D9Jq#.cygVXV82jr", user_id: 4, board_id: 17)
+Pin.create!(title: "The 50 Sexiest Food Photos Ever Taken", description: "It's basically porn that's totaly SFW", image_url: "https://s-media-cache-ak0.pinimg.com/564x/82/98/3f/82983f620eab10dd9a1c71123a449190.jpg", url: "http://www.delish.com/cooking/recipe-ideas/g2830/sexiest-food-photos/", user_id: 4, board_id: 17)
+Pin.create!(title: "Salmon Don", description: "Sashimi all day everyday", image_url: "https://s-media-cache-ak0.pinimg.com/564x/79/4e/ea/794eea9407fa5226da5a2e5071dd8dbb.jpg", url: "https://www.nipponterest.com/", user_id: 4, board_id: 17)
+Pin.create!(title: "Morimoto Chef Robby Cook Tells Us the Right Way to Eat Sushi and Sashimi", description: "Iron Chef Morimoto", image_url: "https://s-media-cache-ak0.pinimg.com/564x/48/4a/b3/484ab35aa9f81e1ce3f76b28b95a0e42.jpg", url: "http://www.instyle.com/news/right-way-eat-sushi-according-morimoto-chef?crlt.pid=camp.GD5y840KVG27", user_id: 4, board_id: 17)
+
+Pin.create!(title: "10 Natural Wonders in Iceland That Will Take Your Breath Away", description: "Backpack Iceland!", image_url: "https://s-media-cache-ak0.pinimg.com/564x/c3/7e/3d/c37e3d299b8bab7b44a5c9d823d5156a.jpg", url: "http://www.popsugar.com/smart-living/Best-Places-Iceland-41606229?crlt.pid=camp.J93HhwUNgNjg#photo-41606229", user_id: 4, board_id: 18)
+Pin.create!(title: "22 Beautiful National Parks in the World", description: "Nature is bae", image_url: "https://s-media-cache-ak0.pinimg.com/564x/16/43/ff/1643ff87e9ebfd462dee25f741c696dc.jpg", url: "http://www.holidayfeed.com/22-beautiful-national-parks-in-the-world/", user_id: 4, board_id: 18)
+Pin.create!(title: "9 Real Life Fairytale Villages in Europe", description: "Fairytale Europe", image_url: "https://s-media-cache-ak0.pinimg.com/564x/bb/2f/5e/bb2f5ef117fcdd11bd59b958e9a1c483.jpg", url: "http://mamabee.com/9-real-life-fairytale-villages-in-europe/", user_id: 4, board_id: 18)
+Pin.create!(title: "One perfect day: 24 hours in New York City", description: "New York New York", image_url: "https://s-media-cache-ak0.pinimg.com/564x/c1/b3/6f/c1b36f80d4bd7a5ce5bc6b85cc31c0fc.jpg", url: "https://www.lonelyplanet.com/usa/new-york-city/travel-tips-and-articles/76747", user_id: 4, board_id: 18)
+
+Pin.create!(title: "Menswear Street Style in London", description: "I want that sweater", image_url: "https://s-media-cache-ak0.pinimg.com/564x/34/7b/32/347b3214800619a2ef54eb944dd1966b.jpg", url: "https://www.instagram.com/p/BH4kNX3gYhN/", user_id: 4, board_id: 19)
+Pin.create!(title: "Stylish in Snow", description: "Men's Winter Fashion", image_url: "https://s-media-cache-ak0.pinimg.com/564x/33/fd/8e/33fd8e2622503481c870c4d09b28f190.jpg", url: "http://famousoutfits.com/collections/mens-winter-fashion/", user_id: 4, board_id: 19)
+Pin.create!(title: "100 Dynamic Winter Fashion Ideas For Men", description: "Stylish wife stylish life", image_url: "https://s-media-cache-ak0.pinimg.com/564x/a1/74/3c/a1743cf89f59b91f25b843989fc50069.jpg", url: "http://www.stylishwife.com/2015/01/dynamic-winter-fashion-ideas-for-men.html/2", user_id: 4, board_id: 19)
+Pin.create!(title: "Fabulous Women's Fashion", description: "Chic Blazers and oversized sweaters, love", image_url: "https://s-media-cache-ak0.pinimg.com/564x/48/a6/6a/48a66a26ae50199a1307086e857c8788.jpg", url: "http://www.modwedding.com/2015/10/fabulous-fashion-made-to-inspire/", user_id: 4, board_id: 19)
+
+Pin.create!(title: "The Shawshank Redemption", description: "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.", image_url: "https://s-media-cache-ak0.pinimg.com/564x/e6/ed/90/e6ed90ecca75e7ff3626a9d1c87d3538.jpg", url: "http://www.imdb.com/title/tt0111161/?ref_=fn_al_tt_1", user_id: 5, board_id: 20)
+Pin.create!(title: "Favorite Sylvester Stallone Movies", description: "Rocky", image_url: "https://s-media-cache-ak0.pinimg.com/564x/8a/34/96/8a3496d9783a10cedad59025d6f8a2d0.jpg", url: "http://hubpages.com/entertainment/My-Favorite-Slyvester-Stallone-movies", user_id: 5, board_id: 20)
+Pin.create!(title: "22 Movie Titles, Re-Worded for Simplicity", description: "For whatever reason, be it artistic license, necessity, or just plain wackiness, a lot of films have ridiculously long names. We asked you…", image_url: "https://s-media-cache-ak0.pinimg.com/564x/2d/2c/f7/2d2cf7a00135d7d26ac601a4d723f084.jpg", url: "http://www.cracked.com/photoplasty_775_22-movie-titles-re-worded-simplicity/", user_id: 5, board_id: 20)
+Pin.create!(title: "50 Must See Alternative Movie Posters By Designers", description: "It has almost become a trend for artists and designers to reimagine movie posters to show off their own take on a design.", image_url: "https://s-media-cache-ak0.pinimg.com/564x/fd/c6/41/fdc64176f6d81c4276b5eb1f5e7e3e0d.jpg", url: "http://blog.spoongraphics.co.uk/articles/50-must-see-alternative-movie-posters-by-designers", user_id: 5, board_id: 20)
+
+
+Pin.create!(title: "Modern Japanese Inspired Styled Shoot", description: "Japanese style Flower Arrangement", image_url: "https://s-media-cache-ak0.pinimg.com/564x/ac/3a/65/ac3a65f1c3b0821b3ebca15470c5b411.jpg", url: "http://www.utterlyengaged.com/modern-japanese-inspired-styled-shoot/", user_id: 5, board_id: 21)
+Pin.create!(title: "Ikebana | Flower Arrangement", description: "Love the use space and extensions", image_url: "https://s-media-cache-ak0.pinimg.com/564x/ba/d8/82/bad882b8b9d21df4f8838dea2279161a.jpg", url: "http://www.akiko-usami.com/2015/01/n296-2/", user_id: 5, board_id: 21)
+Pin.create!(title: "Repurpose Old Fish Bowls – Creative Home Décor Idea", description: "Fishbowls without the fishies", image_url: "https://s-media-cache-ak0.pinimg.com/564x/09/4c/02/094c02a7101720063ac2407ba4502296.jpg", url: "http://decozilla.com/2014/08/repurpose-old-fish-bowls-creative-home-decor-idea/", user_id: 5, board_id: 21)
+Pin.create!(title: "Embrace the Beauty of Nature, with Ikebana", description: "Not everyone knows what an “Ikebana” means but in very simple terms – it’s called, flower arrangement", image_url: "https://s-media-cache-ak0.pinimg.com/564x/47/0c/48/470c482ac218f10f34d564af10dda2e7.jpg", url: "http://www.aishakristine.com/inspiration/embrace-the-beauty-of-nature-with-ikebana.html", user_id: 5, board_id: 21)
+
+Pin.create!(title: "Cajun Chicken Pasta", description: "Chili’s copycat recipe made at home with an amazingly creamy melt-in-your-mouth alfredo sauce. And you know it tastes 10000x better!", image_url: "https://s-media-cache-ak0.pinimg.com/564x/ae/29/c7/ae29c7ff0cbcf213a7b9e359299af367.jpg", url: "hhttp://damndelicious.net/2015/11/30/cajun-chicken-pasta/", user_id: 5, board_id: 22)
+Pin.create!(title: "Mint Chocolate Chip Greek Yoghurt Popsicles", description: "Deliciously creamy mint popsicles studded with chocolate chips and dipped in a milk chocolate magic shell. Perfect for hot summer days!", image_url: "https://s-media-cache-ak0.pinimg.com/564x/a9/fc/35/a9fc35a68b42b1d9be71c357b76922fd.jpg", url: "http://marshasbakingaddiction.com/mint-chocolate-chip-greek-yoghurt-popsicles/", user_id: 5, board_id: 22)
+Pin.create!(title: "Lamb loin, Parmesan risotto and pan juices", description: "1 hour to cook, serves 4", image_url: "https://s-media-cache-ak0.pinimg.com/564x/e0/09/85/e009853b652598818457dcfbcf924e55.jpg", url: "http://www.greatbritishchefs.com/recipes/lamb-loin-recipe-parmesan-risotto", user_id: 5, board_id: 22)
+
+Pin.create!(title: "10 Best things to do in Hong Kong on a Budget", description: "Hong Kong on a budget", image_url: "https://s-media-cache-ak0.pinimg.com/564x/08/fe/5b/08fe5b780e2b5dc770091e2df27ae190.jpg", url: "http://www.danflyingsolo.com/budget-hong-kong-weekend/", user_id: 5, board_id: 23)
+Pin.create!(title: "Jiulong Waterfall", description: "Wah, this is Hong Kong?", image_url: "https://s-media-cache-ak0.pinimg.com/564x/6b/69/32/6b6932446788cb51c207c5b41f344d64.jpg", url: "http://www.fulldose.net/jiulong-waterfall-hong-kong/", user_id: 5, board_id: 23)
+Pin.create!(title: "Temple Street", description: "Shopping shopping!", image_url: "https://s-media-cache-ak0.pinimg.com/564x/09/1f/fb/091ffb3f51c8293a71c699bcdd21fdb1.jpg", url: "http://www.pbase.com/image/27222750", user_id: 5, board_id: 23)
+Pin.create!(title: "Hong Kong Rooftopping", description: "Photographers doing whatever it takes to get the pic", image_url: "https://s-media-cache-ak0.pinimg.com/564x/4a/79/21/4a7921b7888d2ed627174df1cc1791c7.jpg", url: "https://iso.500px.com/21-photographers-doing-whatever-it-takes-to-get-the-perfect-shot/?utm_source=500px&utm_medium=social&utm_campaign=mar7_1PM_21-photographers-doing-whatever-it-takes-to-get-the-perfect-shot", user_id: 5, board_id: 23)
+
+Pin.create!(title: "Self Feeding Fire, Camping Hack", description: "So clever, gravity is my friend", image_url: "https://s-media-cache-ak0.pinimg.com/564x/26/71/fb/2671fb2bd06da1df2ac0fe4171673fc1.jpg", url: "http://thewhoot.com.au/whoot-news/diy/how-to-build-a-self-feeding-fire", user_id: 6, board_id: 24)
+Pin.create!(title: "Popsicle Stick Playing Cards", description: "Engrave them with fire", image_url: "https://s-media-cache-ak0.pinimg.com/564x/d3/ab/69/d3ab69b189117983a6913e4713cc78ef.jpg", url: "http://www.instructables.com/id/Popsicle-Stick-Playing-Cards/", user_id: 6, board_id: 24)
+Pin.create!(title: "Amazing Campgrounds In America", description: "Going for the chill vibes", image_url: "https://s-media-cache-ak0.pinimg.com/564x/cc/3d/23/cc3d23739000c7684f7dd4964934d311.jpg", url: "https://www.buzzfeed.com/anniedaly/lets-go-camping?sub=4244619_8653270&utm_term=.swvPnYB5VX&fb_ref=.rtm7Q5gGJM", user_id: 6, board_id: 24)
+
+Pin.create!(title: "Mechanized Pokemon", description: "so badass", image_url: "https://s-media-cache-ak0.pinimg.com/564x/80/0d/f5/800df55108468d4bc0a67c65363d5534.jpg", url: "http://9gag.com/gag/apLXNm8", user_id: 6, board_id: 25)
+Pin.create!(title: "Motivational Pokemon", description: "Motivational Posters Pokemon Style", image_url: "https://s-media-cache-ak0.pinimg.com/564x/2b/c4/65/2bc465e691b108b1973adfe9ab52471f.jpg", url: "http://iwastesomuchtime.com/76889", user_id: 6, board_id: 25)
+Pin.create!(title: "Just Don't Do It", description: "Lazzzzzz....", image_url: "https://s-media-cache-ak0.pinimg.com/564x/7e/b9/0c/7eb90cd44014ceca066b2b95d4aa9c97.jpg", url: "http://www.theshirtlist.com/just-dont-do-it-white-t-shirt/", user_id: 6, board_id: 25)
+
+Pin.create!(title: "10 Books To Read If You Want To Start 2016 Right", description: "Whoops guess I'll read them for 2017", image_url: "https://s-media-cache-ak0.pinimg.com/564x/f5/ca/8c/f5ca8c73eb448509d4271cd15ed74b1d.jpg", url: "http://www.mindbodygreen.com/0-22693/10-books-to-read-if-you-want-to-start-2016-right.html", user_id: 6, board_id: 26)
+Pin.create!(title: "18 Most Motivaional Books Ever Written", description: "We asked our readers to name the motivational books that have inspired them. These are the 18 reads they loved the best.", image_url: "https://s-media-cache-ak0.pinimg.com/564x/e6/05/ea/e605eab2cbd2956c99375b31e0dba6b2.jpg", url: "http://www.inc.com/geoffrey-james/18-most-motivational-books-ever-written.html?cid=sf01001&sr_share=twitter", user_id: 6, board_id: 26)
+Pin.create!(title: "40+ Life-Changing Books to Read This Year", description: "Tim Ferriss is the man", image_url: "https://s-media-cache-ak0.pinimg.com/564x/6d/0f/c1/6d0fc152f19a3e1bbc07972a08c1bd04.jpg", url: "http://www.popsugar.com/smart-living/Books-Change-My-Life-21195577#photo-33262111", user_id: 6, board_id: 26)
+
+Pin.create!(title: "The 33 Fluffiest Animals On The Planet", description: "Squeal...Babies", image_url: "https://s-media-cache-ak0.pinimg.com/564x/c0/14/23/c014230dec32c2eeb133b7b8da072317.jpg", url: "https://www.buzzfeed.com/chelseamarshall/the-33-fluffiest-animals-on-the-planet", user_id: 7, board_id: 27)
+Pin.create!(title: "Doggies who Cross Their Paws", description: "I want a dog for Christmas", image_url: "https://s-media-cache-ak0.pinimg.com/564x/63/bb/61/63bb616a33fc209cd3a48795c981f46d.jpg", url: "http://stories.barkpost.com/25-dogs-casual/", user_id: 7, board_id: 27)
+Pin.create!(title: "Cute Animals Winking", description: ">.o", image_url: "https://s-media-cache-ak0.pinimg.com/564x/e9/a6/9a/e9a69aef507e09290819d34120badeac.jpg", url: "https://www.buzzfeed.com/toddvanluling/35-cats-and-other-cute-animals-winking", user_id: 7, board_id: 27)
+Pin.create!(title: "Animals That Are Guaranteed To Make You Smile", description: "Poor doggie stuck in the mail box", image_url: "https://s-media-cache-ak0.pinimg.com/564x/55/f9/9c/55f99c0fc7842a5a59b9d6a25926c5f3.jpg", url: "https://www.buzzfeed.com/adamdavis/animals-are-the-best?utm_term=.slx10gjZV", user_id: 7, board_id: 27)
+
+Pin.create!(title: "Emma Watson", description: "Went to college with my sister", image_url: "https://s-media-cache-ak0.pinimg.com/564x/17/b1/5f/17b15f178ca1af99ce22a166f3431928.jpg", url: "http://airows.com/sex-appeal/hottest-emma-watson-photos", user_id: 7, board_id: 28)
+Pin.create!(title: "Daniel Radcliffe", description: "Here's what Daniel would want to take to a desert island", image_url: "https://s-media-cache-ak0.pinimg.com/564x/1d/53/5d/1d535d38f04cc07c99631f25a2269cf0.jpg", url: "https://www.buzzfeed.com/eleanorbate/ice-cream-bacon-and-cheese", user_id: 7, board_id: 28)
+Pin.create!(title: "Rubert Grint", description: "He owns an ice cream truck", image_url: "https://s-media-cache-ak0.pinimg.com/564x/a3/08/18/a30818120072e759cc17a27d8c57ca2a.jpg", url: "http://diply.com/creative-unusual/article/rupert-grint-spent-fortune", user_id: 7, board_id: 28)
+
+Pin.create!(title: "For When It Gets Real", description: "Sh*ts about to go down", image_url: "https://s-media-cache-ak0.pinimg.com/564x/00/6f/3e/006f3ea875913b4384b886d73114f8f5.jpg", url: "http://www.pmslweb.com/the-blog/mischievous-hump-day-when-regular-humor-does-not-cover-it/", user_id: 7, board_id: 29)
+Pin.create!(title: "Interview Hacks", description: "Yup", image_url: "https://s-media-cache-ak0.pinimg.com/564x/9a/39/88/9a398883fc36574bc0ee515c1ffc42a2.jpg", url: "https://www.linkedin.com/", user_id: 7, board_id: 29)
+Pin.create!(title: "Funny Pictures of the Day", description: "Look at all 33 of em'", image_url: "https://s-media-cache-ak0.pinimg.com/564x/c7/cb/8b/c7cb8b615a0c291d1556418fe2355b03.jpg", url: "http://www.dumpaday.com/funny-pictures/funny-pictures-of-the-day-33-pics-16/", user_id: 7, board_id: 29)
+
+Pin.create!(title: "Our 10 Favorite Jennifer Lawrence Photo Shoots", description: "Rocking the hairdo", image_url: "https://s-media-cache-ak0.pinimg.com/564x/f6/63/19/f66319bb47ad203d17b53b96d5e66385.jpg", url: "http://www.hercampus.com/style/our-10-favorite-jennifer-lawrence-photo-shoots", user_id: 8, board_id: 30)
+Pin.create!(title: "How well do you know Taylor Swift", description: "I am a swifty", image_url: "https://s-media-cache-ak0.pinimg.com/564x/16/c0/91/16c091f1970323d39f18d5cdd2b44eea.jpg", url: "http://www.playbuzz.com/ftrzoq10/how-well-do-you-know-taylor-swift?utm_source=pinterest.com&utm_medium=smff&utm_campaign=how-well-do-you-know-taylor-swift", user_id: 8, board_id: 30)
+Pin.create!(title: "Best Celebrity Selfies", description: "So many kissy faces", image_url: "https://s-media-cache-ak0.pinimg.com/564x/fe/58/49/fe58499efc6395839ff07634952c6377.jpg", url: "http://www.cosmopolitan.com/entertainment/celebs/news/g4059/best-celebrity-selfies/?slide=22", user_id: 8, board_id: 30)
+
+Pin.create!(title: "Attack on Titan", description: "Erin Jaeger and Annie Leonhardt", image_url: "https://s-media-cache-ak0.pinimg.com/564x/7e/2c/28/7e2c28112ee05b4bb98acb698616a280.jpg", url: "http://www.zerochan.net/1525812", user_id: 8, board_id: 31)
+Pin.create!(title: "Team Leaders Pledge", description: "Dat water bottle flip was Lit AF", image_url: "https://s-media-cache-ak0.pinimg.com/564x/21/8b/f4/218bf4df60af2af7eceeaeabbbddbcf5.jpg", url: "http://9gag.com/gag/aGDdPxX", user_id: 8, board_id: 31)
+Pin.create!(title: "Sword Art Online", description: "Kirito and Asuna", image_url: "https://s-media-cache-ak0.pinimg.com/564x/a3/b1/29/a3b12987ea9bffef87f299b9e2fe5cee.jpg", url: "http://www.zerochan.net/1752229", user_id: 8, board_id: 31)
+Pin.create!(title: "Uzumaki Naruto", description: "Uzumaki Family", image_url: "https://s-media-cache-ak0.pinimg.com/564x/a3/b1/29/a3b12987ea9bffef87f299b9e2fe5cee.jpg", url: "http://www.zerochan.net/full/1929918", user_id: 8, board_id: 31)
+
+Pin.create!(title: "Game of Thrones Season 7", description: "Can't wait for the new season", image_url: "https://s-media-cache-ak0.pinimg.com/564x/c4/3e/78/c43e7856a23c5fe0d930c3be4faf81f7.jpg", url: "http://www.smh.com.au/entertainment/tv-and-radio/drama/game-of-thrones-season-7-spoilers-leaked-but-does-the-insane-plot-stack-up-20161108-gsl033.html", user_id: 8, board_id: 32)
+Pin.create!(title: "25 Reasons to Watch GoT", description: "Comment for the 26th reason", image_url: "https://s-media-cache-ak0.pinimg.com/564x/0e/67/b7/0e67b78c2fa199467e4335230fce2492.jpg", url: "http://newspapermag.com/25-reasons-to-watch-game-of-thrones/", user_id: 8, board_id: 32)
+Pin.create!(title: "Lyanna Mormont for President", description: "Third Party Wins! Political upset", image_url: "https://s-media-cache-ak0.pinimg.com/564x/64/8a/97/648a97fa1ae6f39424b1f5e1c816c532.jpg", url: "http://www.cbsnews.com/news/presidential-election-2016-results-live-updates/", user_id: 8, board_id: 32)
+Pin.create!(title: "King of the North", description: "Richard Madden, Natalie Dormer and Kit Harington", image_url: "https://s-media-cache-ak0.pinimg.com/564x/41/be/6b/41be6b806d2ad4ec8105ec34b1eaff64.jpg", url: "http://casaharington.tumblr.com/post/140410697522/richard-madden-natalie-dormer-and-kit-harington", user_id: 8, board_id: 32)
+Pin.create!(title: "Caramel Macchiato for Daenerys Stormborn...", description: "Touche starbucks touche", image_url: "https://s-media-cache-ak0.pinimg.com/564x/3e/e9/f6/3ee9f60735c84f9ac98ad293150a1064.jpg", url: "http://www.hbo.com/game-of-thrones", user_id: 8, board_id: 32)
