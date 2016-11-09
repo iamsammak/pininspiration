@@ -15,7 +15,10 @@ cloudinary
 pagnation
 kaminari
 
-implement loading spinner
+Change splash page
+- Pinterest is the world’s catalog of ideas. Find and save recipes, parenting hacks, style inspiration and other ideas to try.
+
+implement loading spinner - maybe check the spinner from www.pexels.com
 
 change the font color on board, pins, follow button to grey
 
@@ -29,8 +32,7 @@ Fix edit button on new board show page
 get rid of edit on board show page
 
 
-error refresh route error
-if there is an uncaught error, all lifecycle methods get dropped
+
 
 make modal for pin more UI scroll intuitive
 
@@ -93,11 +95,32 @@ warning.js:37 Warning: flattenChildren(...): Encountered two children with the s
   and upon every scroll it re-fetches for pins which then duplicates the amount of pins
   therefore increasing the pin count
   not true pin count
+  Fixed it by changing pin count to this.props.user.pins.length
+  because you can only create a pin for a board you own
+
 
 7. Delete Board wasn't working
   I was passing the board as payload in board_actions instead of the id
   which is what the middleware was listening for
   - I also spelled "destroy" as "destory" in the routes.rb file which caused the 404 error upon DELETE
+
+8. Heroku push not working
+  reason is because I didn't npm install --save some of the libraries
+  on installed them, which I guess is temporary?
+
+9. 401 in heroku, auth issue
+
+10. error in refresh router
+  error refresh route error
+  if there is an uncaught error, all lifecycle methods get dropped
+  error because this.user was undefined (which makes sense upon component mounting)
+  fixed by adding - returning an empty div upload component mount if user is undefined
+  if(!this.user) {
+    return (<div></div>);
+  }
+
+
+
 }
 
 

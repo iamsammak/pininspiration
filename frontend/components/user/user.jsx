@@ -86,8 +86,8 @@ class User extends React.Component {
     let followingUrl = `${this.user.username}/following`;
 
     // TODO make sure upon pin creation that the currentUser.pins is re-rendered
-    let pinCount = this.props.currentUser.pins.length;
-    // let pinCount = this.props.pins.pins.length;
+    let pinCount = this.props.user.pins.length;
+    // let pinCount = this.props.currentUser.pins.length;
 
     // REVIEW change 404 to the actual count when you code followers
     let followerCount = this.props.currentUser.followers.length;
