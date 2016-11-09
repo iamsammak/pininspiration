@@ -129,26 +129,26 @@ class User extends React.Component {
           <div className="detail-titles">
             <Link to={boardsUrl}>
               <ul className="text-container checked">
+                <li className="label">Boards</li>
                 <li className="number">{this.props.boards.length}</li>
-                <li>Boards</li>
               </ul>
             </Link>
             <Link to={pinsUrl}>
               <ul className="text-container unchecked">
+                <li className="label">Pins</li>
                 <li className="number">{pinCount}</li>
-                <li>Pins</li>
               </ul>
             </Link>
             <Link to={followersUrl}>
               <ul className="text-container unchecked">
+                <li className="label">Followers</li>
                 <li className="number">{followerCount}</li>
-                <li>Followers</li>
               </ul>
             </Link>
             <Link to={followingUrl}>
               <ul className="text-container unchecked">
+                <li className="label">Following</li>
                 <li className="number">{followeeCount}</li>
-                <li>Following</li>
               </ul>
             </Link>
           </div>
