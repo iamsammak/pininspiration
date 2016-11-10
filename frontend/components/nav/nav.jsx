@@ -69,7 +69,7 @@ class Nav extends React.Component {
       <section className="nav-bar">
         <div className="logo-container all-containers">
           <Link to="/">
-            <i className="fa fa-thumb-tack fa-3x logo"
+            <i className="fa fa-thumb-tack fa-2x logo"
               title="Home Page"
               aria-hidden="true"
               alt="logo" id="logo"></i>
@@ -83,14 +83,14 @@ class Nav extends React.Component {
         </div>
 
         <div className="profile-container all-containers">
-          <i className="fa fa-bars fa-3x catalog-link" aria-hidden="true"></i>
+          <i className="fa fa-bars fa-2x catalog-link" aria-hidden="true"></i>
           <Link to={userUrlPath}>
-            <i className="fa fa-user fa-3x profile-link"
+            <i className="fa fa-user fa-2x profile-link"
               title="User Profile"
               aria-hidden="true"
               alt='profile'></i>
           </Link>
-          <i className="fa fa-sign-out fa-3x logout-button"
+          <i className="fa fa-sign-out fa-2x logout-button"
             title="Sign out"
             onClick={(e) => this.logEmOut(e)}
             aria-hidden="true"></i>

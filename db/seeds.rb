@@ -13,7 +13,8 @@ User.destroy_all
 
 User.create!(username: "miyazaki", password: "password",
 image_url: "http://res.cloudinary.com/dfazwubvc/image/upload/c_crop,h_365,w_502/v1478627769/pinspiration/profile_pics/hayao_miyazki.jpg",
-description: "The creation of a single world comes from a huge number of fragments and chaos.")
+description: "Creating animation means creating a fictional world.\n
+That world soothes the spirit of those who are disheartened and exhausted from dealing with the sharp edges of reality")
 
 User.create!(username: "totoro", password: "password",
 image_url: "http://res.cloudinary.com/dfazwubvc/image/upload/c_crop,h_798,q_67,w_700/v1478626686/pinspiration/profile_pics/totoro.jpg",

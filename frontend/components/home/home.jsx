@@ -279,6 +279,11 @@ class Home extends React.Component {
             <i className="fa fa-github fa-2x git-image" aria-hidden="true"></i>
           </a>
         </div>
+        <div className="linkedin">
+          <a target='_blank' href='https://www.linkedin.com/in/samuel-mak-8520b760'>
+            <i className="fa fa-linkedin-square fa-2x linkedin-image" aria-hidden="true"></i>
+          </a>
+        </div>
         <div className="pinterest">
           <a target='_blank' href='https://www.pinterest.com/iamsammak'>
             <i className="fa fa-pinterest fa-2x pinterest-image" aria-hidden="true"></i>
