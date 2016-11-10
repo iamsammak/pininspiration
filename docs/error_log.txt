@@ -53,6 +53,7 @@ squarespace logos
 
 
 if you don't end up getting to the catalog icon, then disable it
+- if I change the catalog icon to another search icon that when clicked upon will drop down the list of boards
 
 
 Error Log {

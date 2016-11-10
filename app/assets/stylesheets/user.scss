@@ -7,6 +7,7 @@
     width: 100%;
     font-size: 50px;
     color: rgb(74, 74, 74);
+    margin-left: 10%;
   }
 }
 
@@ -22,14 +23,14 @@
 
 .user-profile .user-description {
   font-size: 20px;
-  max-width: 70%;
+  max-width: 60%;
 }
 
 .user-container {
   .profile-picture {
     position: absolute;
-    top: 70px;
-    right: 50px;
+    top: 75px;
+    right: 100px;
     float: right;
     margin: 50px 0 0 0;
     border-radius: 50%;
@@ -39,35 +40,34 @@
   }
   .follow-button {
     position: absolute;
-    top: 285px;
-    right: 90px;
+    top: 289px;
+    right: 110px;
     border-radius: 4px;
-    color: black;
+    // color: rgba(255, 255, 255, 0.85);
+    color: white;
     font-size: 16px;
     font-weight: bold;
+    text-align: center;
+    width: 130px;
     padding: 5px;
     cursor: pointer;
     background-color: white;
   }
   .unfollowed {
-    // backgound-color
-    border: 5px solid #e6544a;
-    box-shadow: 0 8px #ca271c;
+    background-color: #ca271c;
+    border: 1px solid #e6544a;
+    // box-shadow: 0 8px #ca271c;
     &:hover {
-      background-color: #fff;
-      color: #ca271c;
-      box-shadow: 0 6px #ca271c;
-      transform: translateY(2px);
+      background-color: #ca271d;
+      box-shadow: 0 3px 3px 0 rgba(0,0,0,0.24);
     }
   }
   .following {
-    border: 5px solid #4cb5f5;
-    box-shadow: 0 8px #0083d5;
+    background-color: #0083d5;
+    border: 1px solid #4cb5f5;
     &:hover {
-      background-color: #fff;
-      color: #0083d5;
-      box-shadow: 0 6px #0083d5;
-      transform: translateY(2px);
+      background-color: #0083d6;
+      box-shadow: 0 3px 3px 0 rgba(0,0,0,0.24);
     }
   }
   .detail-title-container {
@@ -89,8 +89,8 @@
 }
 
 .text-container {
-  padding: 5px;
-  border-radius: 4px;
+  padding: 15px;
+  border-radius: 25px;
   width: 70px;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -101,6 +101,8 @@
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   overflow: hidden;
+
+  // this is for the blue hover
   // &:before {
   //   content: "";
   //   position: absolute;
@@ -145,5 +147,15 @@
   }
   .detail-container {
     display: block;
+  }
+}
+
+#boards-text-container {
+  padding-right: 0;
+}
+#pins-text-container {
+  padding-right: 0;
+  li {
+    padding-left: 10px;
   }
 }

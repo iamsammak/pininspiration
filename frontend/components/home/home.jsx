@@ -280,8 +280,8 @@ class Home extends React.Component {
           </a>
         </div>
         <ul className="add-pin-menu" id="add-pin-menu-id">
-          <li onClick={this.openPinModal.bind(this)}>Create a new Pin.</li>
-          <li onClick={this.openBoardModal.bind(this)}>Create a new Board.</li>
+          <li onClick={this.openPinModal.bind(this)}>Create a Pin</li>
+          <li onClick={this.openBoardModal.bind(this)}>Create a Board</li>
         </ul>
         <Modal className='addNewBoardModal'
           isOpen={this.state.openNewBoardModal}

@@ -2,11 +2,11 @@
   display: flex;
   .user-picture {
     float: right;
-    border-radius: 50%;
+    border-radius: 25%;
     width: 100px;
     height: 100px;
     margin-right: 30px;
     cursor: pointer;
-    box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.8);
   }
 }
