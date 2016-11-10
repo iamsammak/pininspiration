@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router';
 import PinItem from '../pin/pin_item';
 
-class UserPins extends React.Component {
+class Following extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -27,10 +27,16 @@ class UserPins extends React.Component {
         return [value];
       });
     }
+
+    String.prototype.capitalize = function() {
+      return this.charAt(0).toUpperCase() + this.slice(1);
+    };
+
     if (!this.isEmpty(this.props.user.followees)) {
       followees = followerArr.map((follower) => (
         <Link key={follower.id+follower.username} to={follower.username}>
           <img className='user-picture' src={follower.image_url} />
+          <span className="user-name">{follower.username.capitalize()}</span>
         </Link>
 
       ));
@@ -44,4 +50,4 @@ class UserPins extends React.Component {
   }
 }
 
-export default withRouter(UserPins);
+export default withRouter(Following);

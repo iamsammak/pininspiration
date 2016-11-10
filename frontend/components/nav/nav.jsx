@@ -70,6 +70,7 @@ class Nav extends React.Component {
         <div className="logo-container all-containers">
           <Link to="/">
             <i className="fa fa-thumb-tack fa-3x logo"
+              title="Home Page"
               aria-hidden="true"
               alt="logo" id="logo"></i>
           </Link>
@@ -85,10 +86,12 @@ class Nav extends React.Component {
           <i className="fa fa-bars fa-3x catalog-link" aria-hidden="true"></i>
           <Link to={userUrlPath}>
             <i className="fa fa-user fa-3x profile-link"
+              title="User Profile"
               aria-hidden="true"
               alt='profile'></i>
           </Link>
           <i className="fa fa-sign-out fa-3x logout-button"
+            title="Sign out"
             onClick={(e) => this.logEmOut(e)}
             aria-hidden="true"></i>
         </div>

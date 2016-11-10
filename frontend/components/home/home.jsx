@@ -219,7 +219,7 @@ class Home extends React.Component {
         top: '50%',
         transform: 'translate(-50%,-50%)',
         minWidth: '10rem',
-        width: '300px',
+        width: '400px',
         maxWidth: '60rem',
         backgroundColor : 'rgba(255, 255, 255, 1)',
         boxShadow : '3px 3px 10px black',
@@ -246,7 +246,7 @@ class Home extends React.Component {
         top: '50%',
         transform: 'translate(-50%,-50%)',
         minWidth: '10rem',
-        width: '300px',
+        width: '600px',
         maxWidth: '60rem',
         backgroundColor : 'rgba(255, 255, 255, 1)',
         boxShadow : '3px 3px 10px black',
@@ -275,8 +275,13 @@ class Home extends React.Component {
           <em></em>
         </button>
         <div className="github">
+          <a target='_blank' href='https://github.com/iamsammak/pininspiration'>
+            <i className="fa fa-github fa-2x git-image" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div className="pinterest">
           <a target='_blank' href='https://www.pinterest.com/iamsammak'>
-            <i className="fa fa-pinterest fa-2x git-image" aria-hidden="true"></i>
+            <i className="fa fa-pinterest fa-2x pinterest-image" aria-hidden="true"></i>
           </a>
         </div>
         <ul className="add-pin-menu" id="add-pin-menu-id">
@@ -289,9 +294,6 @@ class Home extends React.Component {
           style={newBoardStyle}>
           <section className="modal-form-container">
             <form	className="modal-form-box">
-              <div>
-              { this.renderErrors() }
-              </div>
               <div className="modal-form">
                 <input
                   type="text"
@@ -304,6 +306,9 @@ class Home extends React.Component {
                   className="description-input modal-input"
                   placeholder='What is your board about?'></textarea>
 
+                <div>
+                  { this.renderErrors() }
+                </div>
                 <div className="modal-save-button-box">
                   <input type="submit"
                     className="modal-save-button"
@@ -323,11 +328,8 @@ class Home extends React.Component {
           <section className="modal-form-container">
             <form	className="modal-form-box">
               <div className="modal-form">
-                <div>
-                { this.renderErrors() }
-                </div>
                 <label className='modal-label'>
-                  <p className='modal-label-text'>New URL</p>
+                  <p className='modal-label-text'>Enter a New URL</p>
                   <input
                     type='text'
                     onChange={this.scrapeImages}
@@ -335,7 +337,8 @@ class Home extends React.Component {
                     className="title-input modal-input" />
                 </label>
                 <div className='modal-input new-pin-image-area'>
-                  <img className='background-image' src='http://res.cloudinary.com/dfazwubvc/image/upload/v1478280874/pinspiration/icons/picture_frames.png' />
+                  <i className="fa fa-picture-o fa-4x background-image" aria-hidden="true"></i>
+                  <span className="background-image-prompt">Click on image after entering valid URL</span>
                 </div>
                 <input
                   type="text"
@@ -352,6 +355,9 @@ class Home extends React.Component {
                    {boardList}
                  </select>
 
+                 <div>
+                   { this.renderErrors() }
+                 </div>
                 <div className="modal-save-button-box">
                   <input type="submit"
                     className="modal-save-button"
@@ -372,6 +378,9 @@ class Home extends React.Component {
     //     }} type="button">
     //       <i className="fa fa-plus fa-2x plus-sign" aria-hidden="true"></i>
     //     </div>
+
+    // <img className='background-image' src='http://res.cloudinary.com/dfazwubvc/image/upload/v1478280874/pinspiration/icons/picture_frames.png' />
+
 
   }
 }
