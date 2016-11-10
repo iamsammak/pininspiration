@@ -61,6 +61,13 @@ COMPLETE - 3. masonary the following/followers (flex wrapped them)
 if you don't end up getting to the catalog icon, then disable it
 - if I change the catalog icon to another search icon that when clicked upon will drop down the list of boards
 
+TODO Friday
+1. favicon
+2. production readme
+3. Last minute css styling
+4. update seed data
+5. Keep dyno awake
+6. get rid of minify warning in heroku (check slack)
 
 Error Log {
 1:

@@ -22,21 +22,22 @@
   }
   i {
     position: absolute;
-    top: 38%;
+    top: 43%;
     left: 0;
     right: 0;
   }
   i::before {
-    width: 56px;
-    height: 56px;
-    background-image: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478211490/pinspiration/icons/pinterest_sprite.png);
-    background-position: -62px -234px;
+    // Bigger add button
+    // width: 56px;
+    // height: 56px;
+    // background-image: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478211490/pinspiration/icons/pinterest_sprite.png);
+    // background-position: -62px -234px;
     // Smaller add button
-    // width: 40px;
-    // height: 40px;
-    // background-image: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478565958/pinspiration/icons/pinterest_sprite2.png);
-    // background-position: -237px -183px;
-    // background-size: 405px 370px;
+    width: 40px;
+    height: 40px;
+    background-image: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478565958/pinspiration/icons/pinterest_sprite2.png);
+    background-position: -237px -183px;
+    background-size: 405px 370px;
     display: inline-block;
     text-shadow: none;
     color: transparent;

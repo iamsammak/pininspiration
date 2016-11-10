@@ -11,42 +11,10 @@
   margin-left: 50px;
 }
 
-// .add-pin-button {
-//   color: black;
-//   // box-shadow: 1px 1px 1px black;
-//   padding: 20px 20px;
-//   border-radius: 50%;
-//   border: 0;
-//   margin: 0;
-//   position: fixed;
-//   right: 2%;
-//   bottom: 9%;
-//   z-index: 1;
-// }
-
-// .plus-sign {
-//   position: fixed;
-//   right: 2%;
-//   bottom: 9%;
-//   vertical-align: middle;
-//   width: 25px;
-//   height: 25px;
-//   z-index: 999;
-//   cursor: pointer;
-//   background: white;
-//   border-radius: 50%;
-//   border: 5px solid #4cb5f5;
-//   box-shadow: 0 7px #0083d5;
-//   &:hover, &:focus, &:active {
-//     box-shadow: 0 5px #0083d5;
-//     transform: translateY(2px);
-//   }
-// }
-
 .add-pin-button {
   z-index: 90;
   right: 2%;
-  bottom: 13%;
+  bottom: 18%;
   background-color: #fff;
   padding: 11px 13px;
   box-shadow: 0 2px 0 0 rgba(0,0,0,0.1),0 0 0 0.5px rgba(0,0,0,0.04);
@@ -57,6 +25,9 @@
   position: fixed;
   outline: none;
   cursor: pointer;
+  &:hover {
+    background-color: #bd081c;
+  }
   em {
     display: inline-block;
     outline: none;
@@ -73,6 +44,29 @@
 .github {
   z-index: 90;
   right: 2%;
+  bottom: 13%;
+  background-color: #fff;
+  padding: 4px 6px;
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.1),0 0 0 0.5px rgba(0,0,0,0.04);
+  border-radius: 50%;
+  border: 0;
+  margin: 0;
+  display: inline-block;
+  position: fixed;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background-color: #bd081c;
+  }
+  .git-image {
+    color: #555;
+  }
+}
+
+.linkedin {
+  // font-size: 1.8em;
+  z-index: 90;
+  right: 2%;
   bottom: 8%;
   background-color: #fff;
   padding: 4px 6px;
@@ -84,18 +78,10 @@
   position: fixed;
   outline: none;
   cursor: pointer;
-  // em {
-  //   display: inline-block;
-  //   outline: none;
-  //   position: relative;
-  //   vertical-align: middle;
-  //   background-image: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478565958/pinspiration/icons/pinterest_sprite2.png);
-  //   background-position: -391px -113px;
-  //   background-size: 405px 370px;
-  //   width: 10px;
-  //   height: 15px;
-  // }
-  .git-image {
+  &:hover {
+    background-color: #bd081c;
+  }
+  .linkedin-image {
     color: #555;
   }
 }
@@ -114,6 +100,9 @@
   position: fixed;
   outline: none;
   cursor: pointer;
+  &:hover {
+    background-color: #bd081c;
+  }
   .pinterest-image {
     color: #555;
   }
@@ -152,21 +141,6 @@
 
 .m-fadeIn {
   display: block;
-}
-
-.add-pin-button:hover {
-  background-color: #bd081c;
-  // background-color: #f5f5f5;
-}
-
-.github:hover {
-  background-color: #bd081c;
-  // background-color: #f5f5f5;
-}
-
-.pinterest:hover {
-  background-color: #bd081c;
-  // background-color: #f5f5f5;
 }
 
 .add-pin-menu > li {
