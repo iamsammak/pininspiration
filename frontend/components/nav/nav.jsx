@@ -88,8 +88,9 @@ class Nav extends React.Component {
               aria-hidden="true"
               alt='profile'></i>
           </Link>
-          <button className="logout-button"
-            onClick={(e) => this.logEmOut(e)}>Logout</button>
+          <i className="fa fa-sign-out fa-3x logout-button"
+            onClick={(e) => this.logEmOut(e)}
+            aria-hidden="true"></i>
         </div>
       </section>
     );
@@ -97,3 +98,6 @@ class Nav extends React.Component {
 }
 
 export default withRouter(Nav);
+
+// <button className="logout-button"
+//   onClick={(e) => this.logEmOut(e)}>Logout</button>
