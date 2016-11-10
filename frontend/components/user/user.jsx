@@ -122,19 +122,19 @@ class User extends React.Component {
           <div className="empty"></div>
           <p className="user-description">{description}</p>
         </div>
-          <img className="profile-picture" src={this.user.image_url} />
+        <img className="profile-picture" src={this.user.image_url} />
           {followButton}
         <br />
         <div className="detail-title-container">
           <div className="detail-titles">
             <Link to={boardsUrl}>
-              <ul className="text-container checked">
+              <ul className="text-container checked" id="boards-text-container">
                 <li className="label">Boards</li>
                 <li className="number">{this.props.boards.length}</li>
               </ul>
             </Link>
             <Link to={pinsUrl}>
-              <ul className="text-container unchecked">
+              <ul className="text-container unchecked" id="pins-text-container">
                 <li className="label">Pins</li>
                 <li className="number">{pinCount}</li>
               </ul>

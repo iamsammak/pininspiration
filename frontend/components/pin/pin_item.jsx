@@ -144,6 +144,33 @@ class PinItem extends React.Component {
         boxShadow : '3px 3px 10px black',
       }
     };
+    // let detailPinStyle = {
+    //   overlay : {
+    //   position        : 'fixed',
+    //   top             : 0,
+    //   left            : 0,
+    //   right           : 0,
+    //   bottom          : 0,
+    //   backgroundColor : 'rgba(255,255,255, 0.85)'
+    //   },
+    //   content : {
+    //     borderRadius: '4px',
+    //     bottom: 'auto',
+    //     maxHeight: '100%',
+    //     left: '50%',
+    //     padding: '2rem',
+    //     position: 'fixed',
+    //     right: 'auto',
+    //     top: '50%',
+    //     transform: 'translate(-50%,-46%)',
+    //     minWidth: '10rem',
+    //     width: '600px',
+    //     // height: '900px',
+    //     maxWidth: '60%',
+    //     backgroundColor : 'rgba(255, 255, 255, 1)',
+    //     boxShadow : '3px 3px 10px black',
+    //   }
+    // };
     let pinShortUrl = null;
     if (this.props.pin !== undefined) {
       pinShortUrl = this.props.pin.url.replace("http://", "").replace("https://", "").replace("www.", "").split("/")[0];
