@@ -46,7 +46,7 @@
 .add-pin-button {
   z-index: 90;
   right: 2%;
-  bottom: 9%;
+  bottom: 13%;
   background-color: #fff;
   padding: 11px 13px;
   box-shadow: 0 2px 0 0 rgba(0,0,0,0.1),0 0 0 0.5px rgba(0,0,0,0.04);
@@ -73,7 +73,7 @@
 .github {
   z-index: 90;
   right: 2%;
-  bottom: 3%;
+  bottom: 8%;
   background-color: #fff;
   padding: 4px 6px;
   box-shadow: 0 2px 0 0 rgba(0,0,0,0.1),0 0 0 0.5px rgba(0,0,0,0.04);
@@ -100,11 +100,30 @@
   }
 }
 
+.pinterest {
+  z-index: 90;
+  right: 2%;
+  bottom: 3%;
+  background-color: #fff;
+  padding: 4px 6px;
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.1),0 0 0 0.5px rgba(0,0,0,0.04);
+  border-radius: 50%;
+  border: 0;
+  margin: 0;
+  display: inline-block;
+  position: fixed;
+  outline: none;
+  cursor: pointer;
+  .pinterest-image {
+    color: #555;
+  }
+}
+
 .add-pin-menu {
   display: none;
   position: fixed;
   right: 7%;
-  bottom: 10%;
+  bottom: 13%;
   font-size: 16px;
   background: #fff;
   border-radius: 5%;
@@ -136,12 +155,17 @@
 }
 
 .add-pin-button:hover {
-  background-color: #ca271c;
+  background-color: #bd081c;
   // background-color: #f5f5f5;
 }
 
 .github:hover {
-  background-color: #ca271c;
+  background-color: #bd081c;
+  // background-color: #f5f5f5;
+}
+
+.pinterest:hover {
+  background-color: #bd081c;
   // background-color: #f5f5f5;
 }
 
@@ -173,7 +197,7 @@
   box-sizing: border-box;
   padding: 5px;
   &:focus, &:active {
-    box-shadow: 0 0 8px rgba(0, 0, 255, 0.8);
+    box-shadow: 0 0 8px rgba(189, 8, 28, 0.8);
   }
 }
 
@@ -183,7 +207,7 @@
   }
   .description-input {
     margin-top: 10px;
-    height: auto;
+    height: 80px;
   }
   .modal-board-select {
     height: 30px;
@@ -201,12 +225,12 @@
     text-align: center;
     cursor: pointer;
     background-color: #fff;
-    border: 5px solid #e6544a;
-    box-shadow: 0 8px #ca271c;
+    border: 5px solid #ca271c;
+    box-shadow: 0 8px #bd081c;
     &:hover {
       background-color: #fff;
-      color: #ca271c;
-      box-shadow: 0 6px #ca271c;
+      color: #bd081c;
+      box-shadow: 0 6px #bd081c;
       transform: translateY(2px);
     }
   }
@@ -219,7 +243,7 @@
   }
   position: relative;
   display: block;
-  width: 286px;
+  width: 586px;
   height: 286px;
   border: 2px;
   border-style: dashed;
@@ -228,13 +252,44 @@
   box-sizing: content-box;
   .background-image {
     position: absolute;
-    top: 40%;
-    left: 35%;
+    top: 38%;
+    left: 45%;
+    color: #bd081c;
+  }
+  .background-image-prompt {
+    position: absolute;
+    top: 28%;
+    left: 31%;
+    // color: #bd081c;
   }
   .pin-upload-image-unchecked {
     opacity: 1;
   }
   .pin-upload-image-checked {
     opacity: 0.6;
+    border: 1px solid #bd081c;
   }
+}
+
+.error-prompt {
+  margin-left: 2px;
+  color: #bd081c;
+  -webkit-animation-name: error_prompt; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: error_prompt;
+  animation-duration: 2s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes error_prompt {
+  0% {color: #bd081c; left:0px; top:0px;}
+  50% {color: #0083D5; left:10px; top:0px;}
+  100% {color: #bd081c; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes error_prompt {
+  0% {color: #bd081c; right:0px; top:0px;}
+  50% {color: #0083D5; right:10px; top:0px;}
+  100% {color: #bd081c; right:0px; top:0px;}
 }

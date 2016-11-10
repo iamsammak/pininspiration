@@ -78,7 +78,7 @@ class Boards extends React.Component {
         top: '50%',
         transform: 'translate(-50%,-50%)',
         minWidth: '10rem',
-        width: '300px',
+        width: '400px',
         maxWidth: '60rem',
         backgroundColor : 'rgba(255, 255, 255, 1)',
         boxShadow : '3px 3px 10px black',
@@ -87,7 +87,7 @@ class Boards extends React.Component {
 
     let boards = "";
     let newBoard = null;
-    
+
     if (this.props.user !== undefined && this.props.user.id === this.props.currentUser.id) {
       newBoard = (
         <section className="new-board-item" key="new-board" onClick={this.openBoardModal.bind(this)}>

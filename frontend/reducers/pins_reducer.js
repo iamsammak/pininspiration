@@ -70,7 +70,7 @@ const PinsReducer = function(state = {pins, pin, errors: []}, action){
           idx2 = i;
         }
       }
-    debugger;
+    // debugger;
       if (idx2 === -1) {
         return state;
       } else {

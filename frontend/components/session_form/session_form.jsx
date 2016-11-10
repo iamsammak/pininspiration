@@ -138,7 +138,6 @@ class SessionForm extends React.Component {
     let usernamePlaceholder = (this.props.formType === "login") ? "Username" : "Create a username ";
     let passwordPlaceholder = (this.props.formType === "login") ? "Password" : "Create a password ";
     let submitText = (this.props.formType === "login") ? "Log In" : "Sign Up ";
-    let demoClass = (this.props.formType === "login") ? "login-buttons demo-button demo-show" : "login-buttons demo-button demo-hide";
 
 
     return (
@@ -179,7 +178,7 @@ class SessionForm extends React.Component {
                   className="submit-button"
                   value={submitText} />
                 <input type="submit"
-                    className={demoClass}
+                    className="login-buttons demo-button"
                     onClick={e => this.beMyGuest(e, "baymax", "password")}
                     value="Demo" />
               </div>

@@ -43,7 +43,7 @@
   position: relative;
   box-shadow: 1px 1px 3px black;
   margin: 100px auto;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.9);
   /*background: rgba(172, 208, 192, 0.5);*/
   /*hex #ACD0C0*/
   /*rgb colors, opacity*/
@@ -52,14 +52,17 @@
   /*transition: height 1s, background-color 1s ease;*/
 }
 
-/*.login {
-  background: rgba(255, 200, 200, 0.5);
-  height: 370px;
-}*/
-
 .switch-button {
   /*color: rgb(0,51,204);*/
   font-size: 14px;
+  padding-bottom: 3px;
+  a {
+    color: #bd081c;
+  }
+  a:hover {
+    color: #ca271a;
+    font-weight: bold;
+  }
 }
 
 .header-link {
@@ -81,6 +84,7 @@
 
 .login-input {
   /*margin-left: 20px;*/
+  width: 200px;
   text-align: left;
   border: 1px solid black;
   border-radius: 3px;
@@ -96,36 +100,33 @@
   /*border-radius: 5px;*/
 }
 
+/*fun button transformations*/
+
 .submit-button {
   margin: 10px;
-  border: none;
-  width: 100px;
-  height: 30px;
-  background-color: #f2d737;
   cursor: pointer;
   font-size: 14px;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+  background-color: #fff;
+  color: black;
+  border: 5px solid #ca271c;
+  box-shadow: 0 8px #bd081c;
   &:hover {
-    background-color: #ffaf1a;
-    /*background-color: #e69500;*/
+    background-color: #fff;
+    color: #bd081c;
+    box-shadow: 0 6px #bd081c;
+    transform: translateY(2px);
   }
 }
 
 .demo-button {
   margin: 10px;
-  border: none;
-  width: 100px;
-  height: 30px;
-  background-color: #4cb5f5;
   cursor: pointer;
   font-size: 14px;
-  &:hover {
-    background-color: #0083d5;
-  }
-}
-
-/*fun button transformations*/
-
-.submit-button {
   border-radius: 3px;
   margin-bottom: 30px;
   height: 30px;
@@ -143,30 +144,7 @@
   }
 }
 
-.demo-button {
-  border-radius: 3px;
-  margin-bottom: 30px;
-  height: 30px;
-  width: 100px;
-  text-align: center;
-  background-color: #fff;
-  color: black;
-  border: 5px solid #4cb5f5;
-  box-shadow: 0 8px #0083d5;
-  &:hover {
-    background-color: #fff;
-    color: #0083d5;
-    box-shadow: 0 6px #0083d5;
-    transform: translateY(2px);
-  }
-}
-
 // REVIEW fix the submit button and demo button location
-// .demo-button.demo-hide {
-//   height: 0;
-//   border: 0;
-//   box-shadow: 0;
-// }
 
 
 

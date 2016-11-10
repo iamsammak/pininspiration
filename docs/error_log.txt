@@ -44,12 +44,18 @@ fix create pin error, image display
 create pin/board home button make sure it closes when user clicks elsewhere
 
 
-Change the sizing on the create pin modal
-- change the image background picture
+DONE - Change the sizing on the create pin modal
+DONE- change the image background picture
 
 need to rake db:reset heroku as well
 
-squarespace logos
+
+TODO Thursday
+1. squarespace logos plus updating splash page
+5. implement a new font, so I can bold certain areas i.e. username
+2. catalog
+COMPLETE - 3. masonary the following/followers (flex wrapped them)
+4. fix pin/board edit and delete rerendering state
 
 
 if you don't end up getting to the catalog icon, then disable it
