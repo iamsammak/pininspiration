@@ -86,6 +86,7 @@ class PinItem extends React.Component {
 	}
 
   handleDeletePinSubmit(e){
+    debugger;
     e.preventDefault();
     this.deletePin(this.props.pin.id);
     this.closePinModal();

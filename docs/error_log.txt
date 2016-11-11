@@ -155,7 +155,13 @@ warning.js:37 Warning: flattenChildren(...): Encountered two children with the s
   which then gave me access to fetchBoards in my props
   so I just called this.fetchBoards(userId) inside my handleDeleteBoardSubmit
 
-
+12. to handle the rerendering of upon updating pin when in boards route
+  I added a fetchBoard and fetchBoards
+  dispatch(fetchBoard(pin.board.id));
+  dispatch(fetchBoards(pin.user.id));
+  hashHistory.push(`boards/${pin.board.id}`);
+  To the receivePinWithEditSuccess callback
+  this forces a rerender of the pin
 }
 
 

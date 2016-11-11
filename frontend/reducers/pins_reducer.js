@@ -75,8 +75,8 @@ const PinsReducer = function(state = {pins, pin, errors: []}, action){
         return state;
       } else {
         let newPins = [...state.pins.slice(0,idx2), ...state.pins.slice(idx2+1)];
-        let newState2 = {pins: newPins, pin: {}};
-        return newState2;
+        let newStateAfterPinDelete = {pins: newPins, pin: {}};
+        return newStateAfterPinDelete;
       }
     }
 
