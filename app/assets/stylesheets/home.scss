@@ -111,14 +111,27 @@
 .add-pin-menu {
   display: none;
   position: fixed;
-  right: 7%;
-  bottom: 13%;
+  // right: 7%;
+  right: 75px;
+  bottom: 18%;
   font-size: 16px;
   background: #fff;
   border-radius: 5%;
   border: 1px solid #ccc;
   list-style: none;
   z-index: 990;
+}
+
+.add-pin-menu-Caret {
+  background-image: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478826001/pinspiration/icons/pinterest_sprite_arrows2.png);
+  background-position: -234px -37px;
+  background-size: 249px 240px;
+  width: 10px;
+  height: 20px;
+  right: -10px;
+  z-index: 990;
+  position: absolute;
+  top: 94px;
 }
 
 .greater {

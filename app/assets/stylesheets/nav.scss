@@ -1,6 +1,8 @@
 // Pinterest-colors
 // Red
-// #bd081c #BD080E
+// #bd081c #BD080E #d50c22 (light red)
+// Blue
+// #0083D5
 // Light Grey
 // color: #a7a7a7;
 
@@ -9,7 +11,7 @@
   display: flex;
   flex-shrink: 2;
   width: 100%;
-  border-bottom: 1px solid #a7a7a7;
+  border-bottom: 0.1px solid rgba(0,0,0,0.1);
   // color: #555;
   // dark grey vs light grey
   color: #a7a7a7;
@@ -27,7 +29,7 @@
 
 .logo {
   font-size: 2.3em;
-  padding: 0 4px;
+  padding: 0 15px;
   color: #bd081c;
   &:hover {
     color: #0083D5;
@@ -41,18 +43,55 @@
   width:100%;
 }
 
+.catalog-container {
+  margin: 15px 10px 0px 10px;
+}
+
 .profile-container {
   margin: 15px 10px 0px 10px;
-  min-width: 165px;
+  min-width: 110px;
   display: flex;
   float: left;
-  i {
-    height: 50px;
-    padding: 0 20px 0 10px;
-    cursor: pointer;
-    &:hover {
-      color: #0083D5;
-    }
+  // Comment back in if catalog doesn't pan out then DRY up below
+  // i {
+  //   height: 50px;
+  //   padding: 0 20px 0 10px;
+  //   cursor: pointer;
+  //   &:hover {
+  //     color: #0083D5;
+  //   }
+  // }
+}
+
+// Comment back in if catalog link doesn't get made
+// .catalog-link {
+//   color: transparent;
+//   &:hover {
+//     color: #0083D5;
+//   }
+// }
+.catalog-link {
+  height: 50px;
+  padding: 0 0px 0 10px;
+  cursor: pointer;
+  &:hover {
+    color: #0083D5;
+  }
+}
+.profile-link {
+  height: 50px;
+  padding: 0 20px 0 10px;
+  cursor: pointer;
+  &:hover {
+    color: #0083D5;
+  }
+}
+.logout-button {
+  height: 50px;
+  padding: 0 20px 0 10px;
+  cursor: pointer;
+  &:hover {
+    color: #0083D5;
   }
 }
 
@@ -69,10 +108,77 @@
   background-position:left center;outline:0;
 }
 
-// Comment back in if catalog link doesn't get made
-// .catalog-link {
-//   color: transparent;
-//   &:hover {
-//     color: #0083D5;
-//   }
-// }
+#catalog-menu {
+  position: relative;
+  display: flex;
+}
+
+.catalog-content {
+  width: 170px;
+  margin-top: 50px;
+  display: none;
+  position: absolute;
+  left: -50px;
+  border: 0.1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 1px 0 0 rgba(0,0,0,0.1);
+  border-radius: 5px;
+  padding: 24px 20px 18px 20px;
+}
+
+#catalog-menu:hover > .catalog-content {
+  display:block;
+  z-index: 200;
+  background-color: white;
+}
+
+.homefeed-button {
+  text-align: left;
+  cursor: pointer;
+  padding-bottom: 10px;
+  i {
+    display: inline;
+  }
+  span {
+    display: inline-block;
+    margin-left: 7px;
+    font-size: 1.17em;
+    font-weight: bold;
+  }
+}
+
+.homefeed-title:hover {
+  color: #0083D5;
+}
+
+.catalog-board:hover {
+  color: #0083D5;
+  font-weight: bold;
+}
+
+.catalog-boards {
+  padding-top: 3px 0;
+  i {
+    display: inline;
+  }
+  span {
+    display: inline-block;
+    margin-left: 7px;
+    font-size: 1.17em;
+    font-weight: bold;
+    padding-bottom: 3px
+  }
+  .catalog-board {
+    padding-left: 23px;
+  }
+}
+
+.catalogCaret {
+  background: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478825037/pinspiration/icons/pinterest_sprite_arrows.png) -87px -267px no-repeat;
+  top: -13px;
+  width: 27px;
+  height: 13px;
+  z-index: 200;
+  position: absolute;
+  left: 59px;
+  text-align: left;
+}

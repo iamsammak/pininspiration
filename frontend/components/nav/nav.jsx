@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 
+// testing catalog menu
+import { IndexLink, hashHistory } from 'react-router';
+
+
 class Nav extends React.Component {
   constructor(props) {
     super(props);
@@ -62,6 +66,44 @@ class Nav extends React.Component {
     this.props.logout(0);
   }
 
+  displayCatalog() {
+    return (
+      <div id="catalog-menu">
+        <i className="fa fa-bars fa-2x catalog-link" aria-hidden="true"></i>
+        <div className="catalog-content">
+          <span className="catalogCaret"></span>
+          <div className="homefeed-button">
+            <IndexLink to="/" className="homefeed-link">
+              <i className="fa fa-chevron-right"></i>
+              <span className="homefeed-title">Home Feed</span>
+            </IndexLink>
+          </div>
+          <div className="catalog-boards">
+            <i className="fa fa-chevron-right"></i>
+            <span>My Boards</span>
+            {
+              this.currentUser.boards.map(board => {
+                const boardLink = `/boards/${board.id}`;
+                return (
+                  <div className="catalog-board catalog-item" key={board.id}>
+                    <Link key={board.id} to={boardLink} className="catalog-board-link">{board.title}</Link>
+                  </div>
+                );
+              })
+            }
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // board.id maybe utilizing currentTarget??
+  //<div className="catalog-board catalog-item" key={board.id} onClick={this.redirectToBoard}>{board.title}</div>
+  // redirectToBoard(boardLink) {
+  //   hashHistory.push(boardLink);
+  // }
+
+
   render() {
     let userUrlPath = `/${this.currentUser.username}`;
 
@@ -75,15 +117,15 @@ class Nav extends React.Component {
               alt="logo" id="logo"></i>
           </Link>
         </div>
-
         <div className="search-container all-containers">
           <input className="search-bar"
             type="text"
             placeholder='Search' />
         </div>
-
+        <div className="catalog-container all-containers">
+          { this.displayCatalog() }
+        </div>
         <div className="profile-container all-containers">
-          <i className="fa fa-bars fa-2x catalog-link" aria-hidden="true"></i>
           <Link to={userUrlPath}>
             <i className="fa fa-user fa-2x profile-link"
               title="User Profile"
@@ -97,10 +139,8 @@ class Nav extends React.Component {
         </div>
       </section>
     );
+
   }
 }
 
 export default withRouter(Nav);
-
-// <button className="logout-button"
-//   onClick={(e) => this.logEmOut(e)}>Logout</button>

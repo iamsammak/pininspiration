@@ -33,7 +33,14 @@ class UserPins extends React.Component {
     }
     if (!this.isEmpty(this.props.pins)) {
       pins = pinArr.map((pin) => (
-        <PinItem key={pin.id+pin.title} pin={pin} user={this.props.user} currentUser={this.props.currentUser} updatePin={this.props.updatePin} deletePin={this.props.deletePin}/>
+        <PinItem
+                  key={pin.id+pin.title}
+                  pin={pin}
+                  user={this.props.user}
+                  currentUser={this.props.currentUser}
+                  fetchAllPins={this.props.fetchAllPins}
+                  updatePin={this.props.updatePin}
+                  deletePin={this.props.deletePin}/>
       ));
     }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
-import PinItem from '../pin/pin_item';
+import PinItem from '../pin/pin_item'; //remove if unneccessary
 
 class Following extends React.Component {
   constructor(props) {

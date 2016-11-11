@@ -6,6 +6,7 @@ class BoardItem extends React.Component {
   constructor(props) {
     super(props);
     this.fetchBoard = this.props.fetchBoard.bind(this);
+    this.fetchBoards = this.props.fetchBoards.bind(this);
     this.updateBoard = this.props.updateBoard.bind(this);
     this.deleteBoard = this.props.deleteBoard.bind(this);
     this.state = {
@@ -56,12 +57,16 @@ class BoardItem extends React.Component {
         description: this.state.description
       }
     });
+    this.fetchBoards(this.props.user.id);
     this.closeBoardModal();
 	}
 
   handleDeleteBoardSubmit(e){
+    // debugger;
     e.preventDefault();
     this.deleteBoard(this.props.board.id);
+    // I want to fetchBoards
+    this.fetchBoards(this.props.user.id);
     this.closeBoardModal();
   }
 
