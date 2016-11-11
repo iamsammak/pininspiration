@@ -38,7 +38,6 @@ class UserPins extends React.Component {
                   pin={pin}
                   user={this.props.user}
                   currentUser={this.props.currentUser}
-                  fetchAllPins={this.props.fetchAllPins}
                   updatePin={this.props.updatePin}
                   deletePin={this.props.deletePin}/>
       ));

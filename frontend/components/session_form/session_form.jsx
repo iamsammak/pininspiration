@@ -146,6 +146,7 @@ class SessionForm extends React.Component {
           <form
             onSubmit={this.handleSubmit}
             className={loginFromClass}>
+            <img id="app-logo" src="http://res.cloudinary.com/dfazwubvc/image/upload/v1478902704/pinspiration/icons/Pin_That_-logo_1000px.png" />
             <h1 id="app-name">Pin That!</h1>
             <p id='slogan'>Inspiration at your fingertips</p>
 

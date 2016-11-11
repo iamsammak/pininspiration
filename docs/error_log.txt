@@ -53,9 +53,9 @@ need to rake db:reset heroku as well
 TODO Thursday
 1. squarespace logos plus updating splash page
 5. implement a new font, so I can bold certain areas i.e. username
-2. catalog
+COMPLETE - 2. catalog
 COMPLETE - 3. masonary the following/followers (flex wrapped them)
-4. fix pin/board edit and delete rerendering state
+COMPLETE - 4. fix pin/board edit and delete rerendering state
 
 
 if you don't end up getting to the catalog icon, then disable it
