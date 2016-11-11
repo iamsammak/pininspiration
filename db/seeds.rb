@@ -50,7 +50,7 @@ image_url: "http://res.cloudinary.com/dfazwubvc/image/upload/v1478627614/pinspir
 description: "Sometimes you have to fight for the things that are worth fighting for.")
 
 # 1 - 3
-Board.create!(title: "Studio Ghilbi", description: "Best films ever", user_id: 1)
+Board.create!(title: "Studio Ghilbi", description: "Best films ever. And let's be real I've seen each of them like 100+ times", user_id: 1)
 Board.create!(title: "Digital illustrations", description: "Imagination in the clouds", user_id: 1)
 Board.create!(title: "Simple colors", description: "Design...is life", user_id: 1)
 # 4 - 6
@@ -58,11 +58,11 @@ Board.create!(title: "Life Lessons", description: "Never stop learning", user_id
 Board.create!(title: "Books that I read", description: "Knowledge", user_id: 1)
 Board.create!(title: "Travel", description: "Places I want to go", user_id: 1)
 # 7 8 9
-Board.create!(title: "Sports", description: "Sports", user_id: 2)
+Board.create!(title: "Sports", description: "Sports that I totally know how to play", user_id: 2)
 Board.create!(title: "Youtube", description: "Do you think Totoro can start a youtube channel", user_id: 2)
-Board.create!(title: "Buzzfeed", description: "I can read these articles all day", user_id: 2)
+Board.create!(title: "Buzzfeed", description: "I can read these articles all day, literaly...all...day", user_id: 2)
 # 10 11 12
-Board.create!(title: "Celebrities", description: "My patients", user_id: 3)
+Board.create!(title: "Celebrities", description: "These are my friends, I text them everyday", user_id: 3)
 Board.create!(title: "Music", description: "Music that Tadashi downloaded onto my harddrive", user_id: 3)
 Board.create!(title: "Design", description: "Little do you know, I actually came upon with my inflatable design (not Tadashi's idea)", user_id: 3)
 # 13 14 15
@@ -75,13 +75,13 @@ Board.create!(title: "Food porn", description: "Pics or it didn't happen", user_
 Board.create!(title: "Travel", description: "Next adventure", user_id: 4)
 Board.create!(title: "Fashion", description: "Ideas", user_id: 4)
 #20
-Board.create!(title: "Movies", description: "To watch later", user_id: 5)
-Board.create!(title: "Flower Arrangements", description: "Back to the roots", user_id: 5)
+Board.create!(title: "Movies", description: "To share with friends and to watch later", user_id: 5)
+Board.create!(title: "Flower Arrangements", description: "Back to the roots, my mother taught me how to arrange flowers", user_id: 5)
 Board.create!(title: "Recipes", description: "Momma wants me to learn how to cook", user_id: 5)
-Board.create!(title: "Hong Kong", description: "Travel Ideas", user_id: 5)
+Board.create!(title: "Hong Kong", description: "Travel Ideas to my favorite place on Earth", user_id: 5)
 
-Board.create!(title: "Family Trips", description: "Plan the next trip", user_id: 6)
-Board.create!(title: "Pokemon Go", description: "Gotta Catch em' All", user_id: 6)
+Board.create!(title: "Family Trips", description: "Ideas for the next family trip, where should we go next?", user_id: 6)
+Board.create!(title: "Pokemon Go", description: "I wanna be the very best like no one ever was to catch them is my real test to train them is my cause", user_id: 6)
 Board.create!(title: "Books on Books", description: "Soak in some knowledge", user_id: 6)
 
 Board.create!(title: "Things I like", description: "I like", user_id: 7)

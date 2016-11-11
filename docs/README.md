@@ -2,7 +2,13 @@
 
 [Live site][pinspiration]
 
-[pinspiration]: http://www.pinthat.space
+[Heroku link][heroku]
+
+[Trello link][trello]
+
+[pinspiration]: http://www.pinspiration.space
+[heroku]: http://www.herokuapp.com
+[trello]: https://trello.com/b/8DdmFHNC/pinterest-clone-name-tbd
 
 ## Minimum Viable Product
 

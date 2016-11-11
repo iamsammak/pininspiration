@@ -35,7 +35,6 @@ class BoardPins extends React.Component {
                   user={this.props.user}
                   currentUser={this.props.currentUser}
                   fetchPin={this.props.fetchPin}
-                  fetchAllPins={this.props.fetchAllPins}
                   updatePin={this.props.updatePin}
                   deletePin={this.props.deletePin}
                   canEditPin={true}/>
