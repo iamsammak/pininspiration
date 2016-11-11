@@ -89,7 +89,6 @@ class User extends React.Component {
     let pinCount = this.props.user.pins.length;
     // let pinCount = this.props.currentUser.pins.length;
 
-    // REVIEW change 404 to the actual count when you code followers
     let followerCount = this.props.currentUser.followers.length;
     let followeeCount = this.props.currentUser.followees.length;
     let followText = "Follow";

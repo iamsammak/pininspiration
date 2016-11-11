@@ -61,11 +61,19 @@ COMPLETE - 3. masonary the following/followers (flex wrapped them)
 if you don't end up getting to the catalog icon, then disable it
 - if I change the catalog icon to another search icon that when clicked upon will drop down the list of boards
 
+Idea 1
+- either have a dropdown or a modal appear with links to all the boards available
+Idea 2
+- has a link to three predefined boards
+- and a random option that will random pick a number between the Board.count
+- then appead that number to the board url path
+
+
 TODO Friday
 1. favicon
 2. production readme
 3. Last minute css styling
-4. update seed data
+4. update seed data - add more text to the board descriptions
 5. Keep dyno awake
 6. get rid of minify warning in heroku (check slack)
 
@@ -140,6 +148,12 @@ warning.js:37 Warning: flattenChildren(...): Encountered two children with the s
     return (<div></div>);
   }
 
+11. In user profile router
+  the deleteboard wasn't working, or well it was but I needed to rerender the profile show page
+  which means refetching all Boards
+  so I added "fetchBoards" into the props of boards.jsx where I call board_item
+  which then gave me access to fetchBoards in my props
+  so I just called this.fetchBoards(userId) inside my handleDeleteBoardSubmit
 
 
 }

@@ -12,11 +12,11 @@ class PinItem extends React.Component {
       title: "",
       description: "",
       url: "",
-      // user_id: this.props.pin.user_id, //user.id or user_id
       user_id: this.props.pin.user.id, //user.id or user_id
       board_id: -1,
       image_url: ""
     };
+    // this.fetchAllPins = this.props.fetchAllPins.bind(this);
     this.updatePin = this.props.updatePin.bind(this);
     this.deletePin = this.props.deletePin.bind(this);
     this.handleEditPinSubmit = this.handleEditPinSubmit.bind(this);
@@ -72,6 +72,7 @@ class PinItem extends React.Component {
 	}
 
   handleEditPinSubmit(e){
+    // debugger;
     e.preventDefault();
     this.updatePin({
       pin: {
@@ -81,6 +82,7 @@ class PinItem extends React.Component {
       }
     });
     this.closePinModal();
+
 	}
 
   handleDeletePinSubmit(e){
@@ -144,6 +146,7 @@ class PinItem extends React.Component {
         boxShadow : '3px 3px 10px black',
       }
     };
+    // testing the overflow pin layout hack
     // let detailPinStyle = {
     //   overlay : {
     //   position        : 'fixed',

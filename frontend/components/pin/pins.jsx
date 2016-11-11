@@ -15,11 +15,13 @@ class Pins extends React.Component {
 
   componentDidMount() {
     this.props.fetchAllPins(this.state.page);
+    // testing masonary
     // this.masonry.on('layoutComplete', this.handleLayoutComplete);
   }
 
 
   componentWillUnmount() {
+    // testing masonry
     // this.masonry.off('layoutComplete', this.handleLayoutComplete);
   }
   handleLayoutComplete() {
@@ -60,14 +62,15 @@ class Pins extends React.Component {
     if (!this.isEmpty(this.props.pins)) {
       pins = this.props.pins.map((pin) => (
         <PinItem
-          key={pin.id+pin.title}
-          pin={pin}
-          user={this.props.user}
-          currentUser={this.props.currentUser}
-          fetchPin={this.props.fetchPin}
-          updatePin={this.props.updatePin}
-          deletePin={this.props.deletePin}
-          canEditPin={false}/>
+                  key={pin.id+pin.title}
+                  pin={pin}
+                  user={this.props.user}
+                  currentUser={this.props.currentUser}
+                  fetchAllPins={this.props.fetchAllPins}
+                  fetchPin={this.props.fetchPin}
+                  updatePin={this.props.updatePin}
+                  deletePin={this.props.deletePin}
+                  canEditPin={false}/>
       ));
     }
     this.listenForScroll();

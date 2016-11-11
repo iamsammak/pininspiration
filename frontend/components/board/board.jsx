@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
-import BoardItem from '../board/board_item';
+import BoardItem from '../board/board_item'; //unnecessary, remove if not used
 import BoardPins from './board_pins';
 import Modal from 'react-modal';
 import merge from 'lodash/merge';
@@ -22,10 +22,18 @@ class Boards extends React.Component {
     this.handleDeleteBoardSubmit = this.handleDeleteBoardSubmit.bind(this);
   }
   componentDidMount() {
+    // debugger;
     this.props.fetchBoard(this.props.params.boardId);
   }
 
+
+// catalog my boards - isn't mounting the component
+// instead the component is receiving props
+// therefor I need the fetchBoard logic instead the componentWillReceiveProps
+// get the boardId from nextProps - nextProps.params.boardId
+
   componentWillReceiveProps(nextProps) {
+    // debugger; //check with nextProps is and extract the correct info then fetchBoard
     if (nextProps.board !== undefined) {
       this.setState({title: nextProps.board.title });
       this.setState({description: nextProps.board.description });
@@ -37,6 +45,13 @@ class Boards extends React.Component {
         this.state.newPin[this.state.newPin.length - 1].id !== nextProps.pin.id ) {
         this.setState({newPin: this.state.newPin.concat([nextProps.pin])});
       }
+    }
+    // well this is an infinite loop
+    // added logic then setState, but this receives Board twice, seems redundant
+    if (parseInt(nextProps.params.boardId) !== nextProps.board.id) {
+      nextProps.fetchBoard(nextProps.params.boardId);
+      this.setState({title: nextProps.board.title });
+      this.setState({description: nextProps.board.description });
     }
   }
 
@@ -78,6 +93,7 @@ class Boards extends React.Component {
 
   handleDeleteBoardSubmit(e){
     e.preventDefault();
+    // debugger; //if current location is the same then we need to refetch page
     this.deleteBoard(this.props.board.id);
     this.closeBoardModal();
     this.props.router.push(`/${this.props.currentUser.username}`);

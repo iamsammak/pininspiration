@@ -21,6 +21,7 @@ class Home extends React.Component {
       pin_user_id: this.props.currentUser.id,
       errors: []
     };
+    // TODO comment back in when you have internet or comment below out if testing with no internet
     $.embedly.defaults.key = "066711cadc384f7fb4e7e0dc3a2d02f0";
     this.createBoard = this.props.createBoard.bind(this);
     this.createPin = this.props.createPin.bind(this);
@@ -290,6 +291,7 @@ class Home extends React.Component {
           </a>
         </div>
         <ul className="add-pin-menu" id="add-pin-menu-id">
+          <span className="add-pin-menu-Caret"></span>
           <li onClick={this.openPinModal.bind(this)}>Create a Pin</li>
           <li onClick={this.openBoardModal.bind(this)}>Create a Board</li>
         </ul>

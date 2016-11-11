@@ -58,7 +58,7 @@
     border: 1px solid #BD080E;
     // box-shadow: 0 8px #bd081c;
     &:hover {
-      background-color: #BD080E;
+      background-color: #d50c22;
       // box-shadow: 0 3px 3px 0 rgba(0,0,0,0.24);
       box-shadow: 0 0 10px 0 rgba(0,0,0,0.2),0 5px 5px 0 rgba(0,0,0,0.24);
     }
@@ -67,7 +67,7 @@
     background-color: #0083d5;
     border: 1px solid #4cb5f5;
     &:hover {
-      background-color: #0083d6;
+      background-color: #009DFF;
       // box-shadow: 0 3px 3px 0 rgba(0,0,0,0.24);
       box-shadow: 0 0 10px 0 rgba(0,0,0,0.2),0 5px 5px 0 rgba(0,0,0,0.24);
     }
@@ -104,7 +104,7 @@
   position: relative;
   overflow: hidden;
 
-  // this is for the blue hover
+  // this is for the blue hover ripple thing
   // &:before {
   //   content: "";
   //   position: absolute;
