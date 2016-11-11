@@ -46,9 +46,10 @@ const PinMiddleware = ({getState, dispatch}) => next => action => {
   };
   const receivePinWithDeleteSuccess = id => {
     dispatch(receivePinWithDelete(id));
-    // dispatch(fetchBoard(pin.board.id));
-    // dispatch(fetchBoards(pin.user.id));
-    // hashHistory.push(`boards/${pin.board.id}`);
+    // debugger;
+    dispatch(fetchBoard(id.board.id));
+    dispatch(fetchBoards(id.board.user_id));
+    hashHistory.push(`boards/${id.board.id}`);
   };
 
   const receivePinSuccess = pin => dispatch(receivePin(pin));

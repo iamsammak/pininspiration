@@ -162,6 +162,12 @@ warning.js:37 Warning: flattenChildren(...): Encountered two children with the s
   hashHistory.push(`boards/${pin.board.id}`);
   To the receivePinWithEditSuccess callback
   this forces a rerender of the pin
+13. to handle the rerendering of board upon pin deletion, so the pin actually disappears
+  I added more dispatch actions to receivePinWithDeleteSuccess callback
+  dispatch(fetchBoard(id.board.id));
+  dispatch(fetchBoards(id.board.user_id));
+  hashHistory.push(`boards/${id.board.id}`);
+  id was an object with all the board/pin info so I just pulled the necessary info from that object
 }
 
 
