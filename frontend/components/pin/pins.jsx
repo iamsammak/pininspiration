@@ -9,7 +9,7 @@ class Pins extends React.Component {
     super(props);
     this.state = {
       page: 1,
-      total_pages: 12
+      total_pages: 15
     };
   }
 
