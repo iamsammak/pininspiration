@@ -1,72 +1,78 @@
-# Pin That!
+# PinThat!
 
 [Live site][pinspiration]
 
 [pinspiration]: http://www.pinthat.space
 
-## Minimum Viable Product
+PinThat is a full-stack web application inspired by Pinterest and built using Ruby on Rails and React.
+It is a full-stack web application built on the following:
 
-PinterestClone is a web application inspired by Pinterest built using Ruby on Rails
-and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the
-following criteria with smooth, bug-free navigation, adequate seed data and
-sufficient CSS styling:
+*  Rails backend
+*  React/Redux frontend
+*  Postgres RDBMS
 
-- [ ] Hosting on Heroku
-- [ ] New account creation, login, and guest/demo login
-- [ ] Profiles
-- [ ] Pins
-- [ ] Boards for organizing pins
-- [ ] Follows
-- [ ] Infinite Scroll
-- [ ] Production README
+## Features
 
-## Design Docs
-* [View Wireframes][wireframes]
-* [React Components][components]
-* [API endpoints][api-endpoints]
-* [DB schema][schema]
-* [Sample State][sample-state]
+### Single Page App
 
-[wireframes]: docs/wireframes
-[components]: docs/component-hierarchy.md
-[sample-state]: docs/sample-state.md
-[api-endpoints]: docs/api-endpoints.md
-[schema]: docs/schema.md
+PinThat uses React Router to keep all its content on a single root page.
 
-## Implementation Timeline (10 days)
 
-### Phase 1: Backend setup and Front End User Authentication (2 days)
+### New account creation, login and demo login
+![login]
 
-**Objective:** Functioning rails project with front-end Authentication
+### Discover Feed on Home Page
 
-- [ ] create New Rails project
+Scroll through all pins with infinite scroll feature. Loading 15 pins per scroll
+![homefeed]
 
-### Phase 2: Pins Model, API, and components (2 days)
+### Quick Navigation Dropdown
 
-**Objective:** Pins can be created, read, edited and destroyed through
-the API.
+User has access to a dropdown menu for quick navigation to their boards and home feed
 
-### Phase 3: Boards (2 day)
+![quickdropdown]
 
-**Objective:** Pins belong to Boards that can be created, read, edited, and destroyed through the API.
+### User Profile
 
-### Phase 4: Follows Model, API, and components (1 days)
+Using masonry User has a live view of their boards, pins, followers and followings
 
-**Objective:** Users can follow and unfollow another user.
+![userprofile]
 
-### Phase 5: Infinite Scroll for Pins (1 days)
+### Pin Modal
 
-**objective:** Add infinite scroll to Pins Index.
+Using React Modal creates a zoomed in view for users to get a clearer picture of their favorite pins
 
-### Phase 6: Search (1 day)
+![pindetailmodal]
 
-**objective:** Implement Search Bar Realtime functionality.
+### Realtime Search
 
-### Phase 7: Final CSS styling for MVP (1 day)
+User can search through pins matching search keyword to pin titles and descriptions
 
-**objective:** Beauty in Simplicity.
+![search]
 
-### Bonus Features (TBD)
-- [ ] Comments for pins
-- [ ] Taggings for pins
-- [ ] Likes for pins
+### Scraping Live Images
+
+Using Embedly users can create pin and scrape real images from live websites by entering the website url in the create pin form
+
+![createpin]
+
+## Future Features
+
+The next steps in developing PinThat! will be:
+
+### Comments
+
+Allow users to leave comments on pins to further inspire one another.
+
+### Tags
+
+Creating tags for each image will allow for a realtime search to be better utilized.
+
+
+[login]: ./docs/screenshots/login.png
+[homefeed]: ./docs/screenshots/homefeed.png
+[userprofile]: ./docs/screenshots/userprofile.png
+[quickdropdown]: ./docs/screenshots/quickdropdown.png
+[pindetailmodal]: ./docs/screenshots/pindetailmodal.png
+[search]: ./docs/screenshots/search.png
+[createpin]: ./docs/screenshots/createpin.png
