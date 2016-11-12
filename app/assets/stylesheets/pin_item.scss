@@ -3,38 +3,29 @@
   float: left;
   width: 248px;
   height: auto;
-  padding: 10px;
   border: 1px 1px 1px 1px solid #ccc;
   border-radius: 5px;
+  padding: 10px;
   text-align: center;
-  /*float: left;
-	width: 235px;
-	margin-bottom: 13px;
-	border-radius: 10px;
-	background-color: #fff;
-	color: #333333;
-	font-size: 10px;
-	box-shadow: 0 1px 2px #999999;
-	opacity: 1;*/
   &:hover {
     background-color: rgb(242, 242, 242);
     .edit-board-button em {
       display: inline;
     }
   }
-  .picture-block {
+  .picture-section {
+    cursor: -webkit-zoom-in;
     display: block;
     content: "";
-    cursor: -webkit-zoom-in;
-    width: 100%;
     height: auto;
+    width: 100%;
   }
   .pin-picture {
     display: block;
     width: 100%;
     border-radius: 5px;
   }
-  .detail-block {
+  .detail-section {
     width: 100%;
     display: block;
     float: left;
@@ -57,7 +48,7 @@
     vertical-align: middle;
     float: left;
   }
-  .url-block {
+  .url-section {
     display: inline-block;
     color: rgb(85, 85, 85);
     text-align: left;
@@ -67,31 +58,29 @@
     font-weight: bold;
     font-size: 16px;
   }
-  .pin-url {}
 
   .edit-board-button {
     &:hover {
       background-color: #bd081c;
     }
     em {
-      background: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478211490/pinspiration/icons/pinterest_sprite.png) -183px -204px no-repeat;
-      border-radius: 30%;
+      cursor: pointer;
+      z-index: 2;
       display: none;
       position: absolute;
+      background: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478211490/pinspiration/icons/pinterest_sprite.png) -183px -204px no-repeat;
       width: 30px;
       height: 30px;
       bottom: 0;
       right: 0;
-      cursor: pointer;
-      z-index: 2
+      border-radius: 30%;
     }
-    // display: none;
+    cursor: pointer;
     position: absolute;
     width: 33px;
     height: 33px;
     bottom: 10px;
     right: 5px;
-    cursor: pointer;
-    border-radius: 5px
+    border-radius: 5px;
   }
 }

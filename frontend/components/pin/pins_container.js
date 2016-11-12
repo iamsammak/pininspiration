@@ -14,9 +14,9 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchAllPins: (page) => dispatch(fetchAllPins(page)),
-  updatePin: (pin) => dispatch(updatePin(pin)),
-  deletePin: (id) => dispatch(deletePin(id))
+  fetchAllPins: page => dispatch(fetchAllPins(page)),
+  updatePin: pin => dispatch(updatePin(pin)),
+  deletePin: id => dispatch(deletePin(id))
 });
 
 export default connect(

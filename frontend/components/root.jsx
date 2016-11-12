@@ -1,7 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 
-// react router methods
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 // components
@@ -13,8 +12,8 @@ import PinsContainer from './pin/pins_container';
 import UserPinsContainer from './pin/user_pins_container';
 import BoardsContainer from './board/boards_container';
 import BoardContainer from './board/board_container';
-import FollowersContainer from './user/followers_container';
-import FollowingContainer from './user/following_container';
+import FollowersContainer from './follow/followers_container';
+import FollowingContainer from './follow/following_container';
 import SearchPinContainer from './pin/search_pin_container';
 
 

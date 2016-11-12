@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import PinItem from '../pin/pin_item';
+import PinCard from '../pin/pin_card';
 import Masonry from 'react-masonry-component';
 
 class UserPins extends React.Component {
@@ -17,7 +17,6 @@ class UserPins extends React.Component {
         if(obj.hasOwnProperty(prop))
             return false;
     }
-
     return true && JSON.stringify(obj) === JSON.stringify({});
   }
 
@@ -31,9 +30,10 @@ class UserPins extends React.Component {
         return [value];
       });
     }
+    
     if (!this.isEmpty(this.props.pins)) {
       pins = pinArr.map((pin) => (
-        <PinItem
+        <PinCard
                   key={pin.id+pin.title}
                   pin={pin}
                   user={this.props.user}

@@ -10,8 +10,8 @@ const mapStateToProps = state => ({
 
 
 const mapDispatchToProps = dispatch => ({
-  updatePin: (pin) => dispatch(updatePin(pin)),
-  deletePin: (id) => dispatch(deletePin(id))
+  updatePin: pin => dispatch(updatePin(pin)),
+  deletePin: id => dispatch(deletePin(id))
 });
 
 export default connect(

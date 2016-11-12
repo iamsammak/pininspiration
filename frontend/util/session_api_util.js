@@ -59,12 +59,3 @@ export const unfollowUser = function(userId, success, error){
 		error
 	});
 };
-
-// Testing on chrome console dev tools
-// $.ajax({
-//     method: 'POST',
-//     url: '/api/users',
-//     data: {user: {username: "name", password: "password"}},
-//     success: () => console.log("success"),
-//     error: () => console.log("error")
-//   });

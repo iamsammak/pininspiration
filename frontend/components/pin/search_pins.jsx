@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
-import PinItem from './pin_item';
+import PinCard from './pin_card';
 import Masonry from 'react-masonry-component';
 
 class Pins extends React.Component {
@@ -23,7 +23,7 @@ class Pins extends React.Component {
     let pins = "";
     if (!this.isEmpty(this.props.pins)) {
       pins = this.props.pins.map((pin) => (
-        <PinItem
+        <PinCard
                   key={pin.id+pin.title}
                   pin={pin}
                   user={this.props.user}

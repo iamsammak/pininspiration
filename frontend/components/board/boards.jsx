@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import BoardItem from '../board/board_item';
+import BoardCard from '../board/board_card';
 import Modal from 'react-modal';
 
 class Boards extends React.Component {
@@ -30,6 +30,20 @@ class Boards extends React.Component {
     return true && JSON.stringify(obj) === JSON.stringify({});
   }
 
+  openBoardModal() {
+    this.setState({ openNewBoardModal: true });
+  }
+
+  closeBoardModal() {
+    this.setState({ openNewBoardModal: false });
+  }
+
+  update(field){
+    return e => {
+      this.setState({[field]: e.currentTarget.value });
+    };
+  }
+
   handleNewBoardSubmit(e){
     e.preventDefault();
     this.createBoard({
@@ -42,21 +56,6 @@ class Boards extends React.Component {
     this.closeBoardModal();
   }
 
-  openBoardModal() {
-    this.setState({
-      openNewBoardModal: true
-    });
-  }
-
-  closeBoardModal() {
-    this.setState({
-      openNewBoardModal: false
-    });
-  }
-
-  update(field){
-    return e => { this.setState({[field]: e.currentTarget.value }); };
-  }
   render() {
     let newBoardStyle = {
       overlay : {
@@ -90,7 +89,7 @@ class Boards extends React.Component {
 
     if (this.props.user !== undefined && this.props.user.id === this.props.currentUser.id) {
       newBoard = (
-        <section className="new-board-item" key="new-board" onClick={this.openBoardModal.bind(this)}>
+        <section className="new-board-card" key="new-board" onClick={this.openBoardModal.bind(this)}>
           <p className='create-a-board'>Create a board</p>
           <i></i>
         </section>
@@ -98,10 +97,10 @@ class Boards extends React.Component {
     }
     if (!this.isEmpty(this.props.boards)) {
       boards = this.props.boards.map((board) => (
-        <BoardItem
+        <BoardCard
                     key={board.id+board.title}
                     board={board}
-                    pins={board.pins} 
+                    pins={board.pins}
                     user={this.props.user}
                     currentUser={this.props.currentUser}
                     fetchBoard={this.props.fetchBoard}
@@ -111,10 +110,9 @@ class Boards extends React.Component {
       ));
     }
 
-
     return (
       <section className="boards-container">
-        <div className='all-board-container'>
+        <div className='all-boards-container'>
           {newBoard}
           {boards}
         </div>

@@ -16,11 +16,11 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchBoard: (boardId) => dispatch(fetchBoard(boardId)),
+  fetchBoard: boardId => dispatch(fetchBoard(boardId)),
   updateBoard: board => dispatch(updateBoard(board)),
   deleteBoard: id => dispatch(deleteBoard(id)),
-  updatePin: (pin) => dispatch(updatePin(pin)),
-  deletePin: (id) => dispatch(deletePin(id))
+  updatePin: pin => dispatch(updatePin(pin)),
+  deletePin: id => dispatch(deletePin(id))
 });
 
 export default connect(

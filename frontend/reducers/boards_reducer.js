@@ -15,7 +15,6 @@ const board = {
 };
 
 const BoardsReducer = function(state = {boards, board, errors: []}, action){
-  console.log(action);
   switch(action.type){
     case RECEIVE_BOARDS: {
       const newState = {boards: action.boards, board: state.board};
@@ -37,7 +36,7 @@ const BoardsReducer = function(state = {boards, board, errors: []}, action){
 
     case RECEIVE_BOARD_WITH_EDIT: {
       let idx = -1;
-      for (var i = 0; i < state.boards.length; i++) {
+      for (let i = 0; i < state.boards.length; i++) {
         if (state.boards[i].id === action.board.id) {
           idx = i;
         }
@@ -53,7 +52,7 @@ const BoardsReducer = function(state = {boards, board, errors: []}, action){
 
     case RECEIVE_BOARD_WITH_DELETE: {
       let idx2 = -1;
-      for (var i = 0; i < state.boards.length; i++) {
+      for (let i = 0; i < state.boards.length; i++) {
         if (state.boards[i].id === action.id) {
           idx2 = i;
         }
@@ -62,8 +61,8 @@ const BoardsReducer = function(state = {boards, board, errors: []}, action){
         return state;
       } else {
         let newBoards = [...state.boards.slice(0,idx2), ...state.boards.slice(idx2+1)];
-        let newState2 = {boards: newBoards, board: {}};
-        return newState2;
+        let newStateAfterDelete = {boards: newBoards, board: {}};
+        return newStateAfterDelete;
       }
     }
 

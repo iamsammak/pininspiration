@@ -1,13 +1,13 @@
-.board-item-container {
+.board-card-container {
   position: relative;
   display: block;
   float: left;
-  width: 236px;
-  height: auto;
-  padding: 10px;
   border: 1px 1px 1px 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
+  width: 236px;
+  height: auto;
+  padding: 10px;
   &:hover {
     background-color: rgb(242, 242, 242);
     .edit-board-button em {
@@ -20,7 +20,7 @@
   background-color: rgb(230, 230, 230);
 }
 
-.pin-picture-block {
+.pin-picture-section {
   display: block;
   content: "";
   height: 210px;
@@ -28,22 +28,22 @@
   z-index: 1;
 }
 
-.detail-block {
-  width: 100%;
+.detail-section {
+  cursor: default;
   display: block;
   float: left;
-  cursor: default;
+  width: 100%;
 }
 
-.pin-picture-block {
+.pin-picture-section {
   .boardcover, .boardthumbs {
-    vertical-align: middle;
     display: block;
     float: left;
+    vertical-align: middle;
   }
 }
 
-.pin-picture-0 {
+.pin-picture-cover {
   border-radius: 5px 5px 0 0;
   width: 234px;
   height: 110px;
@@ -63,7 +63,7 @@
   }
 }
 
-.pin-picture-1 {
+.pin-picture-thumb {
   display: inline-block;
   width: 117px;
   height: 111px;
@@ -76,15 +76,15 @@
 
 .board-title {
   display: block;
-  margin: 5px auto;
   float: left;
+  text-align: left;
   font-size: 20px;
   font-weight: bold;
   width: 100%;
-  text-align: left;
+  margin: 5px auto;
 }
 
-.pin-count-block {
+.pin-count-section {
   color: #b5b5b5;
   font-size: 16px;
   width: 100%;
@@ -103,23 +103,23 @@
     background-color: #bd081c;
   }
   em {
-    background: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478211490/pinspiration/icons/pinterest_sprite.png) -183px -204px no-repeat;
-    border-radius: 30%;
+    cursor: pointer;
     display: none;
     position: absolute;
     width: 30px;
     height: 30px;
     bottom: 0;
     right: 0;
-    cursor: pointer;
+    background: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478211490/pinspiration/icons/pinterest_sprite.png) -183px -204px no-repeat;
+    border-radius: 30%;
     z-index: 2
   }
   // display: none;
+  cursor: pointer;
   position: absolute;
-  width: 33px;
+  border-radius: 5px;
   height: 33px;
+  width: 33px;
   bottom: 10px;
   right: 5px;
-  cursor: pointer;
-  border-radius: 5px
 }

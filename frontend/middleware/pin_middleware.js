@@ -59,7 +59,6 @@ const PinMiddleware = ({getState, dispatch}) => next => action => {
     dispatch(receiveErrors(errors));
   };
 
-  console.log(action);
   switch(action.type) {
     case FETCH_ALL_PINS:
       fetchAllPins(action.page, receiveAllPinsSuccess, errorCallback);

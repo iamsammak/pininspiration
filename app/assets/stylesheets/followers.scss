@@ -1,4 +1,4 @@
-.all-follower-container {
+.all-followers-container {
   display: flex;
   flex-wrap: wrap;
   a:hover {
@@ -6,12 +6,12 @@
     border-radius: 5px;
   }
   .user-picture {
+    cursor: pointer;
     float: right;
     border-radius: 25%;
     width: 130px;
     height: 130px;
     margin: 15px;
-    cursor: pointer;
     // box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.8);
   }
   .user-name{

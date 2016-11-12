@@ -20,7 +20,6 @@ const pin = {
 };
 
 const PinsReducer = function(state = {pins, pin, errors: []}, action){
-  console.log(action);
   switch(action.type) {
     case RECEIVE_ALL_PINS: {
       const oldPins = state.pins;
@@ -30,8 +29,8 @@ const PinsReducer = function(state = {pins, pin, errors: []}, action){
     }
 
     case RECEIVE_BOARD_PINS: {
-      const newState1 = {pins: action.pins};
-      return newState1;
+      const newState = {pins: action.pins};
+      return newState;
     }
 
     case RECEIVE_PIN: {
@@ -70,7 +69,6 @@ const PinsReducer = function(state = {pins, pin, errors: []}, action){
           idx2 = i;
         }
       }
-    // debugger;
       if (idx2 === -1) {
         return state;
       } else {

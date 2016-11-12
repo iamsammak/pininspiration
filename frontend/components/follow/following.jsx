@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
-import PinItem from '../pin/pin_item'; //remove if unneccessary
+import PinCard from '../pin/pin_card'; //remove if unneccessary
 
 class Following extends React.Component {
   constructor(props) {
@@ -44,7 +44,7 @@ class Following extends React.Component {
 
     return (
       <section className="followers-container">
-        <div className='all-follower-container'>{followees}</div>
+        <div className='all-followers-container'>{followees}</div>
       </section>
     );
   }

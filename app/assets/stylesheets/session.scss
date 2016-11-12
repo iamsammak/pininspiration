@@ -1,17 +1,6 @@
-// testing
-// header {
-//   background: #b9d9c3;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   padding: 25px;
-//   height: 250px;
-// }
-
 .session-form {
-  /*opacity: .8;*/
+  // opacity: .8;
   position: absolute;
-  /*top: 150px;*/
   top: 0;
   height: 100%;
   width: 100%;
@@ -23,9 +12,6 @@
   #app-name {
     font-size: 50px;
     display: none;
-    /*font-weight: bold;*/
-    /*color: #fff;*/
-    /*text-shadow: 2px 2px 3px #444;*/
   }
   #slogan {
     font-family: "montserrat", sans-serif;
@@ -33,7 +19,6 @@
     padding-top: 128px;
     text-align: right;
     margin-right: 31px;
-    /*text-decoration: underline;*/
   }
   #app-logo {
     height: 200px;
@@ -45,25 +30,20 @@
 }
 
 .login-form-box {
+  position: relative;
   font-family: "montserrat", sans-serif;
+  color: #555555;
   border: 1px solid #555555;
   border-radius: 3px;
   padding: 20px;
   width: 400px;
-  position: relative;
   box-shadow: 1px 1px 3px #555555;
   margin: 100px auto;
   background: rgba(255, 255, 255, 0.9);
-  /*background: rgba(172, 208, 192, 0.5);*/
-  /*hex #ACD0C0*/
-  /*rgb colors, opacity*/
-  color: #555555;
   z-index: 20;
-  /*transition: height 1s, background-color 1s ease;*/
 }
 
 .switch-button {
-  /*color: rgb(0,51,204);*/
   font-size: 12px;
   padding-bottom: 3px;
   a {
@@ -93,7 +73,6 @@
 }
 
 .login-input {
-  /*margin-left: 20px;*/
   width: 200px;
   text-align: left;
   border: 1px solid #555555;
@@ -104,14 +83,9 @@
 }
 
 .form-errors {
-  /*float: right;*/
-  /*border: 1px solid #555555;*/
   padding: 5px;
   color: #f62a00;
-  /*border-radius: 5px;*/
 }
-
-/*fun button transformations*/
 
 .submit-button {
   margin: 10px;
@@ -156,66 +130,3 @@
     transform: translateY(2px);
   }
 }
-
-// REVIEW fix the submit button and demo button location
-
-
-
-
-
-// testing text_input
-// .input__field {
-//   position: relative;
-//   display: block;
-//   float: right;
-//   padding: 0.8em;
-//   width: 60%;
-//   border: none;
-//   border-radius: 0;
-//   background: #f0f0f0;
-//   color: #aaa;
-//   font-weight: bold;
-//   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-//   -webkit-appearance: none;
-//   /* for box shadows to show on iOS */
-//   &:focus {
-//     outline: none;
-//   }
-// }
-//
-// .input__label {
-//   display: inline-block;
-//   float: right;
-//   padding: 0 1em;
-//   width: 40%;
-//   color: #6a7989;
-//   font-weight: bold;
-//   font-size: 70.25%;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   -webkit-touch-callout: none;
-//   -webkit-user-select: none;
-//   -khtml-user-select: none;
-//   -moz-user-select: none;
-//   -ms-user-select: none;
-//   user-select: none;
-// }
-//
-// .input__label-content {
-//   position: relative;
-//   display: block;
-//   padding: 1.6em 0;
-//   width: 100%;
-// }
-//
-// .graphic {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   fill: none;
-// }
-//
-// .icon {
-//   color: #ddd;
-//   font-size: 150%;
-// }

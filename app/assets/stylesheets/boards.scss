@@ -1,22 +1,21 @@
-.all-board-container {
+.all-boards-container {
   text-align: center;
 }
 
-.new-board-item {
+.new-board-card {
+  cursor: pointer;
   position: relative;
   display: block;
   float: left;
+  background-color: rgb(230, 230, 230);
+  content: "";
+  text-align: center;
+  vertical-align: middle;
   width: 236px;
   height: auto;
   margin: 9px;
   border-radius: 5px;
-  text-align: center;
-  content: "";
-  background-color: #eee;
-  vertical-align: middle;
   height: 290px;
-  background-color: rgb(230, 230, 230);
-  cursor: pointer;
   &:hover {
     background-color: rgb(204, 204, 204);
   }
@@ -27,12 +26,13 @@
     right: 0;
   }
   i::before {
-    // Bigger add button
+    // Bigger add button - Pinterest changed their styling layout
     // width: 56px;
     // height: 56px;
     // background-image: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478211490/pinspiration/icons/pinterest_sprite.png);
     // background-position: -62px -234px;
-    // Smaller add button
+
+    // Smaller add button (below)
     width: 40px;
     height: 40px;
     background-image: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478565958/pinspiration/icons/pinterest_sprite2.png);
@@ -46,17 +46,12 @@
 }
 
 .create-a-board {
-  // color: rgb(194, 194, 194);
   color: rgb(115, 115, 115);
   position: absolute;
   top: 58%;
   left: 0;
   right: 0;
 }
-
-// .new-board-item:hover .create-a-board {
-//   color: rgb(115, 115, 115);
-// }
 
 .plus-sign-at-board {
   position: absolute;

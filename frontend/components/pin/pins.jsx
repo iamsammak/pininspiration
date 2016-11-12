@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
-import PinItem from './pin_item';
+import PinCard from './pin_card';
 import Masonry from 'react-masonry-component';
 import _ from 'underscore';
 
@@ -15,19 +15,6 @@ class Pins extends React.Component {
 
   componentDidMount() {
     this.props.fetchAllPins(this.state.page);
-    // testing masonary
-    // this.masonry.on('layoutComplete', this.handleLayoutComplete);
-  }
-
-
-  componentWillUnmount() {
-    // testing masonry
-    // this.masonry.off('layoutComplete', this.handleLayoutComplete);
-  }
-  handleLayoutComplete() {
-    // console.log('complete!');
-  }
-  componentWillReceiveProps() {
   }
 
   isEmpty(obj) {
@@ -40,7 +27,7 @@ class Pins extends React.Component {
   }
 
   listenForScroll() {
-    $(window).off("scroll"); // remove previous listeners
+    $(window).off("scroll");
     let throttledCallback = _.throttle(this.nextPage.bind(this), 20);
     $(window).on("scroll", throttledCallback);
   }
@@ -57,12 +44,11 @@ class Pins extends React.Component {
 
   render() {
     let pins = "";
-    // debugger;
-    // error 5 is right here, what can I use as a unique key
+    // error5
     if (!this.isEmpty(this.props.pins)) {
       pins = this.props.pins.map((pin) => (
-        <PinItem
-                  key={pin.id+pin.title}
+        <PinCard
+                  key={pin.id + pin.title}
                   pin={pin}
                   user={this.props.user}
                   currentUser={this.props.currentUser}
