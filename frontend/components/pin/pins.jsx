@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import PinCard from './pin_card';
+
 import Masonry from 'react-masonry-component';
 import _ from 'underscore';
+
 
 class Pins extends React.Component {
   constructor(props) {
@@ -17,6 +19,12 @@ class Pins extends React.Component {
     this.props.fetchAllPins(this.state.page);
   }
 
+  listenForScroll() {
+    $(window).off("scroll");
+    let throttledCallback = _.throttle(this.nextPage.bind(this), 20);
+    $(window).on("scroll", throttledCallback);
+  }
+
   isEmpty(obj) {
     for(var prop in obj) {
         if(obj.hasOwnProperty(prop))
@@ -24,12 +32,6 @@ class Pins extends React.Component {
     }
 
     return true && JSON.stringify(obj) === JSON.stringify({});
-  }
-
-  listenForScroll() {
-    $(window).off("scroll");
-    let throttledCallback = _.throttle(this.nextPage.bind(this), 20);
-    $(window).on("scroll", throttledCallback);
   }
 
   nextPage() {
