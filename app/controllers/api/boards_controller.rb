@@ -34,7 +34,6 @@ class Api::BoardsController < ApplicationController
     # render 'api/boards/show'
     if @board.destroy
       render :show
-      # render json: params[:id]
     else
       render json: @board.errors.full_messages, status: 422
     end

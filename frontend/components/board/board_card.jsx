@@ -2,19 +2,21 @@ import React from 'react';
 import { Link, withRouter } from 'react-router';
 import Modal from 'react-modal';
 
-class BoardItem extends React.Component {
+class BoardCard extends React.Component {
   constructor(props) {
     super(props);
-    this.fetchBoard = this.props.fetchBoard.bind(this);
-    this.fetchBoards = this.props.fetchBoards.bind(this);
-    this.updateBoard = this.props.updateBoard.bind(this);
-    this.deleteBoard = this.props.deleteBoard.bind(this);
     this.state = {
       openEditBoardModal: false,
       title: "",
       description: "",
       user_id: this.props.currentUser
     };
+
+    this.fetchBoard = this.props.fetchBoard.bind(this);
+    this.fetchBoards = this.props.fetchBoards.bind(this);
+    this.updateBoard = this.props.updateBoard.bind(this);
+    this.deleteBoard = this.props.deleteBoard.bind(this);
+
     this.handleEditBoardSubmit = this.handleEditBoardSubmit.bind(this);
     this.handleDeleteBoardSubmit = this.handleDeleteBoardSubmit.bind(this);
   }
@@ -62,10 +64,8 @@ class BoardItem extends React.Component {
 	}
 
   handleDeleteBoardSubmit(e){
-    // debugger;
     e.preventDefault();
     this.deleteBoard(this.props.board.id);
-    // I want to fetchBoards
     this.fetchBoards(this.props.user.id);
     this.closeBoardModal();
   }
@@ -98,6 +98,7 @@ class BoardItem extends React.Component {
       }
     };
 
+    // Need to grab three images if possible, cover and two thumbs
     let pinsImageUrl =[null, null, null];
     let pinCounts = 0;
     if (this.props.pins !== undefined) {
@@ -110,7 +111,7 @@ class BoardItem extends React.Component {
         }
       }
     }
-    let imgs = pinsImageUrl.map((url, idx) => {
+    let pinImages = pinsImageUrl.map((url, idx) => {
       if (url === null) {
         return "";
       } else {
@@ -132,28 +133,28 @@ class BoardItem extends React.Component {
     }
 
     return (
-      <section className="board-item-container" key={this.props.board.id+this.props.board.title}>
+      <section className="board-card-container" key={this.props.board.id+this.props.board.title}>
         <Link to={boardUrl}>
-          <div className='pin-picture-block'>
+          <div className='pin-picture-section'>
               <div className='boardcover'>
-                <div className='pin-picture-background pin-picture-0'>
-                  {imgs[0]}
+                <div className='pin-picture-background pin-picture-cover'>
+                  {pinImages[0]}
                 </div>
               </div>
               <div className='boardthumbs'>
-                <div className='pin-picture-background pin-picture-1'>
-                  {imgs[1]}
+                <div className='pin-picture-background pin-picture-thumb'>
+                  {pinImages[1]}
                 </div>
-                <div className='pin-picture-background pin-picture-1'>
-                  {imgs[2]}
+                <div className='pin-picture-background pin-picture-thumb'>
+                  {pinImages[2]}
                 </div>
               </div>
           </div>
         </Link>
         <br/>
-        <div className='detail-block'>
+        <div className='detail-section'>
           <div className='board-title'>{this.props.board.title}</div>
-          <div className='pin-count-block'>
+          <div className='pin-count-section'>
             <div className='pin-count'>{pinCounts} Pins</div>
           </div>
           {editButton}
@@ -206,4 +207,4 @@ class BoardItem extends React.Component {
   }
 }
 
-export default withRouter(BoardItem);
+export default withRouter(BoardCard);

@@ -155,6 +155,15 @@ warning.js:37 Warning: flattenChildren(...): Encountered two children with the s
   which then gave me access to fetchBoards in my props
   so I just called this.fetchBoards(userId) inside my handleDeleteBoardSubmit
 
+11.5 - catalog infiniti loop inside componentWillReceiveProps
+// well this is an infinite loop (if only fetchBoard is called)
+// added logic then setState, but this receives Board twice, seems redundant
+if (parseInt(nextProps.params.boardId) !== nextProps.board.id) {
+  nextProps.fetchBoard(nextProps.params.boardId);
+  this.setState({title: nextProps.board.title });
+  this.setState({description: nextProps.board.description });
+}
+
 12. to handle the rerendering of upon updating pin when in boards route
   I added a fetchBoard and fetchBoards
   dispatch(fetchBoard(pin.board.id));

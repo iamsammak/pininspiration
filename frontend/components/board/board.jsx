@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
-import BoardItem from '../board/board_item'; //unnecessary, remove if not used
 import BoardPins from './board_pins';
 import Modal from 'react-modal';
 import merge from 'lodash/merge';
@@ -8,9 +7,6 @@ import merge from 'lodash/merge';
 class Boards extends React.Component {
   constructor(props) {
     super(props);
-    this.fetchBoard = this.props.fetchBoard.bind(this);
-    this.updateBoard = this.props.updateBoard.bind(this);
-    this.deleteBoard = this.props.deleteBoard.bind(this);
     this.state = {
       openEditBoardModal: false,
       title: "",
@@ -18,22 +14,19 @@ class Boards extends React.Component {
       user_id: this.props.currentUser,
       newPin: []
     };
+
+    this.fetchBoard = this.props.fetchBoard.bind(this);
+    this.updateBoard = this.props.updateBoard.bind(this);
+    this.deleteBoard = this.props.deleteBoard.bind(this);
+
     this.handleEditBoardSubmit = this.handleEditBoardSubmit.bind(this);
     this.handleDeleteBoardSubmit = this.handleDeleteBoardSubmit.bind(this);
   }
   componentDidMount() {
-    // debugger;
     this.props.fetchBoard(this.props.params.boardId);
   }
 
-
-// catalog my boards - isn't mounting the component
-// instead the component is receiving props
-// therefor I need the fetchBoard logic instead the componentWillReceiveProps
-// get the boardId from nextProps - nextProps.params.boardId
-
   componentWillReceiveProps(nextProps) {
-    // debugger; //check with nextProps is and extract the correct info then fetchBoard
     if (nextProps.board !== undefined) {
       this.setState({title: nextProps.board.title });
       this.setState({description: nextProps.board.description });
@@ -46,8 +39,7 @@ class Boards extends React.Component {
         this.setState({newPin: this.state.newPin.concat([nextProps.pin])});
       }
     }
-    // well this is an infinite loop
-    // added logic then setState, but this receives Board twice, seems redundant
+
     if (parseInt(nextProps.params.boardId) !== nextProps.board.id) {
       nextProps.fetchBoard(nextProps.params.boardId);
       this.setState({title: nextProps.board.title });
@@ -63,20 +55,19 @@ class Boards extends React.Component {
 
     return true && JSON.stringify(obj) === JSON.stringify({});
   }
+
   openBoardModal() {
-    this.setState({
-      openEditBoardModal: true
-    });
+    this.setState({ openEditBoardModal: true });
   }
 
   closeBoardModal() {
-    this.setState({
-      openEditBoardModal: false
-    });
+    this.setState({ openEditBoardModal: false });
   }
 
   update(field){
-		return e => { this.setState({[field]: e.currentTarget.value }); };
+		return e => {
+      this.setState({[field]: e.currentTarget.value });
+    };
 	}
 
   handleEditBoardSubmit(e){
@@ -93,7 +84,6 @@ class Boards extends React.Component {
 
   handleDeleteBoardSubmit(e){
     e.preventDefault();
-    // debugger; //if current location is the same then we need to refetch page
     this.deleteBoard(this.props.board.id);
     this.closeBoardModal();
     this.props.router.push(`/${this.props.currentUser.username}`);
@@ -130,15 +120,16 @@ class Boards extends React.Component {
     let boardPins = null;
     let pinCount = 0;
     if (this.props.board !== undefined && this.props.board.pins !== undefined) {
+      boardPins = <BoardPins
+                              pins={this.props.board.pins}
+                              user={this.props.user}
+                              currentUser={this.props.currentUser}
+                              fetchPin={this.props.fetchPin}
+                              updatePin={this.props.updatePin}
+                              deletePin={this.props.deletePin}/>;
 
-      boardPins = <BoardPins pins={this.props.board.pins}
-        user={this.props.user} currentUser={this.props.currentUser}
-        fetchPin={this.props.fetchPin} updatePin={this.props.updatePin}
-        deletePin={this.props.deletePin}/>;
       pinCount = Object.keys(this.props.board.pins).length;
-    } else if (this.props.board !== undefined) {
-
-    }else {
+    } else {
       return (<div></div>);
     }
 
@@ -147,11 +138,11 @@ class Boards extends React.Component {
         <div className='board-details'>
           <p className='title'>{this.props.board.title}</p>
           <p className='description'>{this.props.board.description}</p>
-          <div className='pin-count-block'>
+          <div className='pin-count-section'>
             <div className='pin-count'>{pinCount} Pins</div>
           </div>
         </div>
-        <div className='edit-button-block'>
+        <div className='edit-button-section'>
           <button className='edit-board-button' onClick={this.openBoardModal.bind(this)}>
             <em></em>
           </button>

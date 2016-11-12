@@ -1,10 +1,16 @@
+// Pinterest-colors
+// Red
+// #bd081c #BD080E #d50c22 (light red)
+// Blue
+// #0083D5
+// Light Grey
+// color: #a7a7a7;
+
 .home-container {
   position: relative;
   height: 100%;
   width: 100%;
   min-width: 560px;
-  // padding-left: 20px;
-  .nav-bar {}
 }
 
 .home-children {
@@ -12,26 +18,26 @@
 }
 
 .add-pin-button {
+  cursor: pointer;
   z-index: 90;
-  right: 2%;
-  bottom: 18%;
+  display: inline-block;
+  position: fixed;
   background-color: #fff;
-  padding: 11px 13px;
+  bottom: 18%;
+  right: 2%;
   box-shadow: 0 2px 0 0 rgba(0,0,0,0.1),0 0 0 0.5px rgba(0,0,0,0.04);
   border-radius: 50%;
   border: 0;
+  padding: 11px 13px;
   margin: 0;
-  display: inline-block;
-  position: fixed;
   outline: none;
-  cursor: pointer;
   &:hover {
     background-color: #bd081c;
   }
   em {
     display: inline-block;
-    outline: none;
     position: relative;
+    outline: none;
     vertical-align: middle;
     background-image: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478565958/pinspiration/icons/pinterest_sprite2.png);
     background-position: -391px -56px;
@@ -42,76 +48,76 @@
 }
 
 .github {
+  cursor: pointer;
   z-index: 90;
-  right: 2%;
-  bottom: 13%;
-  background-color: #fff;
-  padding: 4px 6px;
-  box-shadow: 0 2px 0 0 rgba(0,0,0,0.1),0 0 0 0.5px rgba(0,0,0,0.04);
-  border-radius: 50%;
-  border: 0;
-  margin: 0;
   display: inline-block;
   position: fixed;
+  background-color: #fff;
+  right: 2%;
+  bottom: 13%;
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.1),0 0 0 0.5px rgba(0,0,0,0.04);
+  padding: 4px 6px;
+  margin: 0;
+  border-radius: 50%;
+  border: 0;
   outline: none;
-  cursor: pointer;
   &:hover {
     background-color: #bd081c;
   }
-  .git-image {
+  .github-icon {
     color: #555;
   }
 }
 
 .linkedin {
   // font-size: 1.8em;
+  cursor: pointer;
+  display: inline-block;
+  position: fixed;
   z-index: 90;
+  background-color: #fff;
   right: 2%;
   bottom: 8%;
-  background-color: #fff;
   padding: 4px 6px;
   box-shadow: 0 2px 0 0 rgba(0,0,0,0.1),0 0 0 0.5px rgba(0,0,0,0.04);
   border-radius: 50%;
   border: 0;
   margin: 0;
-  display: inline-block;
-  position: fixed;
   outline: none;
-  cursor: pointer;
   &:hover {
     background-color: #bd081c;
   }
-  .linkedin-image {
+  .linkedin-icon {
     color: #555;
   }
 }
 
 .pinterest {
+  cursor: pointer;
   z-index: 90;
+  display: inline-block;
+  position: fixed;
+  background-color: #fff;
   right: 2%;
   bottom: 3%;
-  background-color: #fff;
   padding: 4px 6px;
   box-shadow: 0 2px 0 0 rgba(0,0,0,0.1),0 0 0 0.5px rgba(0,0,0,0.04);
   border-radius: 50%;
   border: 0;
   margin: 0;
-  display: inline-block;
-  position: fixed;
   outline: none;
-  cursor: pointer;
   &:hover {
     background-color: #bd081c;
   }
-  .pinterest-image {
+  .pinterest-icon {
     color: #555;
   }
 }
 
 .add-pin-menu {
+  z-index: 990;
   display: none;
   position: fixed;
-  // right: 7%;
   right: 75px;
   bottom: 18%;
   font-size: 16px;
@@ -119,68 +125,53 @@
   border-radius: 5%;
   border: 1px solid #ccc;
   list-style: none;
-  z-index: 990;
 }
 
 .add-pin-menu-Caret {
+  z-index: 990;
+  position: absolute;
   background-image: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478826001/pinspiration/icons/pinterest_sprite_arrows2.png);
   background-position: -234px -37px;
   background-size: 249px 240px;
   width: 10px;
   height: 20px;
   right: -10px;
-  z-index: 990;
-  position: absolute;
   top: 94px;
-}
-
-.greater {
-  display: none;
-  position: absolute;
-  right: -13px;
-  bottom: 10px;
-}
-
-.accessibilityText {
-  font: 0 / 0 serif;
-  text-shadow: none;
-  color: transparent;
-  position: absolute;
-}
-
-.m-fadeOut {
-  display: none;
 }
 
 .m-fadeIn {
   display: block;
 }
 
+.m-fadeOut {
+  display: none;
+}
+
 .add-pin-menu > li {
-  padding: 20px;
-  color: #000;
   cursor: pointer;
+  color: #000;
+  padding: 20px;
   &:hover {
     background: #eee;
   }
 }
 
 .modal-input {
+  color: rgb(85, 85, 85);
   display: block;
   width: 100%;
   line-height: 1.66;
-  color: rgb(85, 85, 85);
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px inset;
   border-style: solid;
   border-color: rgb(204, 204, 204);
   border-width: 1px;
   border-radius: 4px;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   margin: 15px 0 5px 0;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   -webkit-box-sizing: border-box;
-  /* Safari/Chrome, other WebKit */
+  // styling for Safari/Chrome, other WebKit
   -moz-box-sizing: border-box;
-  /* Firefox, other Gecko */
+  // styling for Firefox, other Gecko
   box-sizing: border-box;
   padding: 5px;
   &:focus, &:active {
@@ -193,25 +184,25 @@
     margin: 5px 0 5px 0;
   }
   .description-input {
-    margin-top: 10px;
     height: 80px;
+    margin-top: 10px;
   }
   .modal-board-select {
     height: 30px;
   }
   .modal-save-button-box {
-    margin: 10px auto;
     float: right;
+    margin: 10px auto;
   }
   .modal-save-button {
+    cursor: pointer;
+    background-color: #fff;
+    color: black;
+    text-align: center;
     width: 100px;
     height: 30px;
     border-radius: 4px;
-    color: black;
     margin-left: 10px;
-    text-align: center;
-    cursor: pointer;
-    background-color: #fff;
     border: 5px solid #ca271c;
     box-shadow: 0 8px #bd081c;
     &:hover {
@@ -230,51 +221,51 @@
   }
   position: relative;
   display: block;
+  box-sizing: content-box;
   width: 586px;
   height: 286px;
   border: 2px;
   border-style: dashed;
   border-radius: 4px;
   background-color: rgb(239, 239, 239);
-  box-sizing: content-box;
   .background-image {
     position: absolute;
+    color: #bd081c;
     top: 38%;
     left: 45%;
-    color: #bd081c;
   }
   .background-image-prompt {
     position: absolute;
     top: 28%;
     left: 31%;
-    // color: #bd081c;
   }
   .pin-upload-image-unchecked {
     opacity: 1;
   }
   .pin-upload-image-checked {
     opacity: 0.6;
-    border: 1px solid #bd081c;
+    border: 2px solid #bd081c;
+    border-radius: 5px;
   }
 }
 
 .error-prompt {
   margin-left: 2px;
   color: #bd081c;
-  -webkit-animation-name: error_prompt; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-name: error_prompt; //for Safari 4.0-8.0
+  -webkit-animation-duration: 2s; //for Safari 4.0-8.0
   animation-name: error_prompt;
   animation-duration: 2s;
 }
 
-/* Safari 4.0 - 8.0 */
+//for Safari 4.0-8.0
 @-webkit-keyframes error_prompt {
   0% {color: #bd081c; left:0px; top:0px;}
   50% {color: #0083D5; left:10px; top:0px;}
   100% {color: #bd081c; left:0px; top:0px;}
 }
 
-/* Standard syntax */
+// Standard keyframes syntax - Yay changing colors
 @keyframes error_prompt {
   0% {color: #bd081c; right:0px; top:0px;}
   50% {color: #0083D5; right:10px; top:0px;}

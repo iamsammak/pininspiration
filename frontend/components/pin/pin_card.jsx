@@ -2,21 +2,20 @@ import React from 'react';
 import { Link, withRouter } from 'react-router';
 import Modal from 'react-modal';
 
-class PinItem extends React.Component {
+class PinCard extends React.Component {
   constructor(props) {
     super(props);
-    // debugger;
     this.state = {
       openEditPinModal: false,
       openPinDetailModal: false,
       title: "",
       description: "",
       url: "",
-      user_id: this.props.pin.user.id, //user.id or user_id
+      user_id: this.props.pin.user.id,
       board_id: -1,
       image_url: ""
     };
-    // this.fetchAllPins = this.props.fetchAllPins.bind(this);
+
     this.updatePin = this.props.updatePin.bind(this);
     this.deletePin = this.props.deletePin.bind(this);
     this.handleEditPinSubmit = this.handleEditPinSubmit.bind(this);
@@ -72,7 +71,6 @@ class PinItem extends React.Component {
 	}
 
   handleEditPinSubmit(e){
-    // debugger;
     e.preventDefault();
     this.updatePin({
       pin: {
@@ -86,14 +84,12 @@ class PinItem extends React.Component {
 	}
 
   handleDeletePinSubmit(e){
-    // debugger;
     e.preventDefault();
     this.deletePin(this.props.pin.id);
     this.closePinModal();
   }
 
   render() {
-    // debugger;
     let newPinStyle = {
       overlay : {
       position        : 'fixed',
@@ -147,34 +143,7 @@ class PinItem extends React.Component {
         boxShadow : '3px 3px 10px black',
       }
     };
-    // testing the overflow pin layout hack
-    // let detailPinStyle = {
-    //   overlay : {
-    //   position        : 'fixed',
-    //   top             : 0,
-    //   left            : 0,
-    //   right           : 0,
-    //   bottom          : 0,
-    //   backgroundColor : 'rgba(255,255,255, 0.85)'
-    //   },
-    //   content : {
-    //     borderRadius: '4px',
-    //     bottom: 'auto',
-    //     maxHeight: '100%',
-    //     left: '50%',
-    //     padding: '2rem',
-    //     position: 'fixed',
-    //     right: 'auto',
-    //     top: '50%',
-    //     transform: 'translate(-50%,-46%)',
-    //     minWidth: '10rem',
-    //     width: '600px',
-    //     // height: '900px',
-    //     maxWidth: '60%',
-    //     backgroundColor : 'rgba(255, 255, 255, 1)',
-    //     boxShadow : '3px 3px 10px black',
-    //   }
-    // };
+    
     let pinShortUrl = null;
     if (this.props.pin !== undefined) {
       pinShortUrl = this.props.pin.url.replace("http://", "").replace("https://", "").replace("www.", "").split("/")[0];
@@ -189,10 +158,10 @@ class PinItem extends React.Component {
     }
     return (
       <li className="pin-item-container" key={this.props.pin.id+this.props.pin.title}>
-        <div className='picture-block' onClick={this.openPinDetailModal.bind(this)}>
+        <div className='picture-section' onClick={this.openPinDetailModal.bind(this)}>
           <img className='pin-picture' src={this.props.pin.image_url} />
         </div>
-        <div className='detail-block'>
+        <div className='detail-section'>
           <div className='pin-title'>
             {this.props.pin.title}
           </div>
@@ -201,7 +170,7 @@ class PinItem extends React.Component {
             <img className="profile-pic" src={this.props.pin.user.image_url} />
           </Link>
 
-          <div className="url-block">
+          <div className="url-section">
             <p className='board-title'>{this.props.pin.board.title}</p>
             <a className='pin-url' href={this.props.pin.url} target="_blank">
               {pinShortUrl}
@@ -257,13 +226,13 @@ class PinItem extends React.Component {
           isOpen={this.state.openPinDetailModal}
           onRequestClose={this.closePinDetailModal.bind(this)}
           style={detailPinStyle}>
-          <div className="pin-detail-block">
+          <div className="pin-detail-section">
             <a className='pin-url' href={this.props.pin.url} target="_blank">
-              <div className='picture-block'>
+              <div className='picture-section'>
                 <img className='pin-picture' src={this.props.pin.image_url} />
               </div>
             </a>
-            <div className='detail-block'>
+            <div className='detail-section'>
               <div className='pin-title'>
                 {this.props.pin.title}
               </div>
@@ -274,7 +243,7 @@ class PinItem extends React.Component {
                 <img className="profile-pic" src={this.props.pin.user.image_url} />
               </Link>
 
-              <div className="url-block">
+              <div className="url-section">
                 <p className='board-title'>{this.props.pin.board.title}</p>
                 <a className='pin-url' href={this.props.pin.url} target="_blank">
                   {pinShortUrl}
@@ -288,4 +257,4 @@ class PinItem extends React.Component {
   }
 }
 
-export default withRouter(PinItem);
+export default withRouter(PinCard);

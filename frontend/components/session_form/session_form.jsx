@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
       password: "",
       description: ""
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
 
     this.phantomLogin = this.phantomLogin.bind(this);
@@ -18,8 +19,6 @@ class SessionForm extends React.Component {
 
   componentDidUpdate() {
     this.redirectIfLoggedIn();
-    // REVIEW;
-    // add confirmPassword logic if you decide to add that input
   }
 
   redirectIfLoggedIn() {
@@ -43,7 +42,6 @@ class SessionForm extends React.Component {
 			this.setState({description: ""});
 		}
     this.props.processForm({user});
-    // login or signup
   }
 
   navLink() {
@@ -62,7 +60,6 @@ class SessionForm extends React.Component {
 		}
 	}
 
-// work on styling the errors
 	renderErrors() {
 		return(
 			<ul className="form-errors">
@@ -113,7 +110,7 @@ class SessionForm extends React.Component {
 
 	beMyGuest(e, username, password) {
 		e.preventDefault();
-    // this way if they are on the signup page they will first be redirected to login
+
     hashHistory.push('/login');
 
 		let $username = $('.username');
@@ -138,7 +135,6 @@ class SessionForm extends React.Component {
     let usernamePlaceholder = (this.props.formType === "login") ? "Username" : "Create a username ";
     let passwordPlaceholder = (this.props.formType === "login") ? "Password" : "Create a password ";
     let submitText = (this.props.formType === "login") ? "Log In" : "Sign Up ";
-
 
     return (
       <main className="session-form">
@@ -189,7 +185,6 @@ class SessionForm extends React.Component {
       </main>
     );
   }
-
 }
 
 export default withRouter(SessionForm);

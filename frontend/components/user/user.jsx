@@ -19,40 +19,38 @@ class User extends React.Component {
 
       if (nextProps.location.pathname === `/${nextProps.params.username}` || nextProps.location.pathname === `/${nextProps.params.username}/boards` ) {
         if (idx === 0) {
-          $(ul).attr('class', 'text-container checked');
+          $(ul).attr('class', 'profile-detail-container checked');
         } else {
-          $(ul).attr('class', 'text-container unchecked');
+          $(ul).attr('class', 'profile-detail-container unchecked');
         }
       } else if (nextProps.location.pathname === `/${nextProps.params.username}/pins` ) {
         if (idx === 1) {
-          $(ul).attr('class', 'text-container checked');
+          $(ul).attr('class', 'profile-detail-container checked');
         } else {
-          $(ul).attr('class', 'text-container unchecked');
+          $(ul).attr('class', 'profile-detail-container unchecked');
         }
       } else if (nextProps.location.pathname === `/${nextProps.params.username}/followers` ) {
         if (idx === 2) {
-          $(ul).attr('class', 'text-container checked');
+          $(ul).attr('class', 'profile-detail-container checked');
         } else {
-          $(ul).attr('class', 'text-container unchecked');
+          $(ul).attr('class', 'profile-detail-container unchecked');
         }
       } else if (nextProps.location.pathname === `/${nextProps.params.username}/following` ) {
         if (idx === 3) {
-          $(ul).attr('class', 'text-container checked');
+          $(ul).attr('class', 'profile-detail-container checked');
         } else {
-          $(ul).attr('class', 'text-container unchecked');
+          $(ul).attr('class', 'profile-detail-container unchecked');
         }
       }
       $(ul).on("click", (e2) => {
         $('.detail-titles').children().children().each((idx2, ul2) => {
-          $(ul2).attr('class', 'text-container unchecked');
+          $(ul2).attr('class', 'profile-detail-container unchecked');
         }).bind(this);
-        $(ul).attr('class', 'text-container checked');
+        $(ul).attr('class', 'profile-detail-container checked');
       }).bind(this);
     });
   }
 
-  // toggleFollowing
-  // REVIEW error with toggling following
   toggleFollowing(e, followButtonClass) {
     if (followButtonClass === "unfollowed follow-button") {
       this.props.followUser(this.user.id);
@@ -81,20 +79,16 @@ class User extends React.Component {
 
     let boardsUrl = `${this.user.username}/boards`;
     let pinsUrl = `${this.user.username}/pins`;
-    // TODO change this when creating Follows
     let followersUrl = `${this.user.username}/followers`;
     let followingUrl = `${this.user.username}/following`;
 
-    // TODO make sure upon pin creation that the currentUser.pins is re-rendered
     let pinCount = this.props.user.pins.length;
-    // let pinCount = this.props.currentUser.pins.length;
 
     let followerCount = this.props.currentUser.followers.length;
     let followeeCount = this.props.currentUser.followees.length;
     let followText = "Follow";
 
     let followButton = null;
-    // Follow Button Logic - Other user detail logic
     if (this.user !== undefined && this.user.id !== undefined && this.user.id !== this.props.currentUser.id) {
       let followButtonClass = 'unfollowed follow-button';
       name = this.user.username.charAt(0).toUpperCase() + this.user.username.slice(1);
@@ -112,8 +106,6 @@ class User extends React.Component {
         onClick={(e) => this.toggleFollowing(e, followButtonClass)}>{followText}</div>);
     }
 
-    // debugger;
-
     return (
       <section className="user-container">
         <div className="user-profile">
@@ -127,25 +119,25 @@ class User extends React.Component {
         <div className="detail-title-container">
           <div className="detail-titles">
             <Link to={boardsUrl}>
-              <ul className="text-container checked" id="boards-text-container">
+              <ul className="profile-detail-container checked" id="boards-profile-detail-container">
                 <li className="label">Boards</li>
                 <li className="number">{this.props.boards.length}</li>
               </ul>
             </Link>
             <Link to={pinsUrl}>
-              <ul className="text-container unchecked" id="pins-text-container">
+              <ul className="profile-detail-container unchecked" id="pins-profile-detail-container">
                 <li className="label">Pins</li>
                 <li className="number">{pinCount}</li>
               </ul>
             </Link>
             <Link to={followersUrl}>
-              <ul className="text-container unchecked">
+              <ul className="profile-detail-container unchecked">
                 <li className="label">Followers</li>
                 <li className="number">{followerCount}</li>
               </ul>
             </Link>
             <Link to={followingUrl}>
-              <ul className="text-container unchecked">
+              <ul className="profile-detail-container unchecked">
                 <li className="label">Following</li>
                 <li className="number">{followeeCount}</li>
               </ul>

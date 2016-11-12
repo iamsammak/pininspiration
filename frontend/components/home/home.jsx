@@ -21,6 +21,7 @@ class Home extends React.Component {
       pin_user_id: this.props.currentUser.id,
       errors: []
     };
+
     // TODO comment back in when you have internet or comment below out if testing with no internet
     $.embedly.defaults.key = "066711cadc384f7fb4e7e0dc3a2d02f0";
     this.createBoard = this.props.createBoard.bind(this);
@@ -44,7 +45,7 @@ class Home extends React.Component {
 
     // Return from new pin.
     } else if (this.props.board !== undefined && nextProps.board !== undefined && this.props.board.id === nextProps.board.id) {
-
+      //
     }
   }
 
@@ -151,15 +152,10 @@ class Home extends React.Component {
     	images.forEach( (image, idx) => {
         // testing
     		// var imgUrl = $.embedly.display.resize(image.url, {query: {height: 200, width: 300, quality: 1}});
-
-    		var imgUrl = $.embedly.display.resize(image.url, {query: {height: 400, width: 400}});
-    		// var imgUrl = $.embedly.display.resize(image.url, {query: {height: 500, width: 500, grow: true}});
-
+        var imgUrl = $.embedly.display.resize(image.url, {query: {height: 400, width: 600}});
+        // var imgUrl = $.embedly.display.resize(image.url, {query: {height: 500, width: 500, grow: true}});
         // this works - high quality
-    		// var imgUrl = $.embedly.display.resize(image.url);
-
-        // original below
-    		// var imgUrl = $.embedly.display.resize(image.url, {query: {height: 200, width: 300}});
+        // var imgUrl = $.embedly.display.resize(image.url);
     		var $img = $(`<img class=\'pin-upload-image-unchecked pin-upload-image${idx}\'>`);
         $img.on("click", (e2) => {
           this.setState({pin_image_url: imgUrl});
@@ -171,7 +167,6 @@ class Home extends React.Component {
     		$img.attr('src', imgUrl);
     		$container.append($img);
     	});
-
       $('.new-pin-image-area').html($container);
     });
   }
@@ -193,10 +188,9 @@ class Home extends React.Component {
 	}
 
   render() {
-    let greaterUrl = 'http://res.cloudinary.com/dfazwubvc/image/upload/v1478281473/pinspiration/icons/greater_sign.png';
-    let comp = null;
+    let pinsComponent = null;
     if (this.props.location.pathname === "/home/" || this.props.location.pathname === "/") {
-      comp = <PinsContainer />;
+      pinsComponent = <PinsContainer />;
     }
     this.thing = document.getElementById("add-pin-menu-id");
 
@@ -266,7 +260,7 @@ class Home extends React.Component {
           <NavContainer />
         </div>
         <div className='home-children'>
-          {comp}
+          {pinsComponent}
         </div>
         {this.props.children}
         <button className="add-pin-button" onClick={() => {
@@ -277,17 +271,17 @@ class Home extends React.Component {
         </button>
         <div className="github">
           <a target='_blank' href='https://github.com/iamsammak/pininspiration'>
-            <i className="fa fa-github fa-2x git-image" aria-hidden="true"></i>
+            <i className="fa fa-github fa-2x github-icon" aria-hidden="true"></i>
           </a>
         </div>
         <div className="linkedin">
           <a target='_blank' href='https://www.linkedin.com/in/samuel-mak-8520b760'>
-            <i className="fa fa-linkedin-square fa-2x linkedin-image" aria-hidden="true"></i>
+            <i className="fa fa-linkedin-square fa-2x linkedin-icon" aria-hidden="true"></i>
           </a>
         </div>
         <div className="pinterest">
           <a target='_blank' href='https://www.pinterest.com/iamsammak'>
-            <i className="fa fa-pinterest fa-2x pinterest-image" aria-hidden="true"></i>
+            <i className="fa fa-pinterest fa-2x pinterest-icon" aria-hidden="true"></i>
           </a>
         </div>
         <ul className="add-pin-menu" id="add-pin-menu-id">
@@ -377,18 +371,6 @@ class Home extends React.Component {
         </Modal>
       </section>
     );
-
-
-    //     <div className="add-pin-button" onClick={() => {
-    //       this.thing.classList.toggle("m-fadeIn");
-    //       this.state['errors'] = [];
-    //     }} type="button">
-    //       <i className="fa fa-plus fa-2x plus-sign" aria-hidden="true"></i>
-    //     </div>
-
-    // <img className='background-image' src='http://res.cloudinary.com/dfazwubvc/image/upload/v1478280874/pinspiration/icons/picture_frames.png' />
-
-
   }
 }
 

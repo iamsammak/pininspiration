@@ -11,27 +11,17 @@ class Nav extends React.Component {
     this.state = {
       searchWord: ""
     };
+
     this.logEmOut = this.logEmOut.bind(this);
     this.currentUser = this.props.currentUser;
     this.update = this.update.bind(this);
   }
 
-  // REVIEW testing
-  // shouldComponentUpdate(nextProps) {
-  //   if (!nextProps.currentUser) {
-  //     return false;
-  //   }
-  //   return true;
-  // }
-
-  // might cause an error would I need shouldComponentUpdate
   componentWillReceiveProps(nextProps) {
     if (!nextProps.currentUser) {
       this.props.router.push("/login");
     }
   }
-
-// update, onKeyUp, componentDidMount
 
   componentDidMount() {
     $('.search-bar').on('keyup', e => this.onKeyUp(e));
@@ -41,18 +31,11 @@ class Nav extends React.Component {
     e.preventDefault();
     if (e.key !== "Enter") {
       this.setState({searchWord: e.currentTarget.value});
-
-      // Realtime search part. If don't want that, comment out these 4 lines and comment back the rest in else statement.
-      console.log(this.state.searchWord);
       this.props.fetchSearchPins(this.state.searchWord);
       this.props.router.push('/search');
     } else {
-
       $('.search-bar').val('');
-      // console.log(this.state.searchWord);
-      // this.props.fetchSearchPins(this.state.searchWord);
       this.setState({searchWord: ""});
-      // this.props.router.push('/search');
     }
   }
 
@@ -60,15 +43,13 @@ class Nav extends React.Component {
     this.setState({searchWord: e.currentTarget.value});
   }
 
-
-
   logEmOut (e) {
     this.props.logout(0);
   }
 
   displayCatalog() {
     return (
-      <div id="catalog-menu">
+      <div className="catalog-menu">
         <i className="fa fa-bars fa-2x catalog-link" aria-hidden="true"></i>
         <div className="catalog-content">
           <span className="catalogCaret"></span>
@@ -97,13 +78,6 @@ class Nav extends React.Component {
     );
   }
 
-  // board.id maybe utilizing currentTarget??
-  //<div className="catalog-board catalog-item" key={board.id} onClick={this.redirectToBoard}>{board.title}</div>
-  // redirectToBoard(boardLink) {
-  //   hashHistory.push(boardLink);
-  // }
-
-
   render() {
     let userUrlPath = `/${this.currentUser.username}`;
 
@@ -125,7 +99,7 @@ class Nav extends React.Component {
         <div className="catalog-container all-containers">
           { this.displayCatalog() }
         </div>
-        <div className="profile-container all-containers">
+        <div className="profileAndLogout-container all-containers">
           <Link to={userUrlPath}>
             <i className="fa fa-user fa-2x profile-link"
               title="User Profile"
