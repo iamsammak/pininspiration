@@ -21,8 +21,8 @@ class Pins extends React.Component {
 
   listenForScroll() {
     $(window).off("scroll");
-    let throttledCallback = _.throttle(this.nextPage.bind(this), 20);
-    $(window).on("scroll", throttledCallback);
+    let throttleCallback = _.throttle(this.nextPage.bind(this), 20);
+    $(window).on("scroll", throttleCallback);
   }
 
   isEmpty(obj) {
