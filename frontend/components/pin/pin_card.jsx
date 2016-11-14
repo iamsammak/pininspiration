@@ -143,10 +143,10 @@ class PinCard extends React.Component {
         boxShadow : '3px 3px 10px black',
       }
     };
-    
+
     let pinShortUrl = null;
     if (this.props.pin !== undefined) {
-      pinShortUrl = this.props.pin.url.replace("http://", "").replace("https://", "").replace("www.", "").split("/")[0];
+      pinShortUrl = this.props.pin.url.replace("https://", "").replace("http://", "").replace("www.", "").split("/")[0];
     }
     let editButton = null;
     if (this.props.canEditPin === true && this.props.pin.user.id === this.props.currentUser.id) {
