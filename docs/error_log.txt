@@ -177,6 +177,19 @@ if (parseInt(nextProps.params.boardId) !== nextProps.board.id) {
   dispatch(fetchBoards(id.board.user_id));
   hashHistory.push(`boards/${id.board.id}`);
   id was an object with all the board/pin info so I just pulled the necessary info from that object
+
+
+14:When I click on it, I get the following exception:
+
+Uncaught TypeError: Cannot read property 'getHostNode' of null
+The error comes from:
+
+getHostNode: function (internalInstance) {
+    return internalInstance.getHostNode();
+},
+
+I get this error when I use the catalog dropdown to go to those boards first before clicking user profile
+It's almost like somewhere in the backend they need to initialize who the current user or user is right now before using the catalog quick link to boards
 }
 
 

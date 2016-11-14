@@ -24,13 +24,16 @@ class Home extends React.Component {
 
     // TODO comment back in when you have internet or comment below out if testing with no internet
     $.embedly.defaults.key = "066711cadc384f7fb4e7e0dc3a2d02f0";
+
     this.createBoard = this.props.createBoard.bind(this);
     this.createPin = this.props.createPin.bind(this);
+
     this.fetchBoards = this.props.fetchBoards.bind(this);
+    this.selectBoard = this.selectBoard.bind(this);
+
     this.handleNewBoardSubmit = this.handleNewBoardSubmit.bind(this);
     this.handleNewPinSubmit = this.handleNewPinSubmit.bind(this);
     this.scrapeImages = this.scrapeImages.bind(this);
-    this.selectBoard = this.selectBoard.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -146,23 +149,24 @@ class Home extends React.Component {
     e.preventDefault();
     let url = e.currentTarget.value;
     this.setState({pin_url: url});
+    
     $.embedly.extract(url).progress(data => {
-    	var images = data.images;
-    	var $container = $('<div class=\'image-container\'>');
+    	let images = data.images;
+    	let $container = $('<div class=\'image-container\'>');
     	images.forEach( (image, idx) => {
         // testing
-    		// var imgUrl = $.embedly.display.resize(image.url, {query: {height: 200, width: 300, quality: 1}});
-        var imgUrl = $.embedly.display.resize(image.url, {query: {height: 400, width: 600}});
-        // var imgUrl = $.embedly.display.resize(image.url, {query: {height: 500, width: 500, grow: true}});
+    		// let imgUrl = $.embedly.display.resize(image.url, {query: {height: 200, width: 300, quality: 1}});
+        let imgUrl = $.embedly.display.resize(image.url, {query: {height: 400, width: 600}});
+        // let imgUrl = $.embedly.display.resize(image.url, {query: {height: 500, width: 500, grow: true}});
         // this works - high quality
-        // var imgUrl = $.embedly.display.resize(image.url);
-    		var $img = $(`<img class=\'pin-upload-image-unchecked pin-upload-image${idx}\'>`);
+        // let imgUrl = $.embedly.display.resize(image.url);
+    		let $img = $(`<img class=\'scraped-image-unchecked scraped-image${idx}\'>`);
         $img.on("click", (e2) => {
           this.setState({pin_image_url: imgUrl});
           $('.image-container').children().each(function() {
-            $(this).attr('class', 'pin-upload-image-unchecked');
+            $(this).attr('class', 'scraped-image-unchecked');
           });
-          $img.attr('class', 'pin-upload-image-checked');
+          $img.attr('class', 'scraped-image-checked');
         }).bind(this);
     		$img.attr('src', imgUrl);
     		$container.append($img);
