@@ -149,7 +149,7 @@ class Home extends React.Component {
     e.preventDefault();
     let url = e.currentTarget.value;
     this.setState({pin_url: url});
-    
+
     $.embedly.extract(url).progress(data => {
     	let images = data.images;
     	let $container = $('<div class=\'image-container\'>');
@@ -279,7 +279,7 @@ class Home extends React.Component {
           </a>
         </div>
         <div className="linkedin">
-          <a target='_blank' href='https://www.linkedin.com/in/samuel-mak-8520b760'>
+          <a target='_blank' href='https://www.linkedin.com/in/samuelmak'>
             <i className="fa fa-linkedin-square fa-2x linkedin-icon" aria-hidden="true"></i>
           </a>
         </div>

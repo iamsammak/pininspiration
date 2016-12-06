@@ -47,6 +47,7 @@ const Root = ({ store }) => {
                           onEnter={_ensureLoggedIn}>
             <Route path="search" component={ SearchPinContainer } />
             <Route path="pins" component={PinsContainer} />
+            <Route path="boards/:boardId" component={ BoardContainer } />
             <Route path=":username" component={ UserContainer }>
               <IndexRoute component={ BoardsContainer } />
               <Route path="boards" component={ BoardsContainer } />
@@ -54,7 +55,6 @@ const Root = ({ store }) => {
               <Route path="followers" component={ FollowersContainer } />
               <Route path="following" component={ FollowingContainer } />
             </Route>
-            <Route path="boards/:boardId" component={ BoardContainer } />
           </Route>
         </Route>
       </Router>
