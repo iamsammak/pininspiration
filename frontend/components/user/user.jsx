@@ -10,7 +10,18 @@ class User extends React.Component {
     this.toggleFollowing = this.toggleFollowing.bind(this);
   }
 
+  componentWillMount() {
+    debugger;
+  }
+
+  componentDidMount() {
+    debugger;
+  }
+
   componentWillReceiveProps(nextProps) {
+    let { props: { params }} = this;
+    console.log(params);
+    // debugger;
     if (this.props.params.username !== undefined && nextProps.params.username !== undefined && this.props.params.username !== nextProps.params.username && nextProps.params.username !== 'boards') {
       this.props.fetchUser(nextProps.params.username);
     }

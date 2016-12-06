@@ -23,10 +23,12 @@ class Boards extends React.Component {
     this.handleDeleteBoardSubmit = this.handleDeleteBoardSubmit.bind(this);
   }
   componentDidMount() {
+    // debugger;
     this.props.fetchBoard(this.props.params.boardId);
   }
 
   componentWillReceiveProps(nextProps) {
+    // debugger;
     if (nextProps.board !== undefined) {
       this.setState({title: nextProps.board.title });
       this.setState({description: nextProps.board.description });
@@ -39,7 +41,7 @@ class Boards extends React.Component {
         this.setState({newPin: this.state.newPin.concat([nextProps.pin])});
       }
     }
-
+    //
     if (parseInt(nextProps.params.boardId) !== nextProps.board.id) {
       nextProps.fetchBoard(nextProps.params.boardId);
       this.setState({title: nextProps.board.title });
