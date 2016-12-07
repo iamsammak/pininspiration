@@ -9,6 +9,8 @@
   background-size: cover;
   text-align: center;
   z-index: 0;
+  display: flex;
+  justify-content: center;
   #app-name {
     font-size: 50px;
     display: none;
@@ -38,7 +40,6 @@
   padding: 20px;
   width: 400px;
   box-shadow: 1px 1px 3px #555555;
-  margin: 100px 0 0 0;
   background: rgba(255, 255, 255, 0.9);
   z-index: 20;
 }
@@ -63,7 +64,7 @@
 .login-form-container {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  align-items: center;
 }
 
 .login-form {

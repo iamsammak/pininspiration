@@ -267,32 +267,34 @@ class Home extends React.Component {
           {pinsComponent}
         </div>
         {this.props.children}
-        <button className="add-pin-button" onClick={() => {
-          this.thing.classList.toggle("m-fadeIn");
-          this.state['errors'] = [];
-        }}>
-          <em></em>
-        </button>
-        <div className="github">
-          <a target='_blank' href='https://github.com/iamsammak/pininspiration'>
-            <i className="fa fa-github fa-2x github-icon" aria-hidden="true"></i>
-          </a>
+        <div className="floating-buttons">
+          <button className="add-pin-button" onClick={() => {
+            this.thing.classList.toggle("m-fadeIn");
+            this.state['errors'] = [];
+          }}>
+            <em></em>
+          </button>
+          <div className="github">
+            <a target='_blank' href='https://github.com/iamsammak/pininspiration'>
+              <i className="fa fa-github fa-2x github-icon" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div className="linkedin">
+            <a target='_blank' href='https://www.linkedin.com/in/samuelmak'>
+              <i className="fa fa-linkedin-square fa-2x linkedin-icon" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div className="pinterest">
+            <a target='_blank' href='https://www.pinterest.com/iamsammak'>
+              <i className="fa fa-pinterest fa-2x pinterest-icon" aria-hidden="true"></i>
+            </a>
+          </div>
+          <ul className="add-pin-menu" id="add-pin-menu-id">
+            <span className="add-pin-menu-Caret"></span>
+            <li onClick={this.openPinModal.bind(this)}>Create a Pin</li>
+            <li onClick={this.openBoardModal.bind(this)}>Create a Board</li>
+          </ul>
         </div>
-        <div className="linkedin">
-          <a target='_blank' href='https://www.linkedin.com/in/samuelmak'>
-            <i className="fa fa-linkedin-square fa-2x linkedin-icon" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div className="pinterest">
-          <a target='_blank' href='https://www.pinterest.com/iamsammak'>
-            <i className="fa fa-pinterest fa-2x pinterest-icon" aria-hidden="true"></i>
-          </a>
-        </div>
-        <ul className="add-pin-menu" id="add-pin-menu-id">
-          <span className="add-pin-menu-Caret"></span>
-          <li onClick={this.openPinModal.bind(this)}>Create a Pin</li>
-          <li onClick={this.openBoardModal.bind(this)}>Create a Board</li>
-        </ul>
         <Modal className='addNewBoardModal'
           isOpen={this.state.openNewBoardModal}
           onRequestClose={this.closeBoardModal.bind(this)}

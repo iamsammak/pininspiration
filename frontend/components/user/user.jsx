@@ -11,11 +11,11 @@ class User extends React.Component {
   }
 
   componentWillMount() {
-    debugger;
+    // debugger;
   }
 
   componentDidMount() {
-    debugger;
+    // debugger;
   }
 
   componentWillReceiveProps(nextProps) {
