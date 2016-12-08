@@ -328,7 +328,7 @@ class Home extends React.Component {
 
         </Modal>
 
-        <Modal className='addNewBoardModal'
+        <Modal className='addNewPinModal'
           isOpen={this.state.openNewPinModal}
           onRequestClose={this.closePinModal.bind(this)}
           style={newPinStyle}>

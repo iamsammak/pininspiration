@@ -93,7 +93,7 @@ class User extends React.Component {
     let followersUrl = `${this.user.username}/followers`;
     let followingUrl = `${this.user.username}/following`;
 
-    let pinCount = this.props.user.pins.length;
+    let pinCount = this.props.currentUser.pins.length;
 
     let followerCount = this.props.currentUser.followers.length;
     let followeeCount = this.props.currentUser.followees.length;
