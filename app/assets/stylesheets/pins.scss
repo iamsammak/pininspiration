@@ -44,3 +44,55 @@
 		column-count: 5;
 	}
 }*/
+
+// matching the masonry .pin-item-container css
+.new-pin-card {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  float: left;
+  background-color: rgb(230, 230, 230);
+  content: "";
+  text-align: center;
+  vertical-align: middle;
+  width: 248px;
+  height: auto;
+  margin: 9px;
+  border-radius: 5px;
+  height: 290px;
+  &:hover {
+    background-color: rgb(204, 204, 204);
+  }
+  i {
+    position: absolute;
+    top: 43%;
+    left: 0;
+    right: 0;
+  }
+  i::before {
+    // Bigger add button - Pinterest changed their styling layout
+    // width: 56px;
+    // height: 56px;
+    // background-image: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478211490/pinspiration/icons/pinterest_sprite.png);
+    // background-position: -62px -234px;
+
+    // Smaller add button (below)
+    width: 40px;
+    height: 40px;
+    background-image: url(http://res.cloudinary.com/dfazwubvc/image/upload/v1478565958/pinspiration/icons/pinterest_sprite2.png);
+    background-position: -237px -183px;
+    background-size: 405px 370px;
+    display: inline-block;
+    text-shadow: none;
+    color: transparent;
+    content: " ";
+  }
+}
+
+.create-a-pin {
+  color: rgb(115, 115, 115);
+  position: absolute;
+  top: 58%;
+  left: 0;
+  right: 0;
+}
