@@ -24,6 +24,7 @@ class Nav extends React.Component {
   }
 
   componentDidMount() {
+    // debugger;
     $('.search-bar').on('keyup', e => this.onKeyUp(e));
   }
 
@@ -53,6 +54,9 @@ class Nav extends React.Component {
         <i className="fa fa-bars fa-2x catalog-link" aria-hidden="true"></i>
         <div className="catalog-content">
           <span className="catalogCaret"></span>
+          // <div className="create-button">
+          //
+          // </div>
           <div className="homefeed-button">
             <IndexLink to="/" className="homefeed-link">
               <i className="fa fa-chevron-right"></i>

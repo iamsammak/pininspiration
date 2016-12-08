@@ -218,7 +218,7 @@ class UserPins extends React.Component {
           {pins}
         </Masonry>
 
-        // <Modal className='addNewBoardModal'
+        // <Modal className='addNewPinModal'
         //   isOpen={this.state.openNewPinModal}
         //   onRequestClose={this.closePinModal.bind(this)}
         //   style={newPinStyle}>
