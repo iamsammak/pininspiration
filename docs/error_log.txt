@@ -192,6 +192,14 @@ I get this error when I use the catalog dropdown to go to those boards first bef
 It's almost like somewhere in the backend they need to initialize who the current user or user is right now before using the catalog quick link to boards
 }
 
+15. There was an error with catalog links
+  then below code was looking for this.props.user
+    let pinCount = this.props.user.pins.length;
+  but this.props.user was undefined since we just logged in and haven't set user to anything
+  so I changed it to this.props.currentUser which solved the error
+  Wow this was a bigger headache than I thought
+
+
 
 CSS Error log {
 1: for background image url - the "images" folder will be skipped when you write your path
