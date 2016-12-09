@@ -72,7 +72,6 @@ class User extends React.Component {
 
 
   render() {
-
     // this fixed the routing hard refresh error
     if(!this.user) {
       return (<div></div>);
@@ -116,6 +115,8 @@ class User extends React.Component {
       followButton = (<div className={followButtonClass}
         onClick={(e) => this.toggleFollowing(e, followButtonClass)}>{followText}</div>);
     }
+
+    console.log("user:", this.props.children);
 
     return (
       <section className="user-container">
