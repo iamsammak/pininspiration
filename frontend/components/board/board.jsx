@@ -23,12 +23,10 @@ class Boards extends React.Component {
     this.handleDeleteBoardSubmit = this.handleDeleteBoardSubmit.bind(this);
   }
   componentDidMount() {
-    // debugger;
     this.props.fetchBoard(this.props.params.boardId);
   }
 
   componentWillReceiveProps(nextProps) {
-    // debugger;``
     if (nextProps.board !== undefined) {
       this.setState({title: nextProps.board.title });
       this.setState({description: nextProps.board.description });
@@ -92,7 +90,6 @@ class Boards extends React.Component {
   }
 
   render() {
-    console.log("rendering: ", this.props);
     let newBoardStyle = {
       overlay : {
       position        : 'fixed',
@@ -123,8 +120,6 @@ class Boards extends React.Component {
     let boardPins = null;
     let pinCount = 0;
     if (this.props.board !== undefined && this.props.board.pins !== undefined) {
-      // console.log("if...board", this.props.board);
-      // console.log("if...board.pins", this.props.board.pins);
       boardPins = <BoardPins
                               pins={this.props.board.pins}
                               user={this.props.user}
@@ -135,10 +130,6 @@ class Boards extends React.Component {
 
       pinCount = Object.keys(this.props.board.pins).length;
     } else {
-      // debugger;
-      // console.log("else...board", this.props.board);
-      // console.log("else...board.pins", this.props.board.pins);
-      // return (<div></div>);
       boardPins = null;
       // add create pin card here
     }

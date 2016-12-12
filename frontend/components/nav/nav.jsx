@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 
-// testing catalog menu
 import { IndexLink, hashHistory } from 'react-router';
 
 
@@ -24,7 +23,6 @@ class Nav extends React.Component {
   }
 
   componentDidMount() {
-    // debugger;
     $('.search-bar').on('keyup', e => this.onKeyUp(e));
   }
 
