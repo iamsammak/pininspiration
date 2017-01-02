@@ -105,7 +105,7 @@ class SessionForm extends React.Component {
 				clearInterval(typing);
 				callback();
 			}
-		}, 60);
+		}, 100);
 	}
 
 	beMyGuest(e, username, password) {
