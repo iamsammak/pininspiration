@@ -4,23 +4,25 @@
 
 [pinspiration]: http://www.pinthat.space
 
-PinThat is a full-stack web application inspired by Pinterest and built using Ruby on Rails and React.
+PinThat is inspired by the simplicity of Pinterest and built using Ruby on Rails and React.
+
 It is a full-stack web application built on the following:
 
 *  Rails backend
 *  React/Redux frontend
 *  Postgres RDBMS
 
+![login]
+
 ## Features
 
 ### Single Page App
 
-PinThat uses [React Router][https://github.com/ReactTraining/react-router] to keep all its content on a single root page.
+PinThat uses ![React Router] to keep all its content on a single root page.
 
-
+[React Router]: [https://github.com/ReactTraining/react-router]
 
 ### New account creation, login and demo login
-![login]
 
 Created a demo login button that features an auto animated login. A 'phantomLogin' if you will, which utilizes JS setInterval function and callbacks to create the autocompletion animation.
 
