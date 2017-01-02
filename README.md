@@ -18,9 +18,7 @@ It is a full-stack web application built on the following:
 
 ### Single Page App
 
-PinThat uses ![React Router] to keep all its content on a single root page.
-
-[React Router]: [https://github.com/ReactTraining/react-router]
+PinThat uses [React Router](https://github.com/ReactTraining/react-router) to keep all its content on a single root page.
 
 ### New account creation, login and demo login
 
