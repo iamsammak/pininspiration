@@ -111,7 +111,8 @@ Creating tags for each image will allow for a realtime search to be better utili
 
 
 [login]: ./docs/screenshots/login.png
-[logindemogif]: ./doc/screenshots/login_demo.gif
+[logindemogif]: ./docs/screenshots/login_demo.gif
+
 [homefeed]: ./docs/screenshots/homefeed.png
 [userprofile]: ./docs/screenshots/userprofile.png
 [quickdropdown]: ./docs/screenshots/quickdropdown.png
