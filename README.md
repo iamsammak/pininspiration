@@ -60,8 +60,6 @@ beMyGuest(e, username, password) {
 ```
 
 
-
-
 ### Discover Feed on Home Page
 
 Scroll through all pins with infinite scroll feature. Loading 15 pins per scroll
