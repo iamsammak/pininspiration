@@ -15,11 +15,52 @@ It is a full-stack web application built on the following:
 
 ### Single Page App
 
-PinThat uses React Router to keep all its content on a single root page.
+PinThat uses [React Router][https://github.com/ReactTraining/react-router] to keep all its content on a single root page.
+
 
 
 ### New account creation, login and demo login
 ![login]
+
+Created a demo login button that features an auto animated login. A 'phantomLogin' if you will, which utilizes JS setInterval function and callbacks to create the autocompletion animation.
+
+![logindemogif]
+
+```js
+// Demo User
+phantomLogin($el, word, callback){
+
+  var typing = setInterval(function(){
+    $el.val( $el.val() + word.slice(0,1) );
+    word = word.substr(1);
+
+    if (!word){
+      clearInterval(typing);
+      callback();
+    }
+  }, 60);
+}
+
+beMyGuest(e, username, password) {
+  e.preventDefault();
+
+  hashHistory.push('/login');
+
+  let $username = $('.username');
+  let $password = $('.password');
+  let $submitButton = $('.submit-button');
+  let that = this;
+  this.phantomLogin($username, username, () => {
+    this.phantomLogin($password, password, ()=> {
+      that.setState({username, password });
+      $submitButton.click();
+    });
+  });
+}
+```
+
+
+
 
 ### Discover Feed on Home Page
 
@@ -70,6 +111,7 @@ Creating tags for each image will allow for a realtime search to be better utili
 
 
 [login]: ./docs/screenshots/login.png
+[logindemogif]: ./doc/screenshots/login_demo.gif
 [homefeed]: ./docs/screenshots/homefeed.png
 [userprofile]: ./docs/screenshots/userprofile.png
 [quickdropdown]: ./docs/screenshots/quickdropdown.png
