@@ -68,8 +68,7 @@ class Pins extends React.Component {
         disableImagesLoaded={false}
         updateOnEachImageLoad={false} >
         {pins}
-    </Masonry>
-
+      </Masonry>
     );
   }
 }

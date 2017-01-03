@@ -67,7 +67,7 @@ beMyGuest(e, username, password) {
 ![homefeed]
 [homefeed]: ./docs/screenshots/homefeed.png
 
-Scroll through all pins with infinite scroll feature.
+####Scroll through all pins with infinite scroll feature.
 
 I paired jQuery '.on()' and '.off()' method and [underscore.js](http://underscorejs.org/#throttle) throttle function to create the infinite scroll feature.
 
@@ -108,12 +108,25 @@ class Pins extends React.Component {
 }
 ```
 
+####Masonry
+Pins are displayed utilizing [React Masonry Components](https://github.com/eiriklv/react-masonry-component)
+
+```html
+<Masonry
+  className="pins-container"
+  elementType={'ul'}
+  disableImagesLoaded={false}
+  updateOnEachImageLoad={false} >
+  {pins}
+</Masonry>
+```
+
 ### Navigation Bar
 
 ![navbar]
 [navbar]: ./docs/screenshots/navbar.png
 
-The nav bar features a realtime search bar, a dropdown menu, user profile, and logout button
+<!-- The nav bar features a realtime search bar, a dropdown menu, user profile, and logout button -->
 
 #### Realtime Search Bar
 
@@ -162,7 +175,7 @@ Located in the bottom right is a plus button that will trigger a popup menu with
 
 ### Scraping Live Images
 
-Using [Embedly](replace with embedly URL) users can create pin and scrape real images from live websites by entering the website url in the create pin form
+Using [Embedly](https://github.com/embedly/embedly-jquery) users can create pin and scrape real images from live websites by entering the website url in the create pin form
 
 ![createpin]
 [createpin]: ./docs/screenshots/createpin.png
@@ -194,12 +207,58 @@ scrapeImages(e) {
 }
 ```
 
-### Pin Modal
+### Pins
 
-Using React Modal creates a zoomed in view for users to get a clearer picture of their favorite pins
+Using [React Modals](https://github.com/reactjs/react-modal) to create a zoomed in view for users to get a clearer picture of their favorite pins
 
 ![pindetailmodal]
 [pindetailmodal]: ./docs/screenshots/pindetailmodal.png
+
+```html
+<Modal className='addNewPinModal'
+  isOpen={this.state.openNewPinModal}
+  onRequestClose={this.closePinModal.bind(this)}
+  style={newPinStyle}>
+  <section className="modal-form-container">
+    <form	className="modal-form-box">
+      <div className="modal-form">
+        <label className='modal-label'>
+          <p className='modal-label-text'>Enter a New URL</p>
+          <input
+            type='text'
+            onChange={this.scrapeImages}
+            defaultValue='http://'
+            className="title-input modal-input" />
+        </label>
+        <div className='modal-input new-pin-image-area'>
+          <i className="fa fa-picture-o fa-4x background-image" aria-hidden="true"></i>
+          <span className="background-image-prompt">Click on image after entering valid URL</span>
+        </div>
+        <input
+          type="text"
+          onChange={this.update("pin_title")}
+          className="title-input modal-input"
+          placeholder='Title'/>
+
+        <textarea name='description'
+          onChange={this.update("pin_description")}
+          className="description-input modal-input"
+          placeholder='What is your pin about?'></textarea>
+         <select className='modal-input modal-board-select' onChange={this.selectBoard}>
+           <option disabled selected value> -- select a board -- </option>
+           {boardList}
+         </select>
+        <div className="modal-save-button-box">
+          <input type="submit"
+            className="modal-save-button"
+            value='Save Pin'
+            onClick={this.handleNewPinSubmit}/>
+        </div>
+      </div>
+    </form>
+  </section>
+</Modal>
+```
 
 ## Future Features
 
