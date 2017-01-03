@@ -21,6 +21,34 @@ It is a full-stack web application built on the following:
 
 PinThat uses [React Router](https://github.com/ReactTraining/react-router) to keep all its content on a single root page.
 
+```html
+<Provider store={store}>
+  <Router history={ hashHistory }>
+    <Route path="/" component={ App } >
+      <IndexRoute component={ HomeContainer }
+                  onEnter={_ensureLoggedIn}/>
+      <Route path="/login" component={ SessionFormContainer }
+                           onEnter={_redirectIfloggedIn}/>
+      <Route path="/signup" component={ SessionFormContainer }
+                          onEnter={_redirectIfloggedIn}/>
+      <Route path="/" component={ HomeContainer }
+                      onEnter={_ensureLoggedIn}>
+        <Route path="search" component={ SearchPinContainer } />
+        <Route path="pins" component={PinsContainer} />
+        <Route path="boards/:boardId" component={ BoardContainer } />
+        <Route path=":username" component={ UserContainer }>
+          <IndexRoute component={ BoardsContainer } />
+          <Route path="boards" component={ BoardsContainer } />
+          <Route path="pins" component={ UserPinsContainer } />
+          <Route path="followers" component={ FollowersContainer } />
+          <Route path="following" component={ FollowingContainer } />
+        </Route>
+      </Route>
+    </Route>
+  </Router>
+</Provider>
+```
+
 ### New account creation, login and demo login
 
 Created a demo login button that features an auto animated login. Round of applause to Baymax for being the Demo user.
