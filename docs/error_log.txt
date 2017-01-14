@@ -90,7 +90,7 @@ Error Log {
 
 2.
   Ran into an infinite loop between "/" replacing "/login"
-  I had both ensureLoggedIn and redirectIfLoggedIn but replaceing the url path if a currentUser exists
+  I had both ensureLoggedIn and redirectIfLoggedIn but replacing the url path if a currentUser exists
   forgot a ! before currentUser in my ensureLoggedIn function
 
 3.
@@ -155,7 +155,7 @@ warning.js:37 Warning: flattenChildren(...): Encountered two children with the s
   which then gave me access to fetchBoards in my props
   so I just called this.fetchBoards(userId) inside my handleDeleteBoardSubmit
 
-11.5 - catalog infiniti loop inside componentWillReceiveProps
+11.5 - catalog infinite loop inside componentWillReceiveProps
 // well this is an infinite loop (if only fetchBoard is called)
 // added logic then setState, but this receives Board twice, seems redundant
 if (parseInt(nextProps.params.boardId) !== nextProps.board.id) {
@@ -171,6 +171,7 @@ if (parseInt(nextProps.params.boardId) !== nextProps.board.id) {
   hashHistory.push(`boards/${pin.board.id}`);
   To the receivePinWithEditSuccess callback
   this forces a rerender of the pin
+
 13. to handle the rerendering of board upon pin deletion, so the pin actually disappears
   I added more dispatch actions to receivePinWithDeleteSuccess callback
   dispatch(fetchBoard(id.board.id));
@@ -188,7 +189,7 @@ getHostNode: function (internalInstance) {
     return internalInstance.getHostNode();
 },
 
-I get this error when I use the catalog dropdown to go to those boards first before clicking user profile
+I got this error when I use the catalog dropdown to go to those boards first before clicking user profile
 It's almost like somewhere in the backend they need to initialize who the current user or user is right now before using the catalog quick link to boards
 }
 
