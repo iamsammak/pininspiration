@@ -87,6 +87,7 @@ class Boards extends React.Component {
     let boards = "";
     let newBoard = null;
 
+// logic for new board button
     if (this.props.user !== undefined && this.props.user.id === this.props.currentUser.id) {
       newBoard = (
         <section className="new-board-card" key="new-board" onClick={this.openBoardModal.bind(this)}>
@@ -95,6 +96,8 @@ class Boards extends React.Component {
         </section>
       );
     }
+
+// logic to fetch all boards
     if (!this.isEmpty(this.props.boards)) {
       boards = this.props.boards.map((board) => (
         <BoardCard

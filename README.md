@@ -12,8 +12,7 @@ It is a full-stack web application built on the following:
 *  React/Redux frontend
 *  Postgres RDBMS
 
-![login]
-[login]: ./docs/screenshots/login.png
+![login](./docs/screenshots/login.png)
 
 ## Features
 
@@ -54,8 +53,7 @@ PinThat uses [React Router](https://github.com/ReactTraining/react-router) to ke
 Created a demo login button that features an auto animated login. Round of applause to Baymax for being the Demo user.
 A 'phantomLogin' if you will, which utilizes JS setInterval function and callbacks to create the autocompletion animation.
 
-![logindemogif]
-[logindemogif]: ./docs/screenshots/login_demo.gif
+![logindemogif](./docs/screenshots/login_demo.gif)
 
 ```js
 // Demo User
@@ -92,10 +90,9 @@ beMyGuest(e, username, password) {
 
 ### Discover Feed on Home Page
 
-![homefeed]
-[homefeed]: ./docs/screenshots/homefeed.png
+![homefeed](./docs/screenshots/homefeed.png)
 
-####Scroll through all pins with infinite scroll feature.
+#### Scroll through all pins with infinite scroll feature.
 
 I paired jQuery '.on()' and '.off()' method and [underscore.js](http://underscorejs.org/#throttle) throttle function to create the infinite scroll feature.
 
@@ -119,8 +116,7 @@ nextPage() {
 }
 ```
 
-![homefeedscroll]
-[homefeedscroll]: ./docs/screenshots/homefeed_scroll.gif
+![homefeedscroll](./docs/screenshots/homefeed_scroll.gif)
 
 The state of this react-component will hold 'page' and 'total_pages' which will contain 15 pins. Therefore each call to nextPage() will return the next page of pins.
 
@@ -136,7 +132,7 @@ class Pins extends React.Component {
 }
 ```
 
-####Masonry
+#### Masonry
 Pins are displayed utilizing [React Masonry Components](https://github.com/eiriklv/react-masonry-component)
 
 ```html
@@ -151,8 +147,7 @@ Pins are displayed utilizing [React Masonry Components](https://github.com/eirik
 
 ### Navigation Bar
 
-![navbar]
-[navbar]: ./docs/screenshots/navbar.png
+![navbar](./docs/screenshots/navbar.png)
 
 <!-- The nav bar features a realtime search bar, a dropdown menu, user profile, and logout button -->
 
@@ -160,8 +155,7 @@ Pins are displayed utilizing [React Masonry Components](https://github.com/eirik
 
 User can search through pins matching search keyword to pin titles and descriptions
 
-![search]
-[search]: ./docs/screenshots/search.png
+![search](./docs/screenshots/search.png)
 
 A 'keyup' event handler will run a search function to fetch any pins that match the search word
 
@@ -182,31 +176,26 @@ onKeyUp(e) {
 #### Quick Dropdown Menu
 
 User can access the dropdown menu for quick navigation to their boards and home feed
-![quickdropdown]
-[quickdropdown]: ./docs/screenshots/quickdropdown.png
+![quickdropdown](./docs/screenshots/quickdropdown.png)
 
 #### User Profile
 
 User's profile provides a live view of their boards, pins, followers and followings
 
-![userprofile]
-[userprofile]: ./docs/screenshots/userprofile.png
+![userprofile](./docs/screenshots/userprofile.png)
 
 ### Create Button
 
 Located in the bottom right is a plus button that will trigger a popup menu with the options to "create a pin" and "create a board"
 
-![createbutton]
-[createbutton]: ./docs/screenshots/createbutton.png
-![createbuttongif]
-[createbuttongif]: ./docs/screenshots/create_button.gif
+![createbutton](./docs/screenshots/createbutton.png)
+![createbuttongif](./docs/screenshots/create_button.gif)
 
 ### Scraping Live Images
 
 Using [Embedly](https://github.com/embedly/embedly-jquery) users can create pin and scrape real images from live websites by entering the website url in the create pin form
 
-![createpin]
-[createpin]: ./docs/screenshots/createpin.png
+![createpin](./docs/screenshots/createpin.png)
 
 ```js
 scrapeImages(e) {
@@ -239,8 +228,7 @@ scrapeImages(e) {
 
 Using [React Modals](https://github.com/reactjs/react-modal) to create a zoomed in view for users to get a clearer picture of their favorite pins
 
-![pindetailmodal]
-[pindetailmodal]: ./docs/screenshots/pindetailmodal.png
+![pindetailmodal](./docs/screenshots/pindetailmodal.png)
 
 ```html
 <Modal className='addNewPinModal'
