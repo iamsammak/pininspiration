@@ -18,6 +18,8 @@ class User extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     let { props: { params }} = this;
+    console.log(params);
+    // debugger;
     if (this.props.params.username !== undefined && nextProps.params.username !== undefined && this.props.params.username !== nextProps.params.username && nextProps.params.username !== 'boards') {
       this.props.fetchUser(nextProps.params.username);
     }
@@ -112,7 +114,11 @@ class User extends React.Component {
         onClick={(e) => this.toggleFollowing(e, followButtonClass)}>{followText}</div>);
     }
 
+<<<<<<< HEAD
     // console.log("user:", this.props.children);
+=======
+    console.log("user:", this.props.children);
+>>>>>>> 6563530769d8a956403b8c42513f706d3d1784d9
 
     return (
       <section className="user-container">
