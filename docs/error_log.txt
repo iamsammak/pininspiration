@@ -1,3 +1,6 @@
+rails s
+webpack --w
+
 Additional Installation Log {
   - notify.js
   - bootstrap sass
