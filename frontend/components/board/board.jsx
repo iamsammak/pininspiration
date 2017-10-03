@@ -23,10 +23,12 @@ class Boards extends React.Component {
     this.handleDeleteBoardSubmit = this.handleDeleteBoardSubmit.bind(this);
   }
   componentDidMount() {
+    // debugger;
     this.props.fetchBoard(this.props.params.boardId);
   }
 
   componentWillReceiveProps(nextProps) {
+    // debugger;``
     if (nextProps.board !== undefined) {
       this.setState({title: nextProps.board.title });
       this.setState({description: nextProps.board.description });
@@ -90,6 +92,7 @@ class Boards extends React.Component {
   }
 
   render() {
+    // console.log("rendering: ", this.props);
     let newBoardStyle = {
       overlay : {
       position        : 'fixed',
